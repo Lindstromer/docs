@@ -68,3 +68,7 @@ For example
         about-page.php
         contact-page.php
         video-page.php
+
+When creating a new page you will get a new view before you get the edit view for your page where you should choose which page type to use. This will happen for all post types that uses page types.
+
+.. image:: /_static/papi/add-new-page-type.png
