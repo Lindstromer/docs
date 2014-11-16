@@ -15,3 +15,4 @@ Papi documentation
    manual/introduction
    manual/getting-started
    manual/page-types
+   manual/properties/index
