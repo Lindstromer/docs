@@ -1,3 +1,3 @@
-# Papi docs
+# Papi documentation
 
 The documentation of Papi
