@@ -3,7 +3,7 @@ Relationship
 
 .. attribute:: type: relationship
 
-With this property you can link posts, pages or custom post types together. With the `"post_types"` setting you can diced witch post types to use, default is page.
+With this property you can link posts, pages or custom post types together. With the **post_type** setting you can diced witch post types to use, default is page.
 
 Settings
 -----------
@@ -14,7 +14,7 @@ Settings
 
   Default value is **-1** (no limit)
 
-.. attribute:: post_types
+.. attribute:: post_type
 
   Change which post types it loads post objects from.
 
@@ -45,7 +45,7 @@ Example
       'type'     => 'relationship',
       'settings' => [
           'choose_max' => 3,
-          'post_types' => ['post', 'pages', 'my-custom-post-type']
+          'post_type'  => ['post', 'pages', 'my-custom-post-type']
       ]
   ])
 

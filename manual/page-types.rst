@@ -16,7 +16,7 @@ The `page_type()` is a required method of the page type class. It should return 
 
     The description of the page type
 
-.. attribute:: post_types
+.. attribute:: post_type
 
     Array of post types that the page type should be registered on. Default is `page`.
 
