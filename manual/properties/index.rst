@@ -82,6 +82,7 @@ Papi does support 17 core properties (a field is a property in the page type) to
 .. toctree::
   :maxdepth: 1
 
+  bool
   checkbox
   date
   email
@@ -94,6 +95,5 @@ Papi does support 17 core properties (a field is a property in the page type) to
   select
   string
   text
-  bool
   url
 
