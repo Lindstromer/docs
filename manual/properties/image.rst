@@ -12,6 +12,8 @@ Settings
 
   When this is true you can add as many images you like.
 
+  Default value is **false**.
+
 Example
 -----------
 

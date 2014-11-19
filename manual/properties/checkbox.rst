@@ -12,9 +12,13 @@ Settings
 
   The array with checkboxes items, value or key/value.
 
+  Default value is **empty array**.
+
 .. attribute:: selected
 
   The selected key or array of keys
+
+  Default value is **empty array**.
 
 Example
 -----------

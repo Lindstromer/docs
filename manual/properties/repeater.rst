@@ -12,6 +12,8 @@ Settings
 
   The array of properties, the same key/values as the `$this->property` method has.
 
+  Default value is **empty array**.
+
 Example
 -----------
 

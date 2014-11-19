@@ -12,9 +12,13 @@ Settings
 
   The array with checkboxes items, value or key/value.
 
+  Default value is **empty array**.
+
 .. attribute:: selected
 
   The radio button that will be selected from start. The value should match a key of your items.
+
+  Default value is **empty string**.
 
 Example
 -----------
