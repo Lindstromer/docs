@@ -3,7 +3,7 @@ Date
 
 .. attribute:: type: date
 
-The date property has a picker build in using `Pikaday <http://dbushell.github.io/Pikaday/>`_. The format is YYYY-MM-DD in WordPress admin, this can’t be change for now.
+The date property has a picker build in using `Pikaday <http://dbushell.github.io/Pikaday/>`_.
 
 Settings
 -----------
