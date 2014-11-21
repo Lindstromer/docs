@@ -5,12 +5,14 @@ Date
 
 The date property has a picker build in using `Pikaday <http://dbushell.github.io/Pikaday/>`_. The format is YYYY-MM-DD in WordPress admin, this can’t be change for now.
 
-The output will be converted to time using `strtotime <http://php.net/manual/en/function.strtotime.php>`_.
-
 Settings
 -----------
 
-No settings exists.
+.. attribute:: format
+
+The format of the date. Look at `moment.js <http://momentjs.com/>`_ formats.
+
+Default format is **YYYY-MM-DD**.
 
 Example
 -----------
@@ -30,4 +32,4 @@ Example output
 
 .. code-block:: php
 
-  int 1396562400
+  string '2014-11-21'
