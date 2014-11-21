@@ -26,7 +26,7 @@ Show the hour and minute dropdown or not.
 
 Default value is **true**.
 
-.. attribute:: use_24_hour
+.. attribute:: use_24_hours
 
 Use 24 hours instead of PM/AM.
 
