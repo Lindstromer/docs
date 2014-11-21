@@ -42,7 +42,7 @@ Example
   $this->property([
       'title'    => 'Date',
       'slug'     => 'my_date_slug',
-      'type'     => 'date'
+      'type'     => 'datetime'
   ])
 
 Example output
