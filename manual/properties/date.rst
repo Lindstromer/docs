@@ -5,6 +5,8 @@ Date
 
 The date property has a picker build in using `Pikaday <http://dbushell.github.io/Pikaday/>`_.
 
+It only works with date and not time.
+
 Settings
 -----------
 
