@@ -84,7 +84,7 @@ Papi does support 17 core properties (a field is a property in the page type) to
 
   bool
   checkbox
-  date
+  datetime
   email
   image
   number
