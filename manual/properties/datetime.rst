@@ -1,7 +1,7 @@
-Date
+Datetime
 ============
 
-.. attribute:: type: date
+.. attribute:: type: datetime
 
 The date property has a picker build in using `Pikaday <https://github.com/owenmead/Pikaday>`_ with time support.
 
