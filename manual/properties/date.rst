@@ -3,9 +3,7 @@ Date
 
 .. attribute:: type: date
 
-The date property has a picker build in using `Pikaday <http://dbushell.github.io/Pikaday/>`_.
-
-It only works with date and not time.
+The date property has a picker build in using `Pikaday <https://github.com/owenmead/Pikaday>`_ with time support.
 
 Settings
 -----------
@@ -14,7 +12,25 @@ Settings
 
 The format of the date. Look at `moment.js <http://momentjs.com/>`_ formats.
 
-Default format is **YYYY-MM-DD**.
+Default value is **YYYY-MM-DD hh:mm:ss**.
+
+.. attribute:: show_seconds
+
+Show the sconds dropdown or not.
+
+Default value is **false**.
+
+.. attribute:: show_time
+
+Show the hour and minute dropdown or not.
+
+Default value is **true**.
+
+.. attribute:: use_24_hour
+
+Use 24 hours instead of PM/AM.
+
+Default value is **false**.
 
 Example
 -----------
