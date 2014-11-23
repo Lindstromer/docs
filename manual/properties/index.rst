@@ -85,6 +85,7 @@ Papi does support 17 core properties (a field is a property in the page type) to
   bool
   checkbox
   datetime
+  divider
   email
   image
   number
@@ -96,4 +97,3 @@ Papi does support 17 core properties (a field is a property in the page type) to
   string
   text
   url
-
