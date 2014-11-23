@@ -10,15 +10,6 @@ The default values:
   <?php
 
   $options = array(
-    // Page types options
-
-    /**
-     * What sort should we use?
-     * - 'name'
-     * - 'sort_order'.
-     */
-
-    'page_types.sort_by' => 'name',
 
     // Post types options
 
@@ -46,7 +37,6 @@ Example:
 
   function site_change_papi_options( $options ) {
     return array_merge($options, [
-      'page_types.sort_by'                => 'sort_order',
       'post_type.post.show_standard_page' => false
     ]);
   }
