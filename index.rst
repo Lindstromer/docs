@@ -1,5 +1,5 @@
 Papi documentation
-======
+==================
 
 * :ref:`manual`
 
@@ -16,3 +16,9 @@ Papi documentation
    manual/getting-started
    manual/page-types
    manual/properties/index
+   manual/actions
+   manual/filters
+   manual/papi-options
+   manual/api
+   manual/create-your-own-property
+   

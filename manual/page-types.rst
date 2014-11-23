@@ -2,7 +2,7 @@ Page types
 ============
 
 Page type meta options
------------
+----------------------
 
 The `page_type()` is a required method of the page type class. It should return an array containing the required keys:
 
@@ -72,3 +72,104 @@ For example
 When creating a new page you will get a new view before you get the edit view for your page where you should choose which page type to use. This will happen for all post types that uses page types.
 
 .. image:: /_static/papi/add-new-page-type.png
+
+Templates
+---------
+
+Papi has build in template support, which means that you can write your properties, tabs or boxes in seperated files. When loading them you can override the values with a array.
+
+You can more about this functions under `API <api.html>`_ page.
+
+Example $this->box
+
+.. code-block:: php
+
+  <?php
+
+  // my-page-type.php
+  $this->box('boxes/custom-meta-box.php');
+
+  // boxes/custom-meta-box.php
+  return [
+    'title' => 'My meta box',
+    papi_property([
+      'type'     => 'dropdown',
+      'title'    => 'Dropdown',
+      'slug'     => 'my_dropdown',
+      'settings' => [
+        'items' => [
+          'White' => '#ffffff',
+          'Black' => '#000000'
+        ]
+      ]
+    ])
+  ];
+
+Example $this->property or papi_property
+
+.. code-block:: php
+
+  <?php
+
+  // my-page-type.php
+  $this->box('My meta box', [
+    $this->property('properties/dropdown.php')
+  ]);
+
+  // properties/dropdown.php
+  return papi_property([
+    'type'     => 'dropdown',
+    'title'    => 'Dropdown',
+    'slug'     => 'my_dropdown',
+    'settings' => papi_template('settings/dropdown.php')
+  ]);
+
+Example $this->tab or papi_tab
+
+.. code-block:: php
+
+  <?php
+
+  // my-page-type.php
+  $this->box('My meta box', [
+    $this->tab('tabs/image-tab.php', [
+      'title' => 'Background'
+    ])
+  ]);
+
+  // tabs/image.php
+  return papi_tabs([
+    'title' => 'Images',
+    'slug'  => 'custom_image_slug'
+  ], [
+    papi_property('properties/my-image.php'),
+    papi_property([
+      'type'  => 'string',
+      'title' => 'Name',
+      'slug'  => 'name'
+    ])
+  ]);
+
+Example papi_template
+
+.. code-block:: php
+
+  <?php
+
+  // my-page-type.php
+  $this->box('My meta box', [
+    $this->property([
+      'type'     => 'dropdown',
+      'title'    => 'Dropdown',
+      'slug'     => 'my_dropdown',
+      'settings' => papi_template('settings/dropdown.php')
+    ])
+  ]);
+
+  // settings/dropdown.php
+  return [
+    'items' => [
+      'White' => '#ffffff',
+      'Black' => '#000000'
+    ]
+  ];
