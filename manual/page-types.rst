@@ -73,6 +73,25 @@ When creating a new page you will get a new view before you get the edit view fo
 
 .. image:: /_static/papi/add-new-page-type.png
 
+
+Remove meta box
+---------
+It's easy to remove metaboxes with the `remove` method. Check the `WordPress Codex <http://codex.wordpress.org/Function_Reference/remove_meta_box#Parameters>`_ for right metabox slug.
+
+.. code-block:: php
+
+    <?php
+    
+    public function register() {
+    
+        // A single metabox
+        $this->remove( 'comments' );
+        
+        // Multiple metaboxes
+        $this->remove( array( 'comments', 'editor' ) );
+    
+    }
+
 Templates
 ---------
 
