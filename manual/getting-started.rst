@@ -13,6 +13,7 @@ Example:
 .. code-block:: php
 
   <?php
+  
   function _site_papi_page_type_directories () {
   	return dirname( __FILE__ ) . '/data/page-types';
   }
