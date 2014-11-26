@@ -10,9 +10,31 @@ Settings
 
 .. attribute:: items
 
-  The array of properties, the same key/values as the `$this->property` method has.
+  The array of properties, the same key/values as the `$this->property` method or `papi_property` function has.
+  
+  You can't use property repeater inside a repeater.
 
   Default value is **empty array**.
+  
+Filters
+-----------
+
+.. attribute:: tag: papi_property_repeater_not_allowed
+
+Prevent properties from render and working in repeater.
+
+.. code-block:: php
+
+  <?php
+  
+  function site_property_repeater_not_allowed ( $not_allowed ) {
+    return array_merge( $not_allowed, [
+      'string'
+    ] );
+  }
+  
+  add_filter('papi_property_repeater_not_allowed', 'site_property_repeater_not_allowed');
+
 
 Example
 -----------
