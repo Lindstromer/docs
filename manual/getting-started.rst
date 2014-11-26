@@ -14,7 +14,7 @@ Example:
 
   <?php
   function _site_papi_page_type_directories () {
-			return dirname( __FILE__ ) . '/data/page-types';
-	}
+  	return dirname( __FILE__ ) . '/data/page-types';
+  }
 	
   add_filter('papi_page_type_directories', '_site_papi_page_type_directories');
