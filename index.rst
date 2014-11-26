@@ -1,6 +1,8 @@
 Papi documentation
 ==================
 
+The first version of Papi isn't released yet. It will be released soon.
+
 * :ref:`manual`
 
 .. _manual:
