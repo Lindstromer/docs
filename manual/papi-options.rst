@@ -55,8 +55,8 @@ Code example:
 
   function site_change_papi_options( $options ) {
     return array_merge($options, [
-      'post_type.page.only_page_type' => 'video-page-type.php'
+      'post_type_page_only_page_type' => 'video-page-type'
     ]);
   }
 
-  add_filter('papi/options', 'site_change_papi_options');
+  add_filter('papi_options', 'site_change_papi_options');
