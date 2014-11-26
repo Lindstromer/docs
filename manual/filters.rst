@@ -4,7 +4,7 @@ Filters
 Property: Format value
 --------------------------
 
-.. attribute:: action: papi/format_value/$property_type
+.. attribute:: tag: papi/format_value/$property_type
 
 Format the value of the property before we output it to the application.
 
@@ -24,7 +24,7 @@ Example:
 Property: Load value
 --------------------------
 
-.. attribute:: action: papi/load_value/$property_type
+.. attribute:: tag: i/load_value/$property_type
 
 This filter is applied after the $value is loaded in the database.
 
@@ -44,7 +44,7 @@ Example:
 Property: Update value
 --------------------------
 
-.. attribute:: action: papi/update_value/$property_type
+.. attribute:: tag: papi/update_value/$property_type
 
 This filter is applied before the $value is saved in the database.
 
