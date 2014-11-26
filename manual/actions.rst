@@ -18,4 +18,4 @@ Example:
     include_once('class-papi-property-kvack.php');
   }
 
-  add_action('papi/include_properties', 'include_property_kvack');
+  add_action('papi_include_properties', 'include_property_kvack');

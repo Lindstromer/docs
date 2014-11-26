@@ -22,12 +22,12 @@ The default values:
      * page or post key with your post type name in lower cases.
      */
 
-    'post_type.page.show_standard_page' => true,
-    'post_type.post.show_standard_page' => true
+    'post_type_page_show_standard_page' => true,
+    'post_type_post_show_standard_page' => true
   );
 
 
-To change a option you change the values in the options array that are the argument of **papi/options** filter.
+To change a option you change the values in the options array that are the argument of **papi_options** filter.
 
 Example:
 
@@ -37,11 +37,11 @@ Example:
 
   function site_change_papi_options( $options ) {
     return array_merge($options, [
-      'post_type.post.show_standard_page' => false
+      'post_type_post_show_standard_page' => false
     ]);
   }
 
-  add_filter('papi/options', 'site_change_papi_options');
+  add_filter('papi_options', 'site_change_papi_options');
 
 There are some dynamic keys you can add to use only one page type with a post type and skip the "add new page type" view.
 
