@@ -35,7 +35,7 @@ You can check how the `Papi properties <https://github.com/wp-papi/papi/tree/mas
     include_once('class-papi-property-stringx.php');
   }
 
-  add_action('papi/include_properties', 'include_property_stringx');
+  add_action('papi_include_properties', 'include_property_stringx');
 
   // class-papi-property-stringx.php
 
