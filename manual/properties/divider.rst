@@ -15,12 +15,12 @@ Example
 
 .. code-block:: php
 
-<?php
+  <?php
 
-$this->property([
-  'title'       => 'Divider',
-  'type'        => 'divider',
-  'description' => 'Non volutpat ultricies bibendum odio luctus. Reprehenderit molestie litora viverra himenaeos nostra. Nulla habitant culpa lobortis faucibus. Natoque eu ultricies nulla dignissim.'
-])
+  $this->property([
+    'title'       => 'Divider',
+    'type'        => 'divider',
+    'description' => 'Non volutpat ultricies bibendum odio luctus. Reprehenderit molestie litora viverra himenaeos nostra. Nulla habitant culpa lobortis faucibus. Natoque eu ultricies nulla dignissim.'
+  ])
 
 .. image:: /_static/papi/property-divider.png
