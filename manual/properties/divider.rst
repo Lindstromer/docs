@@ -3,7 +3,7 @@ Divider
 
 .. attribute:: type: divider
 
-This property don't output any form or something like that. It outputs a h3 tag with the title inside and the instruction below.
+This property don't output any form or something like that. It outputs a h3 tag with the title inside and the description below.
 
 Settings
 -----------
