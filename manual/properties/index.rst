@@ -64,8 +64,8 @@ Papi does support 17 core properties (a field is a property in the page type) to
   papi_property([
     'capabilities' => array(),
     'default'      => '',
+    'description'  => '',
     'disabled'     => false,
-    'instruction'  => '',
     'lang'         => '',
     'raw'          => false,
     'settings'     => array(),
