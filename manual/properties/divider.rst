@@ -20,7 +20,7 @@ Example
 $this->property([
   'title'       => 'Divider',
   'type'        => 'divider',
-  'instruction' => 'Non volutpat ultricies bibendum odio luctus. Reprehenderit molestie litora viverra himenaeos nostra. Nulla habitant culpa lobortis faucibus. Natoque eu ultricies nulla dignissim.'
+  'description' => 'Non volutpat ultricies bibendum odio luctus. Reprehenderit molestie litora viverra himenaeos nostra. Nulla habitant culpa lobortis faucibus. Natoque eu ultricies nulla dignissim.'
 ])
 
 .. image:: /_static/papi/property-divider.png
