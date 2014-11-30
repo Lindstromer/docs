@@ -1,51 +1,6 @@
 Filters
 ============
 
-Change default sort order
---------------------------
-
-.. attribute:: tag: papi/settings/sort_order
-
-Change the default sort order for page types, meta boxes, tabs and properties.
-
-Default sort order is **1000**.
-
-Example:
-
-.. code-block:: php
-
-  <?php
-
-  function change_default_sort_order() {
-    return 1;
-  }
-
-  add_filter('papi/settings/sort_order', 'change_default_sort_order');
-
-Only page type for a post type
-------------------------------
-
-.. attribute:: tag: papi/settings/only_page_type_{$post_type}
-
-With this filter you can change the add new link for a post type to go direct to a single page type and jump over the "add new page type" view.
-
-The value you should return is the file name of your page type without `.php`.
-
-Default value is **empty string**.
-
-Example:
-
-.. code-block:: php
-
-  <?php
-
-  function only_page_type_post() {
-    return 'video-page-type';
-  }
-
-  add_filter('papi/settings/only_page_type_post', 'only_page_type_post');
-
-
 Property: Format value
 --------------------------
 
@@ -106,14 +61,14 @@ Example:
 
   add_filter('papi/load_value/string', 'update_value_string');
 
-Show standard page for post type
---------------------------------
+Setting: Change default sort order
+--------------------------
 
-.. attribute:: tag: papi/settings/standard_page_{$post_type}
+.. attribute:: tag: papi/settings/sort_order
 
-This filter allows you to hide the standard page on the "add new page type" view.
+Change the default sort order for page types, meta boxes, tabs and properties.
 
-Default value for every post type is **true**.
+Default sort order is **1000**.
 
 Example:
 
@@ -121,13 +76,36 @@ Example:
 
   <?php
 
-  function show_standard_page_post() {
-    return false;
+  function change_default_sort_order() {
+    return 1;
   }
 
-  add_filter('papi/settings/standard_page_post', 'show_standard_page_post');
+  add_filter('papi/settings/sort_order', 'change_default_sort_order');
 
-Page type directories
+Setting: Only page type for a post type
+------------------------------
+
+.. attribute:: tag: papi/settings/only_page_type_{$post_type}
+
+With this filter you can change the add new link for a post type to go direct to a single page type and jump over the "add new page type" view.
+
+The value you should return is the file name of your page type without `.php`.
+
+Default value is **empty string**.
+
+Example:
+
+.. code-block:: php
+
+  <?php
+
+  function only_page_type_post() {
+    return 'video-page-type';
+  }
+
+add_filter('papi/settings/only_page_type_post', 'only_page_type_post');
+
+Setting: Page type directories
 ---------------------
 
 .. attribute:: tag: papi/settings/directories
@@ -149,3 +127,25 @@ Example:
   }
 
   add_filter('papi/settings/directories', 'page_type_directories');
+
+Setting: Show standard page for post type
+--------------------------------
+
+.. attribute:: tag: papi/settings/standard_page_{$post_type}
+
+This filter allows you to hide the standard page on the "add new page type" view.
+
+Default value for every post type is **true**.
+
+Example:
+
+.. code-block:: php
+
+  <?php
+
+  function show_standard_page_post() {
+    return false;
+  }
+
+  add_filter('papi/settings/standard_page_post', 'show_standard_page_post');
+
