@@ -27,8 +27,8 @@ Prevent properties from render and working in repeater.
 
   <?php
   
-  function site_property_repeater_exclude ( $not_allowed ) {
-    return array_merge( $not_allowed, [
+  function site_property_repeater_exclude ( $exclude ) {
+    return array_merge( $exclude, [
       'string'
     ] );
   }
