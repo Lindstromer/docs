@@ -82,7 +82,7 @@ Example:
 
   add_filter('papi/settings/sort_order', 'change_default_sort_order');
 
-Setting: Only page type for a post type
+Setting: Only page type for post type
 ------------------------------
 
 .. attribute:: tag: papi/settings/only_page_type_{$post_type}
