@@ -28,4 +28,4 @@ Example output
 
 .. code-block:: php
 
-  string 'Fredrik'
+  boolean true
