@@ -79,8 +79,7 @@ Papi does support 17 core properties (a field is a property in the page type) to
   
 **Note:** be sure to have different slug for each properties on a page type, the same slug will not work great and you will lose data if you are using same slug for multiple properties.
 
-The list of properties that Papi supports in the core are:
-----------------------------------------------------------
+**The list of properties that Papi supports in the core are:**
 
 .. toctree::
   :maxdepth: 1
