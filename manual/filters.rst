@@ -4,7 +4,7 @@ Filters
 Change default sort order
 --------------------------
 
-.. attribute:: tag: papi_default_sort_order
+.. attribute:: tag: papi/settings/sort_order
 
 Change the default sort order for page types, meta boxes, tabs and properties.
 
@@ -20,12 +20,12 @@ Example:
     return 1;
   }
 
-  add_filter('papi_default_sort_order', 'change_default_sort_order');
+  add_filter('papi/settings/sort_order', 'change_default_sort_order');
 
 Only page type for a post type
 ------------------------------
 
-.. attribute:: tag: papi_only_page_type_for_$post_type
+.. attribute:: tag: papi/settings/only_page_type_{$post_type}
 
 With this filter you can change the add new link for a post type to go direct to a single page type and jump over the "add new page type" view.
 
@@ -39,17 +39,17 @@ Example:
 
   <?php
 
-  function only_page_type_for_post() {
+  function only_page_type_post() {
     return 'video-page-type';
   }
 
-  add_filter('papi_only_page_type_for_post', 'only_page_type_for_post');
+  add_filter('papi/settings/only_page_type_post', 'only_page_type_post');
 
 
 Property: Format value
 --------------------------
 
-.. attribute:: tag: papi_format_value_$property_type
+.. attribute:: tag: papi/format_value/{$property_type}
 
 Format the value of the property before we output it to the application.
 
@@ -64,12 +64,12 @@ Example:
     return $value;
   }
 
-  add_filter('papi_format_value_string', 'format_value_string');
+  add_filter('papi/format_value/string', 'format_value_string');
 
 Property: Load value
 --------------------------
 
-.. attribute:: tag: papi_load_value_$property_type
+.. attribute:: tag: papi/load_value/{$property_type}
 
 This filter is applied after the $value is loaded in the database.
 
@@ -84,12 +84,12 @@ Example:
     return $value;
   }
 
-  add_filter('papi_load_value_string', 'load_value_string');
+  add_filter('papi/load_value/string', 'load_value_string');
 
 Property: Update value
 --------------------------
 
-.. attribute:: tag: papi_update_value_$property_type
+.. attribute:: tag: papi/update_value/{$property_type}
 
 This filter is applied before the $value is saved in the database.
 
@@ -104,12 +104,12 @@ Example:
     return $value;
   }
 
-  add_filter('papi_load_value_string', 'update_value_string');
+  add_filter('papi/load_value/string', 'update_value_string');
 
 Show standard page for post type
 --------------------------------
 
-.. attribute:: tag: papi_show_standard_page_for_$post_type
+.. attribute:: tag: papi/settings/standard_page_{$post_type}
 
 This filter allows you to hide the standard page on the "add new page type" view.
 
@@ -121,16 +121,16 @@ Example:
 
   <?php
 
-  function show_standard_page_for_post() {
+  function show_standard_page_post() {
     return false;
   }
 
-  add_filter('papi_show_standard_page_for_post', 'show_standard_page_for_post');
+  add_filter('papi/settings/standard_page_post', 'show_standard_page_post');
 
 Page type directories
 ---------------------
 
-.. attribute:: tag: papi_page_type_directories
+.. attribute:: tag: papi/settings/directories
 
 This filter is used to register all page type directories that Papi should look for page types in.
 
@@ -148,4 +148,4 @@ Example:
     return dirname(__FILE__) . '/page-types';
   }
 
-  add_filter('papi_page_type_directories', 'page_type_directories');
+  add_filter('papi/settings/directories', 'page_type_directories');

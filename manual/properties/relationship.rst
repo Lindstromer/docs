@@ -35,7 +35,7 @@ Settings
 Filters
 -----------
 
-.. attribute:: tag: papi_property_relationship_sort_options
+.. attribute:: tag: papi/property/relationship/sort_options
 
 Add more sort options to property relationship. The array key is the name and the value that is saved as the sort order identification. All sort order functions is will be passed as argument to `usort <http://php.net/manual/en/function.usort.php>`_ with a array of WordPress post objects.
 

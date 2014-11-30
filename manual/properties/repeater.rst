@@ -19,7 +19,7 @@ Settings
 Filters
 -----------
 
-.. attribute:: tag: papi_property_repeater_not_allowed
+.. attribute:: tag: papi/property/repeater/exclude
 
 Prevent properties from render and working in repeater.
 
@@ -27,13 +27,13 @@ Prevent properties from render and working in repeater.
 
   <?php
   
-  function site_property_repeater_not_allowed ( $not_allowed ) {
+  function site_property_repeater_exclude ( $not_allowed ) {
     return array_merge( $not_allowed, [
       'string'
     ] );
   }
   
-  add_filter('papi_property_repeater_not_allowed', 'site_property_repeater_not_allowed');
+  add_filter('papi/property/repeater/exclude', 'site_property_repeater_exclude');
 
 
 Example
