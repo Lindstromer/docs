@@ -2,7 +2,7 @@ Filters
 ============
 
 Property: Format value
---------------------------
+----------------------
 
 .. attribute:: tag: papi/format_value/{$property_type}
 
@@ -22,7 +22,7 @@ Example:
   add_filter('papi/format_value/string', 'format_value_string');
 
 Property: Load value
---------------------------
+--------------------
 
 .. attribute:: tag: papi/load_value/{$property_type}
 
@@ -42,7 +42,7 @@ Example:
   add_filter('papi/load_value/string', 'load_value_string');
 
 Property: Update value
---------------------------
+----------------------
 
 .. attribute:: tag: papi/update_value/{$property_type}
 
@@ -62,7 +62,7 @@ Example:
   add_filter('papi/load_value/string', 'update_value_string');
 
 Setting: Change default sort order
---------------------------
+----------------------------------
 
 .. attribute:: tag: papi/settings/sort_order
 
@@ -83,7 +83,7 @@ Example:
   add_filter('papi/settings/sort_order', 'change_default_sort_order');
 
 Setting: Only page type for post type
-------------------------------
+-------------------------------------
 
 .. attribute:: tag: papi/settings/only_page_type_{$post_type}
 
@@ -106,7 +106,7 @@ Example:
 add_filter('papi/settings/only_page_type_post', 'only_page_type_post');
 
 Setting: Page type directories
----------------------
+------------------------------
 
 .. attribute:: tag: papi/settings/directories
 
@@ -128,10 +128,10 @@ Example:
 
   add_filter('papi/settings/directories', 'page_type_directories');
 
-Setting: Show standard page for post type
---------------------------------
+Setting: Show standard page type for post type
+----------------------------------------------
 
-.. attribute:: tag: papi/settings/standard_page_{$post_type}
+.. attribute:: tag: papi/settings/standard_page_type_{$post_type}
 
 This filter allows you to hide the standard page on the "add new page type" view.
 
@@ -143,9 +143,9 @@ Example:
 
   <?php
 
-  function show_standard_page_post() {
+  function show_standard_page_type_post() {
     return false;
   }
 
-  add_filter('papi/settings/standard_page_post', 'show_standard_page_post');
+  add_filter('papi/settings/standard_page_type_post', 'show_standard_page_type_post');
 
