@@ -103,7 +103,7 @@ Example:
     return 'video-page-type';
   }
 
-add_filter('papi/settings/only_page_type_post', 'only_page_type_post');
+  add_filter('papi/settings/only_page_type_post', 'only_page_type_post');
 
 Setting: Page type directories
 ------------------------------
