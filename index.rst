@@ -1,6 +1,8 @@
 Papi documentation
 ==================
 
+`Visit Papi's project page <http://wp-papi.github.io/>`_
+
 * :ref:`manual`
 
 .. _manual:
