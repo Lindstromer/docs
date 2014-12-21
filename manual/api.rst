@@ -63,7 +63,7 @@ This function will return the value of a property using the property slug.
   echo papi_field(1, 'twitter_url', 'http://twitter.com/frozzare');
 
 
-papi_page
+papi_get_page
 ---------
 
 **Arguments**
