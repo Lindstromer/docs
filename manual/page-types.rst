@@ -38,7 +38,7 @@ Example:
 
   <?php
 
-  public class Video_Page_Type extends Papi_Page_Type {
+  class Video_Page_Type extends Papi_Page_Type {
 
     /**
      * The page type meta options.
