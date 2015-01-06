@@ -1,4 +1,4 @@
-Box
+Box method
 ============
 
 Documentation of the `box` method. `box` is a short name for `metabox` in Papi.
