@@ -39,7 +39,9 @@ Box
 
 .. attribute:: title
 
-  The title of the meta box. When passing a string as the first argument for box method it will become `array('title' => 'the title')` automatic.
+  The title of the meta box. This can't be empty, seamless mode will not show the title.
+
+  When passing a string as the first argument for box method it will become `array('title' => 'the title')` automatic.
 
   Default value is **empty string**.
 
