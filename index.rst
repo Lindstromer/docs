@@ -17,6 +17,7 @@ Papi documentation
    manual/introduction
    manual/getting-started
    manual/page-types
+   manual/box
    manual/properties/index
    manual/actions
    manual/filters
