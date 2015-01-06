@@ -1,6 +1,8 @@
 Box
 ============
 
+Documentation of the `box` method. `box` is a short name for `metabox` in Papi.
+
 .. attribute:: capabilities
 
   Can be a string with a role or capability or a array with many values.
