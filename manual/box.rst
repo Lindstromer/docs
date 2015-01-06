@@ -47,7 +47,7 @@ Documentation of the `box` method. `box` is a short name for `metabox` in Papi.
 
   Default value is **empty string**.
 
- **Example of the default options:**
+**Example of the default options:**
 
 .. code-block:: php
   
