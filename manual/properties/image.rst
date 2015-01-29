@@ -5,6 +5,8 @@ Image/Gallery
 
 With this property you can add a image from the WordPress media library. If the gallery setting is set to true the output will be a array with objects instead of just one object.
 
+From version 1.1.0 the image object contains "alt", "caption", "description" and "text".
+
 Settings
 -----------
 
@@ -73,8 +75,12 @@ Example output
                           [title] =>
                           [orientation] => 1
                   )
-
-          [is_image] => 1
-          [url] => http://site.com/wp-content/uploads/2014/09/cube.jpg
+          [alt] => 'Alt text'
+          [caption] => 'Caption text'
+          [description] => 'Description text'
           [id] => 6
+          [is_image] => 1
+          [title] => 'Title text'
+          [url] => http://site.com/wp-content/uploads/2014/09/cube.jpg
+          
   )
