@@ -76,7 +76,7 @@ When creating a new page you will get a new view before you get the edit view fo
 
 Remove meta box
 ---------
-It's easy to remove metaboxes with the `remove` method. Check the `WordPress Codex <http://codex.wordpress.org/Function_Reference/remove_meta_box#Parameters>`_ for right metabox slug.
+It's easy to remove metaboxes with the `remove` method. Check the `WordPress Codex <http://codex.wordpress.org/Function_Reference/remove_post_type_support#Parameters>`_ for right metabox slug.
 
 .. code-block:: php
 
