@@ -174,7 +174,7 @@ Example $this->tab or papi_tab
   ]);
 
   // tabs/image.php
-  return papi_tabs([
+  return papi_tab([
     'title' => 'Images',
     'slug'  => 'custom_image_slug'
   ], [
