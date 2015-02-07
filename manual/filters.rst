@@ -128,6 +128,84 @@ Example:
 
   add_filter('papi/settings/directories', 'page_type_directories');
 
+Setting: Show page type on add new page type view
+-------------------------------------------------
+
+.. attribute:: tag: papi/settings/show_page_type_{$post_type}
+
+.. attribute:: since version: 1.2.0
+
+This filter is used to filter which page types that can be listed on the add new page type view.
+
+The function will send in the file name of post types as a argument.
+
+Returning false on a page type will hide the page type on the add new page type view.
+
+Default value for every page type is **true**.
+
+Example:
+
+.. code-block:: php
+
+  <?php
+
+  function hide_start_page_type($page_type) {
+    if ($page_type === 'start-page-type') {
+      return false;
+    }
+
+    return true;
+  }
+
+  add_filter('papi/settings/show_page_type_page', 'hide_start_page_type');
+
+Setting: Change standard page description for post type
+-------------------------------------------------------
+
+.. attribute:: tag: papi/settings/standard_page_description_{$post_type}
+
+.. attribute:: since version: 1.2.0
+
+This filter is used to change the standard page description for a post type.
+
+Default value is the translation of **Just the normal WordPress page**.
+
+Example:
+
+.. code-block:: php
+
+  <?php
+
+  function change_standard_page_description() {
+    return __('The standard blog post', 'my_theme');
+  }
+
+  add_filter('papi/settings/standard_page_description_post', 'change_standard_page_description');
+
+Setting: Change standard page name for post type
+-------------------------------------------------------
+
+.. attribute:: tag: papi/settings/standard_page_name_{$post_type}
+
+.. attribute:: since version: 1.2.0
+
+This filter is used to change the standard page name for a post type.
+
+Default value is the translation of **Standard Page**.
+
+Example:
+
+.. code-block:: php
+
+  <?php
+
+  function change_standard_page_name() {
+    return __('Standard Post', 'my_theme');
+  }
+
+  add_filter('papi/settings/standard_page_name_post', 'change_standard_page_name');
+
+
 Setting: Show standard page type for post type
 ----------------------------------------------
 
@@ -149,3 +227,25 @@ Example:
 
   add_filter('papi/settings/standard_page_type_post', 'show_standard_page_type_post');
 
+Setting: Change standard page thumbnail for post type
+-------------------------------------------------------
+
+.. attribute:: tag: papi/settings/standard_page_thumbnail_{$post_type}
+
+.. attribute:: since version: 1.2.0
+
+This filter is used to change the standard page thumbnail for a post type.
+
+Default value is the translation of **empty string**.
+
+Example:
+
+.. code-block:: php
+
+  <?php
+
+  function change_standard_page_thumbnail() {
+    return '/path/to/thumbnail.png'
+  }
+
+  add_filter('papi/settings/standard_page_thumbnail_post', 'change_standard_page_thumbnail');

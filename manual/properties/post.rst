@@ -5,20 +5,34 @@ Post
 
 With this property you can add reference to another post. It can't handle multiple references like `relationship property <relationship.html>`_
 
+Since version 1.2.0 the post property by default include a blank row in the dropdown, this can be disabled by "include_blank"
+
 Settings
 -----------
 
-.. attribute:: text
+.. attribute:: include_blank
 
-  The text above the dropdown.
+  Include the blank row or not.
 
-  Default value is **Select post** when you have english activated.
+  Default value is **true**.
 
 .. attribute:: post_type
 
   The post type that the property will load posts from. Can only be one post type.
 
   Default value is **post** post type.
+
+.. attribute:: query
+
+  Append a WP_Query on all post types. Gist reference over WP_Query. Note that **post_type** in query will always be removed.
+
+  Default value is **empty array**.
+
+.. attribute:: text
+
+  The text above the dropdown. If this text is a empty string the p tag will be hidden.
+
+  Default value is **Select post** when you have english activated.
 
 Example
 -----------

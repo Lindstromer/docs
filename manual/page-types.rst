@@ -16,13 +16,21 @@ The `page_type()` is a required method of the page type class. It should return 
 
     The description of the page type
 
+.. attribute:: labels
+
+    Since version 1.2.0 all post type can handle the **labels** object that exists on a `post type <http://codex.wordpress.org/Function_Reference/get_post_type_object>`_.
+
+    So this means that you can change "Add New Page" for every page type and have something like "Add New Startpage".
+
+    Just create a array with the **lables** keys and values on your page type meta array.
+
 .. attribute:: post_type
 
     Array of post types that the page type should be registered on. Default is `page`.
 
 .. attribute:: sort_order
 
-    The sort order number of the page type. This required the Papi option ...
+    The sort order number of the page type.
 
 .. attribute:: template
 
@@ -81,15 +89,15 @@ It's easy to remove metaboxes with the `remove` method. Check the `WordPress Cod
 .. code-block:: php
 
     <?php
-    
+
     public function register() {
-    
+
         // A single metabox
         $this->remove( 'comments' );
-        
+
         // Multiple metaboxes
         $this->remove( array( 'comments', 'editor' ) );
-    
+
     }
 
 Templates

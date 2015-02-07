@@ -45,6 +45,8 @@ Example
       ]
   ])
 
+.. image:: /_static/papi/property-reference.png
+
 Example output
 -----------
 
