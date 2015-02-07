@@ -100,6 +100,15 @@ It's easy to remove metaboxes with the `remove` method. Check the `WordPress Cod
 
     }
 
+The register method
+-------------------
+
+This method is used to register all properties, tabs and remove meta boxes as described above.
+
+Since version 1.2.0 the box method can has callable method as the second argument so you can output custom html between your properties.
+
+Read more about that under `box method <box.html>`_ page.
+
 Templates
 ---------
 

@@ -8,28 +8,28 @@ Documentation of the `box` method. `box` is a short name for `metabox` in Papi.
   Can be a string with a role or capability or a array with many values.
 
   Default value is **empty array**.
-  
+
 .. attribute:: context
 
-  The same value as for context in `add_meta_box`. 
+  The same value as for context in `add_meta_box`.
 
   Default value is **normal**.
 
 .. attribute:: mode
 
-  `standard` or `seamless` (no metabox). 
+  `standard` or `seamless` (no metabox).
 
   Default value is **standard**.
 
 .. attribute:: post_type
 
-  The post types where the box should be available. 
+  The post types where the box should be available.
 
   Default value is **page**.
 
 .. attribute:: priority
 
-  The same value as for priority in `add_meta_box`. 
+  The same value as for priority in `add_meta_box`.
 
   Default value is **default**.
 
@@ -50,9 +50,9 @@ Documentation of the `box` method. `box` is a short name for `metabox` in Papi.
 **Example of the default options:**
 
 .. code-block:: php
-  
+
   <?php
-  
+
   $this->box([
     'capabilities' => array(),
     'context'      => 'normal',
@@ -62,3 +62,49 @@ Documentation of the `box` method. `box` is a short name for `metabox` in Papi.
     'sort_order'   => 1000,
     'title'        => ''
   ]);
+
+**Callable method**
+
+Since version 1.2.0 it's possible to use callable method as a second argument in your box method.
+
+The important part is to use the render method so the properties or tabs are rendered.
+
+But that isn't all the callable method can do, you can print your own html between the properties.
+
+.. image:: /_static/papi/custom-html-between-properties.png
+
+Example:
+
+.. code-block:: php
+
+  <?php
+
+  public function register() {
+    $this->box('Content', array($this, 'content_box'));
+  }
+
+  public function content_box() {
+    $this->render($this->property(array(
+      'type'  => 'string',
+      'title' => 'Name'
+    )));
+
+    // Example of custom html between properties
+
+    $this->render($this->property(array(
+      'type'  => 'string',
+      'title' => 'Name'
+    )));
+
+    ?>
+      <div>
+        <h3>Information</h3>
+        <p>Custom text about the property or something</p>
+      </div>
+    <?php
+
+    $this->render($this->property(array(
+      'type'  => 'relationship',
+      'title' => 'Modules'
+    )));
+  }
