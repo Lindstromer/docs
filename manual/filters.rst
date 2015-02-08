@@ -128,6 +128,35 @@ Example:
 
   add_filter('papi/settings/directories', 'page_type_directories');
 
+Setting: Load page type from post id query string
+-------------------------------------------------
+
+.. attribute:: tag: papi/settings/page_type_from_post_qs
+
+.. attribute:: since version 1.2.0
+
+This filter is used to load a page type from a query string that have another post id.
+
+When using plugins as Polylang the query string "from_post" is used to tell which post the current post was created from.
+
+Papi will not now which page type to load then and it should be the same as the "from_post". So that's when this filter will be useful.
+
+This filter is not post type specific and will work on every post type.
+
+Default value is **from_post**.
+
+Example:
+
+.. code-block:: php
+
+  <?php
+
+  function change_page_type_from_post_qs() {
+    return 'parent_post';
+  }
+
+  add_filter('papi/settings/page_type_from_post_qs', 'change_page_type_from_post_qs');
+
 Setting: Show page type on add new page type view
 -------------------------------------------------
 
