@@ -67,7 +67,7 @@ Documentation of the `box` method. `box` is a short name for `metabox` in Papi.
 
 Since version 1.2.0 it's possible to use callable method as a second argument in your box method.
 
-The important part is to use the render method so the properties are rendered.
+The important part is to use the render method (can take a property, tab or array of properties or tabs) so the properties are rendered.
 
 But that isn't all the callable method can do, you can print your own html between the properties.
 
@@ -94,17 +94,23 @@ Example:
   }
 
   public function content_box() {
-    $this->render($this->property(array(
+    $this->render($this->property([
       'type'  => 'string',
       'title' => 'Name'
-    )));
+    ]));
 
     // Example of custom html between properties
 
-    $this->render($this->property(array(
-      'type'  => 'string',
-      'title' => 'Name'
-    )));
+    $this->render([
+      $this->property([
+        'type'  => 'string',
+        'title' => 'Name'
+      ]),
+      $this->property([
+        'type'  => 'email',
+        'title' => 'Email'
+      ])
+    ));
 
     ?>
       <div class="papi-custom-html">
@@ -113,8 +119,8 @@ Example:
       </div>
     <?php
 
-    $this->render($this->property(array(
+    $this->render($this->property([
       'type'  => 'relationship',
       'title' => 'Modules'
-    )));
+    ]));
   }
