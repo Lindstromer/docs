@@ -10,6 +10,12 @@ Since version 1.2.0 the post property by default include a blank row in the drop
 Settings
 -----------
 
+.. attribute:: blank_text
+  
+  Change the blank text to something else.
+  
+  Default value is **empty string**.
+
 .. attribute:: include_blank
 
   Include the blank row or not.
