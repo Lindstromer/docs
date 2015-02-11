@@ -7,10 +7,6 @@ Papi does support 17 core properties (a field is a property in the page type) to
 
   Can be a string with a role or capability or a array with many values.
 
-.. attribute:: capabilities
-
-  Can be a string with a role or capability or a array with many values.
-
 .. attribute:: default
 
   The default value that are presented in the property.
@@ -30,6 +26,10 @@ Papi does support 17 core properties (a field is a property in the page type) to
 .. attribute:: raw
 
   This will render the property without a table, good to use when creating a custom property that uses other properties.
+
+.. attribute:: required
+
+  By default all fields are non required in Papi but this can be changed with required option.
 
 .. attribute:: sidebar
 
