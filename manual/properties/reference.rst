@@ -16,12 +16,6 @@ Settings
 
   Default value is **empty array**.
 
-.. attribute:: post_type
-
-  String or array of post types to check.
-
-  Default value is **"post"**.
-
 .. attribute:: page_type
 
   String or array of page types (the file name of the page type) to check.
@@ -40,7 +34,6 @@ Example
       'type'     => 'reference',
       'settings' => [
         'slug'      => 'top_module',
-        'post_type' => 'post',
         'page_type' => 'start-page-type'
       ]
   ])
