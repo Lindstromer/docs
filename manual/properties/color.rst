@@ -8,6 +8,12 @@ The property output the WordPress color picker.
 Settings
 -----------
 
+.. attribute:: show_input
+
+  Show the text input.
+  
+  Default value is **true**.
+
 .. attribute:: palettes
 
   Array with hex colors
