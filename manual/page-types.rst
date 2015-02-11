@@ -81,6 +81,24 @@ When creating a new page you will get a new view before you get the edit view fo
 
 .. image:: /_static/papi/add-new-page-type.png
 
+Box method
+-------------------
+
+This method is used to register all properties, tabs and remove meta boxes as described above.
+
+Since version 1.2.0 the box method can has callable method as the second argument that returns a array with properties or tabs.
+
+Read more about that under `box method <box.html>`_ page.
+
+Namespaces
+----------
+Since version 1.2.0 Papi has no problem to read page types that have a namespace.
+
+.. code-block:: php
+
+    <?php namespace Foo\Bar;
+
+    class Test_Page_Type extends \Papi_Page_Type {}
 
 Remove meta box
 ---------
@@ -99,15 +117,6 @@ It's easy to remove metaboxes with the `remove` method. Check the `WordPress Cod
         $this->remove( array( 'comments', 'editor' ) );
 
     }
-
-The register method
--------------------
-
-This method is used to register all properties, tabs and remove meta boxes as described above.
-
-Since version 1.2.0 the box method can has callable method as the second argument that returns a array with properties or tabs.
-
-Read more about that under `box method <box.html>`_ page.
 
 Templates
 ---------
