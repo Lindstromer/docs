@@ -23,7 +23,7 @@ Example
       'type'  => 'gallery'
   ])
 
-Example output
+Output
 -----------
 
 A array of image objects as described in `property image <image.html>`_.
