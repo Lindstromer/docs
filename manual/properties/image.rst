@@ -7,7 +7,7 @@ With this property you can add a image from the WordPress media library. If the 
 
 From version 1.1.0 the image object contains "alt", "caption", "description" and "text".
   
-You could also use the `property gallery <gallery.html>`_ without any settings.
+From version 1.2.0 you could also use the `property gallery <gallery.html>`_ without any settings.
 
 Settings
 -----------
