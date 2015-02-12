@@ -1,5 +1,5 @@
-Editor
-============
+WordPress Editor
+================
 
 .. attribute:: type: Editor
 
