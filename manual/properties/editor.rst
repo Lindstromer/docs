@@ -23,7 +23,7 @@ Example
       'type'  => 'editor'
   ])
 
-Example output
+Output
 -----------
 
 String of text.
