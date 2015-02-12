@@ -1,4 +1,4 @@
-Image/Gallery
+Image
 ============
 
 .. attribute:: type: image
@@ -13,6 +13,8 @@ Settings
 .. attribute:: gallery
 
   When this is true you can add as many images you like.
+  
+  You could also use the `property gallery <gallery.html>`_ without any settings.
 
   Default value is **false**.
 
