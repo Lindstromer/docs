@@ -1,9 +1,11 @@
-Text/WordPress editor
+Text
 ============
 
 .. attribute:: type: text
 
 This property will output the textarea tag and the output will be a string with all text from the textarea.
+  
+From version 1.2.0 you could also use the `property editor <editor.html>`_ without any settings.
 
 Settings
 -----------

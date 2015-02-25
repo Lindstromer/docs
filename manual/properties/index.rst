@@ -1,7 +1,7 @@
 Properties
 ============
 
-Papi does support 17 core properties (a field is a property in the page type) to start with and you can easy create your own using our Yeoman generator. The are several keys that all properties have:
+Papi does support 20 core properties (a field is a property in the page type) to start with and you can easy create your own using our Yeoman generator. The are several keys that all properties have:
 
 .. attribute:: capabilities
 
@@ -15,13 +15,17 @@ Papi does support 17 core properties (a field is a property in the page type) to
 
   Disable the property, won’t show in WordPress admin.
 
-.. attribute:: introduction
+.. attribute:: description
 
   The introduction text that will appear below the title text of the property. You could write your help text here.
+  
+  Since version 1.2.0 you can have "\n" to create new lines in the description.
 
 .. attribute:: lang
 
-  When using this key you can specify which language (2 letters language code) will show the property. Papi has build in support for Polylang and when you are using the query string lang.
+  When using this key you can specify which language will show the property.
+
+  Since version 1.2.0 the default value is **false** so the language load feature can be turned off.
 
 .. attribute:: raw
 
@@ -66,7 +70,7 @@ Papi does support 17 core properties (a field is a property in the page type) to
     'default'      => '',
     'description'  => '',
     'disabled'     => false,
-    'lang'         => '',
+    'lang'         => false,
     'raw'          => false,
     'settings'     => array(),
     'sidebar'      => true,
@@ -76,7 +80,7 @@ Papi does support 17 core properties (a field is a property in the page type) to
     'title'        => '',
     'type'         => ''
   ]);
-  
+
 **Note:** be sure to have different slug for each properties on a page type, the same slug will not work great and you will lose data if you are using same slug for multiple properties.
 
 **The list of properties that Papi supports in the core are:**
@@ -86,6 +90,7 @@ Papi does support 17 core properties (a field is a property in the page type) to
 
   bool
   checkbox
+  color
   datetime
   divider
   email
@@ -93,6 +98,7 @@ Papi does support 17 core properties (a field is a property in the page type) to
   number
   post
   radio-buttons
+  reference
   repeater
   relationship
   select

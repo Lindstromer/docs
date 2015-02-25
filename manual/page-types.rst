@@ -16,13 +16,21 @@ The `page_type()` is a required method of the page type class. It should return 
 
     The description of the page type
 
+.. attribute:: labels
+
+    Since version 1.2.0 all post type can handle the **labels** object that exists on a `post type <http://codex.wordpress.org/Function_Reference/get_post_type_object>`_.
+
+    So this means that you can change "Add New Page" for every page type and have something like "Add New Startpage".
+
+    Just create a array with the **lables** keys and values on your page type meta array.
+
 .. attribute:: post_type
 
     Array of post types that the page type should be registered on. Default is `page`.
 
 .. attribute:: sort_order
 
-    The sort order number of the page type. This required the Papi option ...
+    The sort order number of the page type.
 
 .. attribute:: template
 
@@ -73,6 +81,24 @@ When creating a new page you will get a new view before you get the edit view fo
 
 .. image:: /_static/papi/add-new-page-type.png
 
+Box method
+-------------------
+
+This method is used to register all properties, tabs and remove meta boxes as described above.
+
+Since version 1.2.0 the box method can has callable method as the second argument that returns a array with properties or tabs.
+
+Read more about that under `box method <box.html>`_ page.
+
+Namespaces
+----------
+Since version 1.2.0 Papi has no problem to read page types that have a namespace.
+
+.. code-block:: php
+
+    <?php namespace Foo\Bar;
+
+    class Test_Page_Type extends \Papi_Page_Type {}
 
 Remove meta box
 ---------
@@ -81,15 +107,15 @@ It's easy to remove metaboxes with the `remove` method. Check the `WordPress Cod
 .. code-block:: php
 
     <?php
-    
+
     public function register() {
-    
+
         // A single metabox
         $this->remove( 'comments' );
-        
+
         // Multiple metaboxes
         $this->remove( array( 'comments', 'editor' ) );
-    
+
     }
 
 Templates
@@ -157,7 +183,7 @@ Example $this->tab or papi_tab
   ]);
 
   // tabs/image.php
-  return papi_tabs([
+  return papi_tab([
     'title' => 'Images',
     'slug'  => 'custom_image_slug'
   ], [

@@ -1,4 +1,4 @@
-Image/Gallery
+Image
 ============
 
 .. attribute:: type: image
@@ -6,6 +6,8 @@ Image/Gallery
 With this property you can add a image from the WordPress media library. If the gallery setting is set to true the output will be a array with objects instead of just one object.
 
 From version 1.1.0 the image object contains "alt", "caption", "description" and "text".
+  
+From version 1.2.0 you could also use the `property gallery <gallery.html>`_ without any settings.
 
 Settings
 -----------

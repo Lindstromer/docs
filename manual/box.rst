@@ -8,28 +8,28 @@ Documentation of the `box` method. `box` is a short name for `metabox` in Papi.
   Can be a string with a role or capability or a array with many values.
 
   Default value is **empty array**.
-  
+
 .. attribute:: context
 
-  The same value as for context in `add_meta_box`. 
+  The same value as for context in `add_meta_box`.
 
   Default value is **normal**.
 
 .. attribute:: mode
 
-  `standard` or `seamless` (no metabox). 
+  `standard` or `seamless` (no metabox).
 
   Default value is **standard**.
 
 .. attribute:: post_type
 
-  The post types where the box should be available. 
+  The post types where the box should be available.
 
   Default value is **page**.
 
 .. attribute:: priority
 
-  The same value as for priority in `add_meta_box`. 
+  The same value as for priority in `add_meta_box`.
 
   Default value is **default**.
 
@@ -50,9 +50,9 @@ Documentation of the `box` method. `box` is a short name for `metabox` in Papi.
 **Example of the default options:**
 
 .. code-block:: php
-  
+
   <?php
-  
+
   $this->box([
     'capabilities' => array(),
     'context'      => 'normal',
@@ -62,3 +62,31 @@ Documentation of the `box` method. `box` is a short name for `metabox` in Papi.
     'sort_order'   => 1000,
     'title'        => ''
   ]);
+
+**Callable method**
+
+Since version 1.2.0 it's possible to use callable method as a second argument in your box method
+that returns a array with properties or tabs.
+
+Example:
+
+.. code-block:: php
+
+  <?php
+
+  public function register() {
+    $this->box('Content', array($this, 'content_box'));
+  }
+
+  public function content_box() {
+    return [
+      $this->property([
+        'type'  => 'string',
+        'title' => 'Name'
+      ]),
+      $this->property([
+        'type'  => 'text',
+        'title' => 'About'
+      ])
+    ];
+  }

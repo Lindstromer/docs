@@ -62,6 +62,28 @@ This function will return the value of a property using the property slug.
 
   echo papi_field(1, 'twitter_url', 'http://twitter.com/frozzare');
 
+papi_fields
+-----------
+
+**Arguments**
+
+No arguments exists.
+
+**Description**
+
+This function will return a array with meta box title as keys and array of all Papi field slugs in that meta box.
+
+.. code-block:: php
+
+  <?php
+
+  $output = array(
+    'Content' => array(
+      'top_module',
+      'feature_module',
+      'show_feature_module'
+    )
+  );
 
 papi_get_page
 ---------
