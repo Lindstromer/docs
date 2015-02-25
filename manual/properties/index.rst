@@ -19,9 +19,11 @@ Papi does support 17 core properties (a field is a property in the page type) to
 
   Disable the property, won’t show in WordPress admin.
 
-.. attribute:: introduction
+.. attribute:: description
 
   The introduction text that will appear below the title text of the property. You could write your help text here.
+  
+  Since version 1.2.0 you can have "\n" to create new lines in the description.
 
 .. attribute:: lang
 
