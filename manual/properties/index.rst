@@ -1,7 +1,7 @@
 Properties
 ============
 
-Papi does support 17 core properties (a field is a property in the page type) to start with and you can easy create your own using our Yeoman generator. The are several keys that all properties have:
+Papi does support 20 core properties (a field is a property in the page type) to start with and you can easy create your own using our Yeoman generator. The are several keys that all properties have:
 
 .. attribute:: capabilities
 
