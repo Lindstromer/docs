@@ -27,6 +27,29 @@ Papi has a different approach on how to work with fields and page types in WordP
 
 So we though why don't use the same approach in WordPress? Papi is today running in production and has been easy to work with when it came to add new fields. Papi don't have any admin user interface where should add all fields, we use classes in PHP, where one class represents one page type and in your class you add all fields you need. It's that easy!
 
+
+## Download
+
+Papi is completely open-source. You can use it however you like. If you want to help with its development you can submit your suggestions or improvements on in the [Github repository](https://github.com/wp-papi/papi).
+
+## Install
+
+If you're using Composer to manage WordPress, add Papi to your project's dependencies. Run:
+
+```sh
+composer require wp-papi/papi
+```
+
+Or manually add it to your `composer.json`:
+
+```json
+"require": {
+  "php": ">=5.3",
+  "wordpress": "3.8",
+  "wp-papi/papi": "~1.2"
+}
+```
+
 # Page Type Directory
 
 Papi does require a directory in your theme, plugin or somewhere in your WordPress site where your page types exists. You can add multiplied directories.
