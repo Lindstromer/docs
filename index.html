@@ -50,6 +50,24 @@
 
 <p>So we though why don&rsquo;t use the same approach in WordPress? Papi is today running in production and has been easy to work with when it came to add new fields. Papi don&rsquo;t have any admin user interface where should add all fields, we use classes in PHP, where one class represents one page type and in your class you add all fields you need. It&rsquo;s that easy!</p>
 
+<h2 id="download">Download</h2>
+
+<p>Papi is completely open-source. You can use it however you like. If you want to help with its development you can submit your suggestions or improvements on in the <a href="https://github.com/wp-papi/papi">Github repository</a>.</p>
+
+<h2 id="install">Install</h2>
+
+<p>If you&rsquo;re using Composer to manage WordPress, add Papi to your project&rsquo;s dependencies. Run:</p>
+<pre><code class="highlight shell">composer require wp-papi/papi
+</code></pre>
+
+<p>Or manually add it to your <code class="prettyprint">composer.json</code>:</p>
+<pre><code class="highlight json"><span class="s2">"require"</span><span class="err">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"php"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&gt;=5.3"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"wordpress"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3.8"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"wp-papi/papi"</span><span class="p">:</span><span class="w"> </span><span class="s2">"~1.2"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
 <h1 id="page-type-directory">Page Type Directory</h1>
 
 <p>Papi does require a directory in your theme, plugin or somewhere in your WordPress site where your page types exists. You can add multiplied directories.</p>
