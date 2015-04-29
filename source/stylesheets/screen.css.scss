@@ -306,6 +306,7 @@ html, body {
 }
 
 .lang-selector {
+  display: none;
   background-color: $lang-select-bg;
   width: 100%;
   font-weight: bold;
