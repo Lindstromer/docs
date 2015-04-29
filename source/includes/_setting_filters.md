@@ -20,7 +20,7 @@ add_filter('papi/settings/sort_order', function () {
 
 Change the default sort order for page types, meta boxes, tabs and properties.
 
-Default sort order is `1000`.
+Default sort order is `1000`
 
 ## Change standard page description for post type
 
@@ -44,7 +44,7 @@ add_filter('papi/settings/standard_page_description_post', function ($page_type)
 
 This filter is used to change the standard page description for a post type.
 
-Default value is the translation of `Just the normal WordPress page`.
+Default value is the translation of `Just the normal WordPress page`
 
 ## Change standard page thumbnail for post type
 
@@ -68,7 +68,7 @@ add_filter('papi/settings/standard_page_thumbnail_post', function () {
 
 This filter is used to change the standard page thumbnail for a post type.
 
-Default value is the translation of `empty string`.
+Default value is the translation of `empty string`
 
 ## Load page type from post id query string
 
@@ -180,7 +180,7 @@ The function will send in the file name of post types as a argument.
 
 Returning false on a page type will hide the page type on the add new page type view.
 
-Default value for every page type is `true`.
+Default value for every page type is `true`
 
 ## Show standard page type for post type
 
@@ -204,4 +204,4 @@ add_filter('papi/settings/directories', function () {
 
 This filter allows you to hide the standard page on the "add new page type" view.
 
-Default value for every post type is `true`.
+Default value for every post type is `true`
