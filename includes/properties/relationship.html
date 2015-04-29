@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>API Documentation</title>
+
+    <link href="../../stylesheets/screen.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="../../stylesheets/print.css" rel="stylesheet" type="text/css" media="print" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+      <script src="../../javascripts/all_nosearch.js" type="text/javascript"></script>
+
+  </head>
+
+  <body class="includes includes_properties includes_properties_relationship">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="../../images/navbar.png" />
+      </span>
+    </a>
+    <div class="tocify-wrapper">
+      <img src="../../images/logo.png" />
+      <div id="toc">
+      </div>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id="relationship">Relationship</h1>
+
+<p><strong>type</strong> <code class="prettyprint">relationship</code></p>
+
+<h2 id="description">Description</h2>
+
+<p>With this property you can link posts, pages or custom post types together. With the <code class="prettyprint">post_type</code> setting you can diced witch post types to use, default is page.</p>
+
+<h2 id="settings">Settings</h2>
+
+<h5 id="choose_max">choose_max</h5>
+
+<p>Prevent how many post references that can be added.</p>
+
+<p>Default value is <code class="prettyprint">-1</code> (no limit).</p>
+
+<h5 id="post_type">post_type</h5>
+
+<p>Change which post types it loads post objects from.</p>
+
+<p>Default value is <code class="prettyprint">page</code>.</p>
+
+<h5 id="query">query</h5>
+
+<p>Append a WP_Query on all post types. Gist reference over WP_Query. Note that <code class="prettyprint">post_type</code> in query will always be removed.</p>
+
+<p>Default value is <code class="prettyprint">empty array</code>.</p>
+
+<h5 id="show_sort_by">show_sort_by</h5>
+
+<p>Show the sort by dropdown or not.</p>
+
+<p>Default value is <code class="prettyprint">true</code>.</p>
+
+<h2 id="filters">Filters</h2>
+
+<p><strong>tag</strong> <code class="prettyprint">papi/property/relationship/sort_options</code></p>
+
+<p>Add more sort options to property relationship. The array key is the name and the value that is saved as the sort order identification. All sort order functions is</p>
+<pre><code class="highlight php">add_filter('papi_property_relationship_sort_options', function ($not_allowed) {
+  return array_merge($not_allowed, [
+    'Name (alphabetically)' =&gt; function ($a, $b) {
+      return strcmp(strtolower($a-&gt;post_title), strtolower($b-&gt;post_title));
+    }
+  ]);
+});
+</code></pre>
+
+<h2 id="example">Example</h2>
+<pre><code class="highlight php">papi_property([
+  'title'    =&gt; 'Relationship',
+  'slug'     =&gt; 'my_relationship_slug',
+  'type'     =&gt; 'relationship',
+  'settings' =&gt; [
+    'choose_max' =&gt; 3,
+    'post_type'  =&gt; ['post', 'pages', 'my-custom-post-type']
+  ]
+])
+</code></pre>
+
+<p><img alt="Property Relationship" src="../../assets/images/docs/property-relationship.png" /></p>
+
+<h2 id="example-output">Example output</h2>
+<pre><code class="highlight php">Array
+(
+  [0] =&gt; WP_Post Object
+  (
+    [ID] =&gt; 203
+    [post_author] =&gt; 1
+    [post_date] =&gt; 2014-11-18 22:07:38
+    [post_date_gmt] =&gt; 2014-11-18 22:07:38
+    [post_content] =&gt;
+    [post_title] =&gt; The post title
+    [post_excerpt] =&gt;
+    [post_status] =&gt; publish
+    [comment_status] =&gt; closed
+    [ping_status] =&gt; closed
+    [post_password] =&gt;
+    [post_name] =&gt; the_post_title
+    [to_ping] =&gt;
+    [pinged] =&gt;
+    [post_modified] =&gt; 2014-11-18 22:09:05
+    [post_modified_gmt] =&gt; 2014-11-18 22:09:05
+    [post_content_filtered] =&gt;
+    [post_parent] =&gt; 0
+    [guid] =&gt; http://site.com/?page_id=203
+    [menu_order] =&gt; 0
+    [post_type] =&gt; page
+    [post_mime_type] =&gt;
+    [comment_count] =&gt; 0
+    [filter] =&gt; raw
+  )
+)
+</code></pre>
+
+      </div>
+      <div class="dark-box">
+      </div>
+    </div>
+  </body>
+</html>

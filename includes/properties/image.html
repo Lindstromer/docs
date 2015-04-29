@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>API Documentation</title>
+
+    <link href="../../stylesheets/screen.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="../../stylesheets/print.css" rel="stylesheet" type="text/css" media="print" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+      <script src="../../javascripts/all_nosearch.js" type="text/javascript"></script>
+
+  </head>
+
+  <body class="includes includes_properties includes_properties_image">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="../../images/navbar.png" />
+      </span>
+    </a>
+    <div class="tocify-wrapper">
+      <img src="../../images/logo.png" />
+      <div id="toc">
+      </div>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id="image">Image</h1>
+
+<p><strong>type</strong> <code class="prettyprint">image</code></p>
+
+<h2 id="description">Description</h2>
+
+<p>With this property you can add a image from the WordPress media library. If the gallery setting is set to true the output will be a array with objects instead of just one object.</p>
+
+<blockquote>
+<p>Since version 1.1.0 the image object contains &ldquo;alt&rdquo;, &ldquo;caption&rdquo;, &ldquo;description&rdquo; and &ldquo;text&rdquo;.</p>
+
+<p>Since version 1.2.0 you could also use the <a href="/properties/gallery/">property gallery</a> without any settings.</p>
+</blockquote>
+
+<h2 id="settings">Settings</h2>
+
+<p>No settings exists.</p>
+
+<h2 id="example">Example</h2>
+<pre><code class="highlight php">papi_property([
+  'title' =&gt; 'Image',
+  'slug'  =&gt; 'my_image_slug',
+  'type'  =&gt; 'image'
+])
+</code></pre>
+
+<p><img alt="Property Image" src="../../assets/images/docs/property-image.png" /></p>
+
+<h2 id="example-output">Example output</h2>
+<pre><code class="highlight php">stdClass Object
+(
+      [width] =&gt; 800
+      [height] =&gt; 600
+      [file] =&gt; 2014/09/cube.jpg
+      [sizes] =&gt; Array
+              (
+                      [thumbnail] =&gt; Array
+                              (
+                                      [file] =&gt; cube-150x150.jpg
+                                      [width] =&gt; 150
+                                      [height] =&gt; 150
+                                      [mime-type] =&gt; image/jpeg
+                              )
+
+                      [medium] =&gt; Array
+                              (
+                                      [file] =&gt; cube-300x225.jpg
+                                      [width] =&gt; 300
+                                      [height] =&gt; 225
+                                      [mime-type] =&gt; image/jpeg
+                              )
+
+              )
+
+      [image_meta] =&gt; Array
+              (
+                      [aperture] =&gt; 0
+                      [credit] =&gt;
+                      [camera] =&gt;
+                      [caption] =&gt;
+                      [created_timestamp] =&gt; 0
+                      [copyright] =&gt;
+                      [focal_length] =&gt; 0
+                      [iso] =&gt; 0
+                      [shutter_speed] =&gt; 0
+                      [title] =&gt;
+                      [orientation] =&gt; 1
+              )
+      [alt] =&gt; 'Alt text'
+      [caption] =&gt; 'Caption text'
+      [description] =&gt; 'Description text'
+      [id] =&gt; 6
+      [is_image] =&gt; 1
+      [title] =&gt; 'Title text'
+      [url] =&gt; http://site.com/wp-content/uploads/2014/09/cube.jpg
+)
+</code></pre>
+
+      </div>
+      <div class="dark-box">
+      </div>
+    </div>
+  </body>
+</html>
