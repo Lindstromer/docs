@@ -41,7 +41,7 @@ Or manually add it to your `composer.json`:
 {
   "require": {
     "php": ">=5.3",
-    "wordpress": "3.8",
+    "wordpress": "~4",
     "wp-papi/papi": "~1.2"
   }
 }
