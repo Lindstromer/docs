@@ -1,5 +1,49 @@
 # Properties
 
+```php
+<?php
+
+/**
+ * Example of the default options.
+ */
+
+papi_property([
+  'capabilities' => array(),
+  'default'      => '',
+  'description'  => '',
+  'disabled'     => false,
+  'lang'         => false,
+  'raw'          => false,
+  'required'     => false,
+  'settings'     => array(),
+  'sidebar'      => true,
+  'slug'         => '',
+  'sort_order'   => 100,
+  'title'        => '',
+  'type'         => ''
+])
+```
+
+Papi does support 19 core properties (a field is a property in the page type) to start with and you can easy create your own using our [Yeoman generator](). The are several keys that all properties have.
+
+Key          | Default      | Description
+-------------|--------------|---------------------------------------------------
+capabilities | array()      | Can be a string with a role or capability or a array with many values
+default      | empty string | The default value that are presented in the property
+description  | empty string | Disable the property, won’t show in WordPress admin
+disabled     | false        | The introduction text that will appear below the title text of the property. You could write your help text here. Since version 1.2.0 you can have "\n" to create new lines in the description
+lang         | false        | When using this key you can specify which language will show the property
+raw          | false        | This will render the property without a table, good to use when creating a custom property that uses other properties
+required     | false        | By default all fields are non required in Papi but this can be changed with required option
+sidebar      | true         | Boolean that shows the sidebar on each property. If false the sidebar won’t show
+settings     | array()      | Array with custom settings for the property
+sort_order   | 1000         | Numeric value, lowest value in the meta box will be at the top and the highest value at the bottom
+slug         | empty string | The slug of property. If empty or not used the title will be generated to slug value
+title        | empty string | The title of the property. Can be empty for blank title
+type         | empty string | The property type (lower case is preferred to use)
+
+**Note:** be sure to have different slug for each properties on a page type, the same slug will not work great and you will lose data if you are using same slug for multiple properties.
+
 ## Bool
 
 **type** `bool`
