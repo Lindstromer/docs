@@ -609,14 +609,11 @@ selected | empty string | The radio button that will be selected from start. The
  */
 
 papi_property([
-  'title'    => 'Colors',
-  'slug'     => 'my_radio_slug',
-  'type'     => 'radio',
+  'title'    => 'References',
+  'type'     => 'reference',
   'settings' => [
-      'items' => [
-        'White' => '#ffffff',
-        'Black' => '#000000'
-      ]
+    'slug'      => 'top_module',
+    'page_type' => 'start-page-type'
   ]
 ])
 
