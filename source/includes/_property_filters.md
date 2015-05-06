@@ -19,7 +19,7 @@ add_filter('papi/format_value/string', function ($value, $slug, $post_id) {
 
 ### Description
 
-Format the value of the property before we output it to the application.
+Format the value of the property before it's returned to the theme.
 
 ## Load Value
 
