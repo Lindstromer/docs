@@ -1487,14 +1487,11 @@ You can remove both post type support and meta boxes with <code class="prettypri
  */</span>
 
 <span class="nx">papi_property</span><span class="p">([</span>
-  <span class="s1">'title'</span>    <span class="o">=&gt;</span> <span class="s1">'Colors'</span><span class="p">,</span>
-  <span class="s1">'slug'</span>     <span class="o">=&gt;</span> <span class="s1">'my_radio_slug'</span><span class="p">,</span>
-  <span class="s1">'type'</span>     <span class="o">=&gt;</span> <span class="s1">'radio'</span><span class="p">,</span>
+  <span class="s1">'title'</span>    <span class="o">=&gt;</span> <span class="s1">'References'</span><span class="p">,</span>
+  <span class="s1">'type'</span>     <span class="o">=&gt;</span> <span class="s1">'reference'</span><span class="p">,</span>
   <span class="s1">'settings'</span> <span class="o">=&gt;</span> <span class="p">[</span>
-      <span class="s1">'items'</span> <span class="o">=&gt;</span> <span class="p">[</span>
-        <span class="s1">'White'</span> <span class="o">=&gt;</span> <span class="s1">'#ffffff'</span><span class="p">,</span>
-        <span class="s1">'Black'</span> <span class="o">=&gt;</span> <span class="s1">'#000000'</span>
-      <span class="p">]</span>
+    <span class="s1">'slug'</span>      <span class="o">=&gt;</span> <span class="s1">'top_module'</span><span class="p">,</span>
+    <span class="s1">'page_type'</span> <span class="o">=&gt;</span> <span class="s1">'start-page-type'</span>
   <span class="p">]</span>
 <span class="p">])</span>
 
@@ -1930,12 +1927,12 @@ it will show which pages that has a reference to the module.</p>
 <span class="nx">add_filter</span><span class="p">(</span><span class="s1">'papi/format_value/string'</span><span class="p">,</span> <span class="k">function</span> <span class="p">(</span><span class="nv">$value</span><span class="p">,</span> <span class="nv">$slug</span><span class="p">,</span> <span class="nv">$post_id</span><span class="p">)</span> <span class="p">{</span>
   <span class="c1">// do some magic with the value and return it.
 </span>  <span class="k">return</span> <span class="nv">$value</span><span class="p">;</span>
-<span class="p">});</span>
+<span class="p">},</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
 </code></pre>
 
 <h3 id="description">Description</h3>
 
-<p>Format the value of the property before we output it to the application.</p>
+<p>Format the value of the property before it&rsquo;s returned to the theme.</p>
 
 <h2 id="load-value">Load Value</h2>
 
@@ -1949,7 +1946,7 @@ it will show which pages that has a reference to the module.</p>
 <span class="nx">add_filter</span><span class="p">(</span><span class="s1">'papi/load_value/string'</span><span class="p">,</span> <span class="k">function</span> <span class="p">(</span><span class="nv">$value</span><span class="p">,</span> <span class="nv">$slug</span><span class="p">,</span> <span class="nv">$post_id</span><span class="p">)</span> <span class="p">{</span>
   <span class="c1">// do some magic with the value and return it.
 </span>  <span class="k">return</span> <span class="nv">$value</span><span class="p">;</span>
-<span class="p">});</span>
+<span class="p">},</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
 </code></pre>
 
 <h3 id="description">Description</h3>
@@ -1968,7 +1965,7 @@ it will show which pages that has a reference to the module.</p>
 <span class="nx">add_filter</span><span class="p">(</span><span class="s1">'papi/update_value/string'</span><span class="p">,</span> <span class="k">function</span> <span class="p">(</span><span class="nv">$value</span><span class="p">,</span> <span class="nv">$slug</span><span class="p">,</span> <span class="nv">$post_id</span><span class="p">)</span> <span class="p">{</span>
   <span class="c1">// do some magic with the value and return it.
 </span>  <span class="k">return</span> <span class="nv">$value</span><span class="p">;</span>
-<span class="p">});</span>
+<span class="p">},</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
 </code></pre>
 
 <h3 id="description">Description</h3>
