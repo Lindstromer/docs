@@ -32,6 +32,7 @@ Options     | Required | Description
 ------------|----------|------------
 name        | yes      | The name of the page type
 description | no       | The description of the page type
+fill_labels | no       | When this is true it will add the page type name to `add_new_item`, `edit_item` and `view_item` label. Both in WordPress admin and the admin bar on the front. You can override this with the `labels` array.
 labels      | no       | Since version 1.2.0 all post type can handle the `labels` object that exists on a [post type](http://codex.wordpress.org/Function_Reference/get_post_type_object). So this means that you can change "Add New Page" for every page type and have something like "Add New Startpage". Just create a array with the `labels` keys and values on your page type meta array
 post_type   | no       | Array of post types that the page type should be registered on. Default is `page`
 sort_order  | no       | The sort order number of the page type
