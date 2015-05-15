@@ -5,17 +5,17 @@ The documentation of Papi
 # Install
 
 ```
-bundle install
+$ bundle install
 ```
 
 # Run
 
 ```
-bundle exec middleman server
+$ bundle exec middleman server
 ```
 
 # Publish
 
 ```
-rake publish
+$ rake publish
 ```
