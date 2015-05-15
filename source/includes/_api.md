@@ -102,6 +102,35 @@ Parameter | Default | Required | Description
 ----------|---------|----------|------------------------------------------------
 $post_id  | null    | no       | The post id will be added automatic if you are one a post, page or custom post type page. When fetching values from another post this argument will be required
 
+## papi_page_type_name
+
+```php
+<?php
+
+/**
+ * Example of `papi_page_type_name` function.
+ */
+
+echo papi_page_type_name();
+// => "Article Page"
+
+// with post id
+echo papi_page_type_name(2);
+// => "Video Page"
+```
+
+### Description
+
+Get the page type name. Useful when you will print out the name of the page type in your theme.
+
+You can also use [the_papi_page_type_name](#the_papi_page_type_name) to display it without `echo`
+
+### Parameters
+
+Parameter | Default | Required | Description
+----------|---------|----------|------------------------------------------------
+$post_id  | null    | no       | The post id will be added automatic if you are one a post, page or custom post type page. When fetching values from another post this argument will be required
+
 ## papi_property
 
 ```php
@@ -260,3 +289,32 @@ Parameter | Default | Required | Description
 $post_id  | null    | no       | The post id will be added automatic if you are one a post, page or custom post type page. When fetching values from another post this argument will be required
 $slug     |         | yes      | The property slug to fetch value from
 $default  | null    | no       | When a default value is passed as argument it will use that value as return value and echo it if the property value is empty or don't exists
+
+## the_papi_page_type_name
+
+```php
+<?php
+
+/**
+ * Example of `the_papi_page_type_name` function.
+ */
+
+the_papi_page_type_name();
+// => "Article Page"
+
+// with post id
+the_papi_page_type_name(2);
+// => "Video Page"
+```
+
+### Description
+
+Print the page type name. Useful when you will print out the name of the page type in your theme.
+
+You can also use [papi_page_type_name](#papi_page_type_name) to fetch the name into a variable.
+
+### Parameters
+
+Parameter | Default | Required | Description
+----------|---------|----------|------------------------------------------------
+$post_id  | null    | no       | The post id will be added automatic if you are one a post, page or custom post type page. When fetching values from another post this argument will be required
