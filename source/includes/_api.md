@@ -119,6 +119,8 @@ echo papi_page_type_name(2);
 // => "Video Page"
 ```
 
+**since** `1.3.0`
+
 ### Description
 
 Get the page type name. Useful when you will print out the name of the page type in your theme.
@@ -306,6 +308,8 @@ the_papi_page_type_name();
 the_papi_page_type_name(2);
 // => "Video Page"
 ```
+
+**since** `1.3.0`
 
 ### Description
 
