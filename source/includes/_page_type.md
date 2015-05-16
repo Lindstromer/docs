@@ -64,6 +64,12 @@ Since version 1.2.0 the box method can has callable method as the second argumen
 
 Read more about that under [box section](#box).
 
+### Display
+
+**since** `1.3.0`
+
+TODO
+
 ### Namespaces
 
 ```php
