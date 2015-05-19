@@ -22,7 +22,7 @@ Example bootstrap and property class:
 
 The html method is the important one, with out that there aren't going to be any property output in WordPress admin.
 
-You can check how the [Papi properties](https://github.com/wp-papi/papi/tree/master/includes/properties) are to figure out how to do your custom properties.
+You can check how the [properties](#properties) are to figure out how to do your custom properties.
 
 ```php
 <?php
