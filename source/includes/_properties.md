@@ -30,8 +30,8 @@ Key          | Default      | Description
 -------------|--------------|---------------------------------------------------
 capabilities | array()      | Can be a string with a role or capability or a array with many values
 default      | empty string | The default value that are presented in the property
-description  | empty string | Disable the property, won’t show in WordPress admin
-disabled     | false        | If this is true the property will not be showed in WordPress admin
+description  | empty string | The introduction text that will appear below the title text of the property. You could write your help text here. Since version 1.2.0 you can have "\n" to create new lines in the description
+disabled     | false        | Disable the property, won’t show in WordPress admin
 lang         | false        | When using this key you can specify which language will show the property
 raw          | false        | This will render the property without a table, good to use when creating a custom property that uses other properties
 required     | false        | By default all fields are non required in Papi but this can be changed with required option
