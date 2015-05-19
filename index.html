@@ -232,47 +232,6 @@
 </tr>
 </tbody></table>
 
-<h2 id="papi_page_type_name">papi_page_type_name</h2>
-<pre><code class="highlight php"><span class="cp">&lt;?php</span>
-
-<span class="sd">/**
- * Example of `papi_page_type_name` function.
- */</span>
-
-<span class="k">echo</span> <span class="nx">papi_page_type_name</span><span class="p">();</span>
-<span class="c1">// =&gt; "Article Page"
-</span>
-<span class="c1">// with post id
-</span><span class="k">echo</span> <span class="nx">papi_page_type_name</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-<span class="c1">// =&gt; "Video Page"
-</span></code></pre>
-
-<p><strong>since</strong> <code class="prettyprint">1.3.0</code></p>
-
-<h3 id="description">Description</h3>
-
-<p>Get the page type name. Useful when you will print out the name of the page type in your theme.</p>
-
-<p>You can also use <a href="#the_papi_page_type_name">the_papi_page_type_name</a> to display it without <code class="prettyprint">echo</code></p>
-
-<h3 id="parameters">Parameters</h3>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>$post_id</td>
-<td>null</td>
-<td>no       </td>
-<td>The post id will be added automatic if you are one a post, page or custom post type page. When fetching values from another post this argument will be required</td>
-</tr>
-</tbody></table>
-
 <h2 id="papi_property">papi_property</h2>
 <pre><code class="highlight php"><span class="cp">&lt;?php</span>
 
@@ -497,47 +456,6 @@
 </tr>
 </tbody></table>
 
-<h2 id="the_papi_page_type_name">the_papi_page_type_name</h2>
-<pre><code class="highlight php"><span class="cp">&lt;?php</span>
-
-<span class="sd">/**
- * Example of `the_papi_page_type_name` function.
- */</span>
-
-<span class="nx">the_papi_page_type_name</span><span class="p">();</span>
-<span class="c1">// =&gt; "Article Page"
-</span>
-<span class="c1">// with post id
-</span><span class="nx">the_papi_page_type_name</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-<span class="c1">// =&gt; "Video Page"
-</span></code></pre>
-
-<p><strong>since</strong> <code class="prettyprint">1.3.0</code></p>
-
-<h3 id="description">Description</h3>
-
-<p>Print the page type name. Useful when you will print out the name of the page type in your theme.</p>
-
-<p>You can also use <a href="#papi_page_type_name">papi_page_type_name</a> to fetch the name into a variable.</p>
-
-<h3 id="parameters">Parameters</h3>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>$post_id</td>
-<td>null</td>
-<td>no       </td>
-<td>The post id will be added automatic if you are one a post, page or custom post type page. When fetching values from another post this argument will be required</td>
-</tr>
-</tbody></table>
-
           <h1 id="box">Box</h1>
 <pre><code class="highlight php"><span class="cp">&lt;?php</span>
 
@@ -740,11 +658,6 @@ that returns a array with properties or tabs.</p>
 <td>The description of the page type</td>
 </tr>
 <tr>
-<td>fill_labels</td>
-<td> no</td>
-<td>When this is true it will add the page type name to <code class="prettyprint">add_new_item</code>, <code class="prettyprint">edit_item</code> and <code class="prettyprint">view_item</code> label. Both in WordPress admin and the admin bar on the front. You can override this with the <code class="prettyprint">labels</code> array.</td>
-</tr>
-<tr>
 <td>labels</td>
 <td>no</td>
 <td>Since version 1.2.0 all post type can handle the <code class="prettyprint">labels</code> object that exists on a <a href="http://codex.wordpress.org/Function_Reference/get_post_type_object">post type</a>. So this means that you can change &ldquo;Add New Page&rdquo; for every page type and have something like &ldquo;Add New Startpage&rdquo;. Just create a array with the <code class="prettyprint">labels</code> keys and values on your page type meta array</td>
@@ -793,12 +706,6 @@ that returns a array with properties or tabs.</p>
 <p>Since version 1.2.0 the box method can has callable method as the second argument that returns a array with properties or tabs.</p>
 
 <p>Read more about that under <a href="#box">box section</a>.</p>
-
-<h3 id="display">Display</h3>
-
-<p><strong>since</strong> <code class="prettyprint">1.3.0</code></p>
-
-<p>TODO</p>
 
 <h3 id="namespaces">Namespaces</h3>
 <pre><code class="highlight php"><span class="cp">&lt;?php</span>
