@@ -1058,6 +1058,59 @@ You can remove both post type support and meta boxes with <code class="prettypri
 
 <p>No settings exists.</p>
 
+<h2 id="dropdown">Dropdown</h2>
+
+<p><strong>type</strong> <code class="prettyprint">dropdown</code></p>
+<pre><code class="highlight php"><span class="cp">&lt;?php</span>
+
+<span class="sd">/**
+ * Example of select.
+ */</span>
+
+<span class="nx">papi_property</span><span class="p">([</span>
+  <span class="s1">'title'</span>    <span class="o">=&gt;</span> <span class="s1">'Dropdown'</span><span class="p">,</span>
+  <span class="s1">'slug'</span>     <span class="o">=&gt;</span> <span class="s1">'my_dropdown_slug'</span><span class="p">,</span>
+  <span class="s1">'type'</span>     <span class="o">=&gt;</span> <span class="s1">'dropdown'</span><span class="p">,</span>
+  <span class="s1">'settings'</span> <span class="o">=&gt;</span> <span class="p">[</span>
+    <span class="s1">'items'</span> <span class="o">=&gt;</span> <span class="p">[</span>
+      <span class="s1">'White'</span> <span class="o">=&gt;</span> <span class="s1">'#ffffff'</span><span class="p">,</span>
+      <span class="s1">'Black'</span> <span class="o">=&gt;</span> <span class="s1">'#000000'</span>
+    <span class="p">]</span>
+  <span class="p">]</span>
+<span class="p">])</span>
+
+<span class="sd">/**
+ * Example output.
+ */</span>
+
+<span class="nx">string</span> <span class="s1">'#ffffff'</span>
+</code></pre>
+
+<h3 id="description">Description</h3>
+
+<p>With this property you can add a dropdown. The key is the value that the user will se in the WordPress admin and the value is the value saved in the database.</p>
+
+<h3 id="settings">Settings</h3>
+
+<table><thead>
+<tr>
+<th>Key</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>items</td>
+<td>array() (no limit)</td>
+<td>Array with options, value or key/value</td>
+</tr>
+<tr>
+<td>selected</td>
+<td>empty string</td>
+<td>The select item that will be selected from start. The value should match a key of your items</td>
+</tr>
+</tbody></table>
+
 <h2 id="editor">Editor</h2>
 
 <p><strong>type</strong> <code class="prettyprint">editor</code>
@@ -1750,59 +1803,6 @@ it will show which pages that has a reference to the module.</p>
 <tr>
 <td>papi/property/repeater/exclude</td>
 <td>Prevent properties from render and working in repeater</td>
-</tr>
-</tbody></table>
-
-<h2 id="select">Select</h2>
-
-<p><strong>type</strong> <code class="prettyprint">select</code></p>
-<pre><code class="highlight php"><span class="cp">&lt;?php</span>
-
-<span class="sd">/**
- * Example of select.
- */</span>
-
-<span class="nx">papi_property</span><span class="p">([</span>
-  <span class="s1">'title'</span>    <span class="o">=&gt;</span> <span class="s1">'Dropdown'</span><span class="p">,</span>
-  <span class="s1">'slug'</span>     <span class="o">=&gt;</span> <span class="s1">'my_dropdown_slug'</span><span class="p">,</span>
-  <span class="s1">'type'</span>     <span class="o">=&gt;</span> <span class="s1">'select'</span><span class="p">,</span>
-  <span class="s1">'settings'</span> <span class="o">=&gt;</span> <span class="p">[</span>
-    <span class="s1">'items'</span> <span class="o">=&gt;</span> <span class="p">[</span>
-      <span class="s1">'White'</span> <span class="o">=&gt;</span> <span class="s1">'#ffffff'</span><span class="p">,</span>
-      <span class="s1">'Black'</span> <span class="o">=&gt;</span> <span class="s1">'#000000'</span>
-    <span class="p">]</span>
-  <span class="p">]</span>
-<span class="p">])</span>
-
-<span class="sd">/**
- * Example output.
- */</span>
-
-<span class="nx">string</span> <span class="s1">'#ffffff'</span>
-</code></pre>
-
-<h3 id="description">Description</h3>
-
-<p>With this property you can add multiple checkboxes. The key is the value that the user will se in the WordPress admin and the value is the value saved in the database.</p>
-
-<h3 id="settings">Settings</h3>
-
-<table><thead>
-<tr>
-<th>Key</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>items</td>
-<td>array() (no limit)</td>
-<td>Array with options, value or key/value</td>
-</tr>
-<tr>
-<td>selected</td>
-<td>empty string</td>
-<td>The select item that will be selected from start. The value should match a key of your items</td>
 </tr>
 </tbody></table>
 
