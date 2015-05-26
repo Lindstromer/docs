@@ -224,6 +224,49 @@ This property don't output any form or something like that. It outputs a h3 tag 
 
 No settings exists.
 
+## Dropdown
+
+**type** `dropdown`
+
+```php
+<?php
+
+/**
+ * Example of select.
+ */
+
+papi_property([
+  'title'    => 'Dropdown',
+  'slug'     => 'my_dropdown_slug',
+  'type'     => 'dropdown',
+  'settings' => [
+    'items' => [
+      'White' => '#ffffff',
+      'Black' => '#000000'
+    ]
+  ]
+])
+
+/**
+ * Example output.
+ */
+
+string '#ffffff'
+```
+
+### Description
+
+With this property you can add a dropdown. The key is the value that the user will se in the WordPress admin and the value is the value saved in the database.
+
+### Settings
+
+Key           | Default            | Description
+--------------|--------------------|-------------------------------------------------
+blank_text    | empty string       | Change the blank text to something else
+include_blank | true               | Include the blank row or not
+items         | array() (no limit) | Array with options, value or key/value
+selected      | empty string       | The select item that will be selected from start. The value should match a key of your items
+
 ## Editor
 
 **type** `editor`
@@ -820,47 +863,6 @@ add_filter('papi/property/repeater/exclude', function ($exclude) {
 Filter                         | Description
 -------------------------------|-------------
 papi/property/repeater/exclude | Prevent properties from render and working in repeater
-
-## Select
-
-**type** `select`
-
-```php
-<?php
-
-/**
- * Example of select.
- */
-
-papi_property([
-  'title'    => 'Dropdown',
-  'slug'     => 'my_dropdown_slug',
-  'type'     => 'select',
-  'settings' => [
-    'items' => [
-      'White' => '#ffffff',
-      'Black' => '#000000'
-    ]
-  ]
-])
-
-/**
- * Example output.
- */
-
-string '#ffffff'
-```
-
-### Description
-
-With this property you can add multiple checkboxes. The key is the value that the user will se in the WordPress admin and the value is the value saved in the database.
-
-### Settings
-
-Key      | Default            | Description
----------|--------------------|-------------------------------------------------
-items    | array() (no limit) | Array with options, value or key/value
-selected | empty string       | The select item that will be selected from start. The value should match a key of your items
 
 ## String
 
