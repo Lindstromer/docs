@@ -68,7 +68,28 @@ Read more about that under [box section](#box).
 
 **since** `1.3.0`
 
-TODO
+```php
+
+/**
+ * Example of `display` method.
+ */
+
+public function display($post_type) {
+  if ($post_type === 'post') {
+    return true;
+  }
+
+  return false;
+}
+```
+
+This method is use to tell if the page type should be display or not on `Add new page type` page.
+
+The method will take a `$post_type` argument. This is useful when the page type is register one more then one post type.
+
+Returning anything else then true will hide the page type.
+
+Default value is `true`.
 
 ### Namespaces
 

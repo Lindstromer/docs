@@ -174,11 +174,11 @@ add_filter('papi/settings/show_page_type_post', function ($page_type) {
 
 ### Description
 
-This filter is used to filter which page types that can be listed on the add new page type view.
+This filter is used to filter which page types that will be displayed or not on `Add new page type` page.
 
 The function will send in the file name of post types as a argument.
 
-Returning false on a page type will hide the page type on the add new page type view.
+Returning anything else then `true` will hide the page type on `Add new page type` page.
 
 Default value for every page type is `true`
 
