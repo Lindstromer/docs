@@ -393,6 +393,7 @@ No settings exists.
  */
 
 papi_property([
+  'slug'  => 'my_hidden_slug',
   'type'  => 'hidden',
   'value' => 'hidden value'
 ])
