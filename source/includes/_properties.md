@@ -381,6 +381,36 @@ With this property you can add a multiple image from the WordPress media library
 
 No settings exists.
 
+## Hidden
+
+**type** `hidden`
+
+```php
+<?php
+
+/**
+ * Example of hidden.
+ */
+
+papi_property([
+  'type'  => 'hidden',
+  'value' => 'hidden value'
+])
+
+/**
+ * Example output:
+ * The reference property does not save any values.
+ */
+```
+
+### Description
+
+Hidden input field.
+
+### Settings
+
+No settings exists.
+
 ## Html
 
 **type** `html`
@@ -401,10 +431,9 @@ papi_property([
 ])
 
 /**
- * Example output.
+ * Example output:
+ * The reference property does not save any values.
  */
-
-string '#ffffff'
 ```
 
 ### Description
