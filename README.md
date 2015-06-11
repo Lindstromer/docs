@@ -7,7 +7,7 @@ The documentation of Papi
 Read more about [apigen](http://www.apigen.org/).
 
 ```
-apigen generate -s /path/to/papi/src -d source/apigen
+$ rake apigen
 ```
 
 # Install
