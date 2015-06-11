@@ -26,6 +26,8 @@ class Video_Page_Type extends Papi_Page_Type {
 }
 ```
 
+## page_type method
+
 The `page_type()` is a required method of the page type class. It should return an array containing the required keys.
 
 Options     | Required | Description
@@ -56,7 +58,7 @@ When you using `template` key you can get a better structure of all pages type y
 
 When creating a new page you will get a new view before you get the edit view for your page where you should choose which page type to use. This will happen for all post types that uses page types.
 
-### Box method
+### box method
 
 This method is used to register all properties, tabs and remove meta boxes as described above.
 
@@ -64,7 +66,7 @@ The box method can has callable method as the second argument that returns a arr
 
 Read more about that under [box section](#box).
 
-### Display
+### display method
 
 ```php
 
@@ -99,7 +101,7 @@ namespace Foo\Bar;
 class Test_Page_Type extends \Papi_Page_Type {}
 ```
 
-### Remove meta box
+### remove method
 
 ```php
 <?php
