@@ -18,7 +18,7 @@ class Header_Option_Type extends Papi_Option_Type {
   public function option_type() {
     return [
       'menu' => 'options-general.php',
-      'name' => 'Video page'
+      'name' => 'Header'
     ];
   }
 
