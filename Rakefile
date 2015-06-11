@@ -14,4 +14,8 @@ task :apigen do
 
   sh 'git clone git@github.com:wp-papi/papi.git papi'
   sh 'apigen generate -s papi/src -d source/apigen'
+
+  FileUtils.remove_dir('papi')
 end
+
+task :publish => :apigen
