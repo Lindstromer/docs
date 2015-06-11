@@ -102,13 +102,11 @@ Default value is `true`.
  */
 
 public function register() {
-
   // A single metabox
   $this->remove( 'comments' );
 
   // Multiple metaboxes
   $this->remove( array( 'comments', 'editor' ) );
-
 }
 ```
 
