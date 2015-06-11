@@ -12,6 +12,7 @@ includes:
   - actions
   - api
   - box
+  - option_type
   - page_type
   - properties
   - property_filters
