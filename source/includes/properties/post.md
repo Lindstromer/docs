@@ -6,8 +6,6 @@
 
 With this property you can add reference to another post. It can't handle multiple references like [property relationship](relationship.html)
 
-> Since version 1.2.0 the post property by default include a blank row in the dropdown, this can be disabled by `include_blank`
-
 ## Settings
 
 ##### blank_text

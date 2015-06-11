@@ -33,7 +33,7 @@ Options     | Required | Description
 name        | yes      | The name of the page type
 description | no       | The description of the page type
 fill_labels | no       | When this is true it will add the page type name to `add_new_item`, `edit_item` and `view_item` label. Both in WordPress admin and the admin bar on the front. You can override this with the `labels` array.
-labels      | no       | Since version 1.2.0 all post type can handle the `labels` object that exists on a [post type](http://codex.wordpress.org/Function_Reference/get_post_type_object). So this means that you can change "Add New Page" for every page type and have something like "Add New Startpage". Just create a array with the `labels` keys and values on your page type meta array
+labels      | no       | With this you can handle the `labels` object that exists on a [post type](http://codex.wordpress.org/Function_Reference/get_post_type_object). So this means that you can change "Add New Page" for every page type and have something like "Add New Startpage". Just create a array with the `labels` keys and values on your page type meta array
 post_type   | no       | Array of post types that the page type should be registered on. Default is `page`
 sort_order  | no       | The sort order number of the page type
 template    | no       | The template file to render
@@ -60,13 +60,11 @@ When creating a new page you will get a new view before you get the edit view fo
 
 This method is used to register all properties, tabs and remove meta boxes as described above.
 
-Since version 1.2.0 the box method can has callable method as the second argument that returns a array with properties or tabs.
+The box method can has callable method as the second argument that returns a array with properties or tabs.
 
 Read more about that under [box section](#box).
 
 ### Display
-
-**since** `1.3.0`
 
 ```php
 
@@ -100,8 +98,6 @@ namespace Foo\Bar;
 
 class Test_Page_Type extends \Papi_Page_Type {}
 ```
-
-Since version 1.2.0 Papi has no problem to read page types that have a namespace.
 
 ### Remove meta box
 

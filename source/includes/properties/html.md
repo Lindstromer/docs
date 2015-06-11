@@ -2,8 +2,6 @@
 
 **type** `html`
 
-**since** 1.2.0
-
 ## Description
 
 The property output custom html row on the page type in WordPress admin.

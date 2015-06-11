@@ -2,8 +2,6 @@
 
 **type** `editor`
 
-**since** 1.2.0
-
 ## Description
 
 This property is a shortcut property that extends property text and changes the default value of `editor` to `true`.

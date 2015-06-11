@@ -36,7 +36,7 @@ title        | empty string | The title of the meta box. This can't be empty, se
 
 ### Callable method
 
-Since version 1.2.0 it's possible to use callable method as a second argument in your box method
+It's possible to use callable method as a second argument in your box method
 that returns a array with properties or tabs.
 
 ```php

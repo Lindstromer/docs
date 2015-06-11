@@ -31,7 +31,7 @@ Key          | Default      | Description
 capabilities | array()      | Can be a string with a role or capability or a array with many values
 default      | empty string | The default value that are presented in the property
 description  | empty string | Disable the property, won’t show in WordPress admin
-disabled     | false        | The introduction text that will appear below the title text of the property. You could write your help text here. Since version 1.2.0 you can have "\n" to create new lines in the description
+disabled     | false        | The introduction text that will appear below the title text of the property. You could write your help text here. With "\n" you can create new lines in the description
 lang         | false        | When using this key you can specify which language will show the property
 raw          | false        | This will render the property without a table, good to use when creating a custom property that uses other properties
 required     | false        | By default all fields are non required in Papi but this can be changed with required option
@@ -270,7 +270,6 @@ selected      | empty string       | The select item that will be selected from 
 ## Editor
 
 **type** `editor`
-**since** `1.2.0`
 
 ```php
 <?php
@@ -303,7 +302,6 @@ No settings exists.
 ## Gallery
 
 **type** `gallery`
-**since** `1.2.0`
 
 ```php
 <?php
@@ -615,8 +613,6 @@ WP_Post Object
 
 With this property you can add reference to another post. It can't handle multiple references like [relationship](#relationship)
 
-Since version 1.2.0 the post property by default include a blank row in the dropdown, this can be disabled by `include_blank`
-
 ### Settings
 
 Key           | Default       | Description
@@ -671,8 +667,6 @@ selected | empty string | The radio button that will be selected from start. The
 ## Reference
 
 **type** `reference`
-
-**since** `1.2.0`
 
 ```php
 <?php

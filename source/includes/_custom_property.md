@@ -41,7 +41,6 @@ defined( 'ABSPATH' ) || exit;
  * Papi - Custom property string
  *
  * @package Papi
- * @version 1.0.0
  */
 
 class Papi_Property_Stringx extends Papi_Property {
@@ -50,15 +49,12 @@ class Papi_Property_Stringx extends Papi_Property {
    * The default value.
    *
    * @var string
-   * @since 1.0.0
    */
 
   public $default_value = '';
 
   /**
    * Generate the HTML for the property.
-   *
-   * @since 1.0.0
    */
 
   public function html() {

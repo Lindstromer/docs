@@ -4,8 +4,6 @@
 
 **filter** `papi/settings/column_title_{$post_type}`
 
-**since** `2.0.0`
-
 ```php
 <?php
 
@@ -45,8 +43,6 @@ Default sort order is `1000`
 
 **filter** `papi/settings/standard_page_description_{$post_type}`
 
-**since** `1.2.0`
-
 ```php
 <?php
 
@@ -69,8 +65,6 @@ where `Page` will be the singular name for the post type.
 ## Change standard page name for post type
 
 **filter** `papi/settings/standard_page_name_{$post_type}`
-
-**since** `2.0.0`
 
 ```php
 <?php
@@ -95,8 +89,6 @@ where `Page` will be the singular name for the post type.
 
 **filter** `papi/settings/standard_page_thumbnail_{$post_type}`
 
-**since** `1.2.0`
-
 ```php
 <?php
 
@@ -118,8 +110,6 @@ Default value is the translation of `empty string`
 ## Load page type from post id query string
 
 **filter** `papi/settings/page_type_from_post_qs`
-
-**since** `1.2.0`
 
 ```php
 <?php
@@ -149,8 +139,6 @@ Default value is `from_post`.
 
 **filter** `papi/settings/only_page_type_{$post_type}`
 
-**since** `1.2.0`
-
 ```php
 <?php
 
@@ -172,8 +160,6 @@ You can return a string or a array of strings.
 ## Page type directories
 
 **filter** `papi/settings/directories`
-
-**since** `1.2.0`
 
 ```php
 <?php
@@ -198,8 +184,6 @@ Default value is `empty array`.
 ## Show page type on add new page type view
 
 **filter** `papi/settings/show_page_type_{$post_type}`
-
-**since** `1.2.0`
 
 ```php
 <?php
@@ -230,8 +214,6 @@ Default value for every page type is `true`
 ## Show standard page type for post type
 
 **filter** `papi/settings/show_standard_page_type_{$post_type}`
-
-**since** `1.2.0`
 
 ```php
 <?php
