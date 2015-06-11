@@ -301,6 +301,10 @@ The WordPress editor.
 
 No settings exists.
 
+## Flexible
+
+TODO ME
+
 ## Gallery
 
 **type** `gallery`
