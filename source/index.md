@@ -49,9 +49,6 @@ Or manually add it to your `composer.json`:
     "wordpress": "~4.2",
     "wp-papi/papi": "~2.0"
   }
-
-
-
 }
 ```
 
