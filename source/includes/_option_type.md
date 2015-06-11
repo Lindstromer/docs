@@ -32,6 +32,10 @@ class Header_Option_Type extends Papi_Option_Type {
 
 namespace Foo\Bar;
 
+/**
+ * Example of a option type with namespace.
+ */
+
 class Test_Option_Type extends \Papi_Option_Type {}
 ```
 

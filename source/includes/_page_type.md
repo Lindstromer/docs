@@ -122,6 +122,10 @@ Check out [remove_post_type_support](http://codex.wordpress.org/Function_Referen
 
 namespace Foo\Bar;
 
+/**
+ * Example of a page type with namespace.
+ */
+
 class Test_Page_Type extends \Papi_Page_Type {}
 ```
 
