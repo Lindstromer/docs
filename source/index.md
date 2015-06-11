@@ -63,7 +63,7 @@ Papi does require a directory in your theme, plugin or somewhere in your WordPre
  * Register page types directory with Papi.
  */
 
-add_filter('papi/settings/directories', function () {
+add_filter( 'papi/settings/directories', function () {
   return __DIR__ . '/includes/page-types';
-});
+} );
 ```
