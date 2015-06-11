@@ -25,6 +25,13 @@ class Header_Option_Type extends Papi_Option_Type {
 }
 ```
 
+Option type class extends the [page type class](#page-type) so you can create options pages with Papi!
+
+### Differents between option type and a page type
+
+- Does not save the option type id in the database since options don't have a post id. So you can't have different option types that has the same property slug.
+- The `page_type` method is named `option_type`.
+
 ## Namespaces
 
 ```php
