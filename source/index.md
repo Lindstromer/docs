@@ -7,6 +7,7 @@ language_tabs:
 toc_footers:
   - <a href='http://github.com/wp-papi/papi'>Fork me on GitHub</a>
   - <a href='http://wp-papi.github.io/'>Papi project site</a>
+  - <a href='apigen/'>API reference docs</a>
 
 includes:
   - actions
