@@ -29,7 +29,10 @@ So we though why don't use the same approach in WordPress? Papi is today running
 
 Papi is completely open-source. You can use it however you like. If you want to help with its development you can submit your suggestions or improvements on in the [Github repository](https://github.com/wp-papi/papi).
 
-**Papi does require WordPress 4.0 or later**
+## Requirements
+
+* WordPress >= 4.0
+* PHP >= 5.4.7
 
 ## Installation
 
@@ -42,9 +45,9 @@ Or manually add it to your `composer.json`:
 ```json
 {
   "require": {
-    "php": ">=5.3",
+    "php": ">=5.4.7",
     "wordpress": "~4.2",
-    "wp-papi/papi": "~1.2"
+    "wp-papi/papi": "~2.0"
   }
 }
 ```
