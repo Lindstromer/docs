@@ -1,5 +1,24 @@
 # Setting filters
 
+## Change column title for page type column.
+
+**filter** `papi/settings/column_title_{$post_type}`
+
+**since** `2.0.0`
+
+```php
+<?php
+
+/**
+ * Example of `papi/settings/column_title_{$post_type}` filter.
+ */
+
+add_filter( 'papi/settings/column_title_module', function ( $page_type ) {
+ return __( 'Module Type', 'my_theme' );
+} );
+
+```
+
 ## Change default sort order
 
 **filter** `papi/settings/sort_order`
@@ -11,9 +30,9 @@
  * Example of `papi/settings/sort_order` filter.
  */
 
-add_filter('papi/settings/sort_order', function () {
+add_filter( 'papi/settings/sort_order', function () {
   return 1;
-});
+} );
 ```
 
 ### Description
@@ -35,16 +54,42 @@ Default sort order is `1000`
  * Example of `papi/settings/standard_page_description_{$post_type}` filter.
  */
 
-add_filter('papi/settings/standard_page_description_post', function ($page_type) {
-  return __('The standard blog post', 'my_theme');
-});
+add_filter( 'papi/settings/standard_page_description_post', function ( $page_type ) {
+  return __( 'The standard blog post', 'my_theme' );
+} );
 ```
 
 ### Description
 
 This filter is used to change the standard page description for a post type.
 
-Default value is the translation of `Just the normal WordPress page`
+Default value is the translation of `Page with WordPress standard fields`
+where `Page` will be the singular name for the post type.
+
+## Change standard page name for post type
+
+**filter** `papi/settings/standard_page_name_{$post_type}`
+
+**since** `2.0.0`
+
+```php
+<?php
+
+/**
+ * Example of `papi/settings/standard_page_description_{$post_type}` filter.
+ */
+
+add_filter( 'papi/settings/standard_page_description_post', function ( $page_type ) {
+  return __( 'Blog page', 'my_theme' );
+} );
+```
+
+### Description
+
+This filter is used to change the standard page name for a post type.
+
+Default value is the translation of `Standard Page`
+where `Page` will be the singular name for the post type.
 
 ## Change standard page thumbnail for post type
 
@@ -59,9 +104,9 @@ Default value is the translation of `Just the normal WordPress page`
  * Example of `papi/settings/standard_page_thumbnail_{$post_type}` filter.
  */
 
-add_filter('papi/settings/standard_page_thumbnail_post', function () {
+add_filter( 'papi/settings/standard_page_thumbnail_post', function () {
   return '/path/to/thumbnail.png';
-});
+} );
 ```
 
 ### Description
@@ -83,9 +128,9 @@ Default value is the translation of `empty string`
  * Example of `papi/settings/page_type_from_post_qs` filter.
  */
 
-add_filter('papi/settings/page_type_from_post_qs', function () {
+add_filter( 'papi/settings/page_type_from_post_qs', function () {
   return 'parent_post';
-});
+} );
 ```
 
 ### Description
@@ -113,9 +158,9 @@ Default value is `from_post`.
  * Example of `papi/settings/only_page_type_{$post_type}` filter.
  */
 
-add_filter('papi/settings/only_page_type_post', function () {
+add_filter( 'papi/settings/only_page_type_post', function () {
   return 'post-page-type';
-});
+} );
 ```
 
 ### Description
@@ -137,9 +182,9 @@ You can return a string or a array of strings.
  * Example of `papi/settings/directories` filter.
  */
 
-add_filter('papi/settings/directories', function () {
+add_filter( 'papi/settings/directories', function () {
   return false;
-});
+} );
 ```
 
 ### Description
@@ -163,13 +208,13 @@ Default value is `empty array`.
  * Example of `papi/settings/show_page_type_{$post_type}` filter.
  */
 
-add_filter('papi/settings/show_page_type_post', function ($page_type) {
-  if ($page_type === 'start-page-type') {
+add_filter( 'papi/settings/show_page_type_post', function ( $page_type ) {
+  if ( $page_type === 'start-page-type' ) {
       return false;
   }
 
   return true;
-});
+} );
 ```
 
 ### Description
@@ -184,7 +229,7 @@ Default value for every page type is `true`
 
 ## Show standard page type for post type
 
-**filter** `papi/settings/standard_page_type_{$post_type}`
+**filter** `papi/settings/show_standard_page_type_{$post_type}`
 
 **since** `1.2.0`
 
@@ -192,12 +237,12 @@ Default value for every page type is `true`
 <?php
 
 /**
- * Example of `papi/settings/standard_page_type_{$post_type}` filter.
+ * Example of `papi/settings/show_standard_page_type_{$post_type}` filter.
  */
 
-add_filter('papi/settings/directories', function () {
-  return __DIR__ . '/page-types';
-});
+add_filter( 'papi/settings/show_standard_page_type_{$post_type}', function () {
+  return false;
+} );
 ```
 
 ### Description
