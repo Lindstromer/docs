@@ -170,7 +170,7 @@ This is great to use when you will share properties over many page types and it 
 Parameter         | Default | Required | Description
 ------------------|---------|----------|----------------------------------------
 $file_or_options  |         | yes      | File path or a array containing property options
-$values           | array() | no       | The values to override the template values with
+$values           | array | no       | The values to override the template values with
 
 ## papi_tab
 
@@ -217,7 +217,7 @@ This is great to use when you will share tabs over many page types and it will b
 Parameter         | Default | Required | Description
 ------------------|---------|----------|----------------------------------------
 $file_or_options  |         | yes      | Title, file path or a array containing tab options
-$properties       | array() | no       | The values to override the template values with or properties
+$properties       | array | no       | The values to override the template values with or properties
 
 ## papi_template
 
@@ -256,7 +256,7 @@ return [
 Parameter         | Default | Required | Description
 ------------------|---------|----------|----------------------------------------
 $file_or_options  |         | yes      | File path to template file
-$properties       | array() | no       | The values to override the template values with
+$properties       | array | no       | The values to override the template values with
 
 ## the_papi_field
 

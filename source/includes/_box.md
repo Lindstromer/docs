@@ -24,7 +24,7 @@ Documentation of the `box` method. `box` is a short name for `metabox` in Papi.
 
 Key          | Default
 -------------|--------------|---------------------------------------------------
-capabilities | array()      | Can be a string with a role or capability or a array with many values
+capabilities | array      | Can be a string with a role or capability or a array with many values
 context      | 'normal'     | The same value as for context in `add_meta_box`
 post_type    | 'page'       | The post types where the box should be available
 priority     | 'default'    | The same value as for priority in `add_meta_box`

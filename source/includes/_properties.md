@@ -8,14 +8,14 @@
  */
 
 papi_property( [
-  'capabilities' => array(),
+  'capabilities' => array,
   'default'      => '',
   'description'  => '',
   'disabled'     => false,
   'lang'         => false,
   'raw'          => false,
   'required'     => false,
-  'settings'     => array(),
+  'settings'     => array,
   'sidebar'      => true,
   'slug'         => '',
   'sort_order'   => 100,
@@ -30,7 +30,7 @@ The property type is loaded from the page type file instead of saving it in the 
 
 Key          | Default      | Description
 -------------|--------------|---------------------------------------------------
-capabilities | array()      | Can be a string with a role or capability or a array with many values
+capabilities | array      | Can be a string with a role or capability or a array with many values
 default      | empty string | The default value that are presented in the property
 description  | empty string | Disable the property, won’t show in WordPress admin
 disabled     | false        | The introduction text that will appear below the title text of the property. You could write your help text here. With "\n" you can create new lines in the description
@@ -38,7 +38,7 @@ lang         | false        | When using this key you can specify which language
 raw          | false        | This will render the property without a table, good to use when creating a custom property that uses other properties
 required     | false        | By default all fields are non required in Papi but this can be changed with required option
 sidebar      | true         | Boolean that shows the sidebar on each property. If false the sidebar won’t show
-settings     | array()      | Array with custom settings for the property
+settings     | array      | Array with custom settings for the property
 sort_order   | 1000         | Numeric value, lowest value in the meta box will be at the top and the highest value at the bottom
 slug         | empty string | The slug of property. If empty or not used the title will be generated to slug value
 title        | empty string | The title of the property. Can be empty for blank title
@@ -119,8 +119,8 @@ With this property you can add multiple checkboxes. The key is the value that th
 
 Key      | Default | Description
 ---------|---------|------------------------------------------------------------
-items    | array() | Array with checkboxes, value or key/value
-selected | array() | The seleceted key or array of keys
+items    | array | Array with checkboxes, value or key/value
+selected | array | The seleceted key or array of keys
 
 ## Color
 
@@ -155,7 +155,7 @@ The property output the WordPress color picker.
 Key        | Default | Description
 -----------|---------|----------------------------------------------------------
 show_input | true    | Show the text input
-palettes   | array() | Array with hex colors
+palettes   | array | Array with hex colors
 
 ## Datetime
 
@@ -266,7 +266,7 @@ Key           | Default            | Description
 --------------|--------------------|-------------------------------------------------
 blank_text    | empty string       | Change the blank text to something else
 include_blank | true               | Include the blank row or not
-items         | array() (no limit) | Array with options, value or key/value
+items         | array (no limit) | Array with options, value or key/value
 selected      | empty string       | The select item that will be selected from start. The value should match a key of your items
 
 ## Editor
@@ -622,7 +622,7 @@ Key           | Default       | Description
 blank_text    | empty string  | Change the blank text to something else
 include_blank | true          | Include the blank row or not
 post_type     | 'post'        | The post type that the property will load posts from. Can only be one post type
-query         | array()       | Append a `WP_Query` on all post types. Gist reference over `WP_Query`. Note that `post_type` in query will always be removed
+query         | array       | Append a `WP_Query` on all post types. Gist reference over `WP_Query`. Note that `post_type` in query will always be removed
 text          | 'Select Post' | The text above the dropdown. If this text is a empty string the p tag will be hidden
 
 ## Radio buttons
@@ -663,7 +663,7 @@ With this property you can create a list of radio buttons. The key is the value 
 
 Key      | Default      | Description
 ---------|--------------|-------------------------------------------------------
-items    | array()      | Array with radio buttons, value or key/value
+items    | array      | Array with radio buttons, value or key/value
 selected | empty string | The radio button that will be selected from start. The value should match a key of your items
 
 ## Reference
@@ -704,7 +704,7 @@ it will show which pages that has a reference to the module.
 
 Key       | Default      | Description
 ----------|--------------|-------------------------------------------------------
-slug      | array()      | String or array of slugs to look for references
+slug      | array      | String or array of slugs to look for references
 page_type | empty string | String or array of page types (the file name of the page type) to check
 
 ## Relationship
@@ -776,7 +776,7 @@ Key          | Default       | Description
 -------------|---------------|--------------------------------------------------
 choose_max   | -1 (no limit) | Prevent how many post references that can be added
 post_type    | 'page'        | Change which post types it loads post objects from
-query        | array()       | Append a `WP_Query` on all post types. Gist reference over `WP_Query`. Note that `post_type` in query will always be removed
+query        | array       | Append a `WP_Query` on all post types. Gist reference over `WP_Query`. Note that `post_type` in query will always be removed
 show_sort_by | true          | Show the sort by dropdown or not.
 
 ### Filters
@@ -868,7 +868,7 @@ The repeater property can create a repeater of sub fields which can be repeated 
 
 Key   | Default | Description
 ------|---------|----------------------------------------------------------
-items | array() | The array of properties, the same key/values as the `$this->property` method or `papi_property` function has. You can't use property repeater inside a repeater.
+items | array | The array of properties, the same key/values as the `$this->property` method or `papi_property` function has. You can't use property repeater inside a repeater.
 
 ### Filters
 
