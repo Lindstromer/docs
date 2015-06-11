@@ -12,11 +12,11 @@ includes:
   - actions
   - api
   - box
-  - custom_property
   - page_type
   - properties
   - property_filters
   - setting_filters
+  - custom_property
 
 search: true
 ---

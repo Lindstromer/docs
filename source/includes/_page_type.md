@@ -26,18 +26,6 @@ class Video_Page_Type extends Papi_Page_Type {
 }
 ```
 
-## Namespaces
-
-```php
-<?php
-
-namespace Foo\Bar;
-
-class Test_Page_Type extends \Papi_Page_Type {}
-```
-
-## Methods
-
 ### page_type method
 
 The `page_type()` is a required method of the page type class. It should return an array containing the required keys.
@@ -81,6 +69,7 @@ Read more about that under [box section](#box).
 ### display method
 
 ```php
+<?php
 
 /**
  * Example of `display` method.
@@ -108,6 +97,10 @@ Default value is `true`.
 ```php
 <?php
 
+/**
+ * Example of `register` method.
+ */
+
 public function register() {
 
   // A single metabox
@@ -123,3 +116,15 @@ It's easy to remove metaboxes with the `remove` method.
 You can remove both post type support and meta boxes with `remove.`
 
 Check out [remove_post_type_support](http://codex.wordpress.org/Function_Reference/remove_post_type_support#Parameters) for right post type support or [remove_meta_box](https://codex.wordpress.org/Function_Reference/remove_meta_box#Parameters) for meta box slugs.
+
+## Namespaces
+
+```php
+<?php
+
+namespace Foo\Bar;
+
+class Test_Page_Type extends \Papi_Page_Type {}
+```
+
+Papi has no problem to work with page types that have namespaces.
