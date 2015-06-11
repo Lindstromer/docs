@@ -15,7 +15,7 @@ class Video_Page_Type extends Papi_Page_Type {
    * @return array
    */
 
-  public function page_type () {
+  public function page_type() {
     return [
       'name'        => 'Video page',
       'description' => 'A page where you can embed videos',
@@ -86,8 +86,8 @@ Read more about that under [box section](#box).
  * Example of `display` method.
  */
 
-public function display($post_type) {
-  if ($post_type === 'post') {
+public function display( $post_type ) {
+  if ( $post_type === 'post' ) {
     return true;
   }
 

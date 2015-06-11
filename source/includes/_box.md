@@ -7,15 +7,15 @@
  * Example of the default options
  */
 
-$this->box([
-  'capabilities' => array(),
+$this->box( [
+  'capabilities' => [],
   'context'      => 'normal',
   'mode'         => 'standard',
   'post_type'    => 'page',
   'priority'     => 'default',
   'sort_order'   => 1000,
   'title'        => ''
-]);
+] );
 ```
 
 Documentation of the `box` method. `box` is a short name for `metabox` in Papi.
@@ -47,19 +47,19 @@ that returns a array with properties or tabs.
  */
 
 public function register() {
-  $this->box('Content', array($this, 'content_box'));
+  $this->box( 'Content', array( $this, 'content_box' ) );
 }
 
 public function content_box() {
   return [
-    $this->property([
+    papi_property( [
       'type'  => 'string',
       'title' => 'Name'
-    ]),
-    $this->property([
+    ] ),
+    papi_property( [
       'type'  => 'text',
       'title' => 'About'
-    ])
+    ] )
   ];
 }
 ```

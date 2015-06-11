@@ -12,7 +12,7 @@
 echo current_page()->twitter_url;
 
 // will be the same as
-echo papi_field('twitter_url');
+echo papi_field( 'twitter_url' );
 ```
 
 Get the current Papi page with all fields.
@@ -30,7 +30,7 @@ No parameters exists.
  * Example of `papi_field` function.
  */
 
-echo papi_field('twitter_url');
+echo papi_field( 'twitter_url' );
 ```
 
 ### Description
@@ -58,13 +58,13 @@ $default  | null    | no       | When a default value is passed as argument it w
  * Example output from `papi_fields` function.
  */
 
-array(
-  'Content' => array(
+[
+  'Content' => [
     'top_module',
     'feature_module',
     'show_feature_module'
-  )
-);
+  ]
+];
 ```
 
 ### Description
@@ -87,7 +87,7 @@ No parameters exists.
 echo papi_get_page()->twitter_url;
 
 // with post id
-echo papi_get_page(2)->twitter_url;
+echo papi_get_page( 2 )->twitter_url;
 ```
 
 ### Description
@@ -115,7 +115,7 @@ echo papi_page_type_name();
 // => "Article Page"
 
 // with post id
-echo papi_page_type_name(2);
+echo papi_page_type_name( 2 );
 // => "Video Page"
 ```
 
@@ -141,18 +141,18 @@ $post_id  | null    | no       | The post id will be added automatic if you are
  */
 
 // my-page-type.php
-$this->box('My meta box', [
-  papi_property('properties/my-image.php', [
+$this->box( 'My meta box', [
+  papi_property( 'properties/my-image.php', [
     'slug' => 'my_meta_box_image'
-  ])
-]);
+  ] )
+] );
 
 // properties/my-image.php
-return papi_property([
+return papi_property( [
   'type'  => 'image',
   'title' => 'Image',
   'slug'  => 'custom_image_slug'
-]);
+] );
 ```
 
 ### Description
@@ -182,24 +182,24 @@ $values           | array() | no       | The values to override the template va
  */
 
 // my-page-type.php
-$this->box('My meta box', [
-  $this->tab('tabs/image-tab.php', [
+$this->box( 'My meta box', [
+  $this->tab( 'tabs/image-tab.php', [
     'title' => 'Background'
-  ])
-]);
+  ] )
+] );
 
 // tabs/image.php
-return papi_tabs([
+return papi_tabs( [
   'title' => 'Images',
   'slug'  => 'custom_image_slug'
 ], [
-  papi_property('properties/my-image.php'),
-  papi_property([
+  papi_property( 'properties/my-image.php' ),
+  papi_property( [
     'type'  => 'string',
     'title' => 'Name',
     'slug'  => 'name'
-  ])
-]);
+  ] )
+] );
 ```
 
 ### Description
@@ -229,14 +229,14 @@ $properties       | array() | no       | The values to override the template va
  */
 
 // my-page-type.php
-$this->box('My meta box', [
-  $this->property([
+$this->box( 'My meta box', [
+  $this->property( [
     'type'     => 'dropdown',
     'title'    => 'Dropdown',
     'slug'     => 'my_dropdown',
-    'settings' => papi_template('settings/dropdown.php')
-  ])
-]);
+    'settings' => papi_template( 'settings/dropdown.php' )
+  ] )
+] );
 
 // settings/dropdown.php
 return [
@@ -267,13 +267,13 @@ $properties       | array() | no       | The values to override the template va
  * Example of `papi_field` function.
  */
 
-the_papi_field('twitter_url')
+the_papi_field( 'twitter_url' )
 
 // with post id
-the_papi_field(1, 'twitter_url')
+the_papi_field( 1, 'twitter_url' )
 
 // with default value
-the_papi_field(1, 'twitter_url', 'http://twitter.com/frozzare');
+the_papi_field( 1, 'twitter_url', 'http://twitter.com/frozzare' );
 ```
 
 ### Description
@@ -303,7 +303,7 @@ the_papi_page_type_name();
 // => "Article Page"
 
 // with post id
-the_papi_page_type_name(2);
+the_papi_page_type_name( 2 );
 // => "Video Page"
 ```
 

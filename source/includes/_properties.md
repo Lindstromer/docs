@@ -7,7 +7,7 @@
  * Example of the default options.
  */
 
-papi_property([
+papi_property( [
   'capabilities' => array(),
   'default'      => '',
   'description'  => '',
@@ -21,7 +21,7 @@ papi_property([
   'sort_order'   => 100,
   'title'        => '',
   'type'         => ''
-])
+] )
 ```
 
 Papi does support 19 core properties (a field is a property in the page type) to start with and you can easy create your own using our [Yeoman generator](). The are several keys that all properties have.
@@ -55,11 +55,11 @@ type         | empty string | The property type (lower case is preferred to use)
  * Example of bool.
  */
 
-papi_property([
+papi_property( [
   'title'    => 'True or false?',
   'slug'     => 'my_true_or_false_slug',
   'type'     => 'bool'
-])
+] )
 
 /**
  * Example output.
@@ -87,7 +87,7 @@ No settings exists.
  * Example of checkbox.
  */
 
-papi_property([
+papi_property( [
   'title'    => 'Categories',
   'slug'     => 'my_categories_slug',
   'type'     => 'checkbox',
@@ -97,13 +97,13 @@ papi_property([
       'Black' => '#000000'
     ]
   ]
-])
+] )
 
 /**
  * Example output.
  */
 
-Array
+array
 (
   [0] => '#ffffff'
 )
@@ -131,11 +131,11 @@ selected | array() | The seleceted key or array of keys
  * Example of color.
  */
 
-papi_property([
+papi_property( [
   'title'    => 'Color',
   'slug'     => 'my_color_slug',
   'type'     => 'color'
-])
+] )
 
 /**
  * Example output.
@@ -166,11 +166,11 @@ palettes   | array() | Array with hex colors
  * Example of datetime.
  */
 
-papi_property([
+papi_property( [
   'title'    => 'Datetime',
   'slug'     => 'my_datetime_slug',
   'type'     => 'datetime'
-])
+] )
 
 /**
  * Example output.
@@ -203,11 +203,11 @@ use_24_hours | false               | Array with hex colors
  * Example of divider.
  */
 
-papi_property([
+papi_property( [
   'title'       => 'Divider',
   'type'        => 'divider',
   'description' => 'Non volutpat ultricies bibendum odio luctus.'
-])
+] )
 
 /**
  * Example output.
@@ -235,7 +235,7 @@ No settings exists.
  * Example of select.
  */
 
-papi_property([
+papi_property( [
   'title'    => 'Dropdown',
   'slug'     => 'my_dropdown_slug',
   'type'     => 'dropdown',
@@ -245,7 +245,7 @@ papi_property([
       'Black' => '#000000'
     ]
   ]
-])
+] )
 
 /**
  * Example output.
@@ -278,11 +278,11 @@ selected      | empty string       | The select item that will be selected from 
  * Example of Property Editor.
  */
 
-papi_property([
+papi_property( [
   'title' => 'Editor',
   'slug'  => 'my_editor_slug',
   'type'  => 'editor'
-])
+] )
 
 /**
  * Example output.
@@ -310,25 +310,25 @@ No settings exists.
  * Example of gallery.
  */
 
-papi_property([
+papi_property( [
   'title' => 'Gallery',
   'slug'  => 'my_gallery_slug',
   'type'  => 'gallery'
-])
+] )
 
 /**
  * Example output.
  */
 
-Array(
+array(
   stdClass Object
   (
       [width] => 800
       [height] => 600
       [file] => '2014/09/cube.jpg'
-      [sizes] => Array
+      [sizes] => array
         (
-          [thumbnail] => Array
+          [thumbnail] => array
           (
             [file] => 'cube-150x150.jpg'
             [width] => 150
@@ -336,7 +336,7 @@ Array(
             [mime-type] => 'image/jpeg'
           )
 
-          [medium] => Array
+          [medium] => array
           (
             [file] => 'cube-300x225.jpg'
             [width] => 300
@@ -346,7 +346,7 @@ Array(
 
       )
 
-      [image_meta] => Array
+      [image_meta] => array
         (
           [aperture] => 0
           [credit] =>
@@ -390,11 +390,11 @@ No settings exists.
  * Example of hidden.
  */
 
-papi_property([
+papi_property( [
   'slug'  => 'my_hidden_slug',
   'type'  => 'hidden',
   'value' => 'hidden value'
-])
+] )
 
 /**
  * Example output:
@@ -421,13 +421,13 @@ No settings exists.
  * Example of html.
  */
 
-papi_property([
+papi_property( [
   'title'    => 'Information',
   'type'     => 'html',
   'settings' => [
     'html' => '<p>Hello, world</p>'
   ]
-])
+] )
 
 /**
  * Example output:
@@ -456,11 +456,11 @@ html | empty string | String with html or a callable function or method.
  * Example of image.
  */
 
-papi_property([
+papi_property( [
   'title' => 'Image',
   'slug'  => 'my_image_slug',
   'type'  => 'image'
-])
+] )
 
 /**
  * Example output.
@@ -471,9 +471,9 @@ stdClass Object
       [width] => 800
       [height] => 600
       [file] => '2014/09/cube.jpg'
-      [sizes] => Array
+      [sizes] => array
         (
-          [thumbnail] => Array
+          [thumbnail] => array
           (
             [file] => 'cube-150x150.jpg'
             [width] => 150
@@ -481,7 +481,7 @@ stdClass Object
             [mime-type] => 'image/jpeg'
           )
 
-          [medium] => Array
+          [medium] => array
           (
             [file] => 'cube-300x225.jpg'
             [width] => 300
@@ -491,7 +491,7 @@ stdClass Object
 
       )
 
-      [image_meta] => Array
+      [image_meta] => array
         (
           [aperture] => 0
           [credit] =>
@@ -538,11 +538,11 @@ html | empty string | String with html or a callable function or method.
  * Example of number.
  */
 
-papi_property([
+papi_property( [
   'title' => 'Number',
   'slug'  => 'my_number_slug',
   'type'  => 'number'
-])
+] )
 
 /**
  * Example output.
@@ -570,11 +570,11 @@ No settings exists.
  * Example of post.
  */
 
-papi_property([
+papi_property( [
   'title'    => 'Post',
   'slug'     => 'my_post_slug',
   'type'     => 'post'
-])
+] )
 
 /**
  * Example output.
@@ -634,7 +634,7 @@ text          | 'Select Post' | The text above the dropdown. If this text is a e
  * Example of radio buttons.
  */
 
-papi_property([
+papi_property( [
   'title'    => 'Colors',
   'slug'     => 'my_radio_slug',
   'type'     => 'radio',
@@ -644,7 +644,7 @@ papi_property([
         'Black' => '#000000'
       ]
   ]
-])
+] )
 
 /**
  * Example output.
@@ -675,14 +675,14 @@ selected | empty string | The radio button that will be selected from start. The
  * Example of reference.
  */
 
-papi_property([
+papi_property( [
   'title'    => 'References',
   'type'     => 'reference',
   'settings' => [
     'slug'      => 'top_module',
     'page_type' => 'start-page-type'
   ]
-])
+] )
 
 /**
  * Example output:
@@ -716,7 +716,7 @@ page_type | empty string | String or array of page types (the file name of the p
  * Example of relationship.
  */
 
-papi_property([
+papi_property( [
   'title'    => 'Relationship',
   'slug'     => 'my_relationship_slug',
   'type'     => 'relationship',
@@ -724,13 +724,13 @@ papi_property([
     'choose_max' => 3,
     'post_type'  => ['post', 'pages', 'my-custom-post-type']
   ]
-])
+] )
 
 /**
  * Example output:
  */
 
-Array
+array
 (
   [0] => WP_Post Object
   (
@@ -786,13 +786,13 @@ show_sort_by | true          | Show the sort by dropdown or not.
  * Example of `papi/property/relationship/sort_options` filter.
  */
 
-add_filter('papi/property/relationship/sort_options', function ($not_allowed) {
-  return array_merge($not_allowed, [
-    'Name (alphabetically)' => function ($a, $b) {
-      return strcmp(strtolower($a->post_title), strtolower($b->post_title));
+add_filter( 'papi/property/relationship/sort_options', function ( $not_allowed ) {
+  return array_merge( $not_allowed, [
+    'Name (alphabetically)' => function ( $a, $b ) {
+      return strcmp( strtolower( $a->post_title ), strtolower( $b->post_title ) );
     }
-  ]);
-});
+  ] );
+} );
 ```
 
 Filter                                  | Description
@@ -810,7 +810,7 @@ papi/property/relationship/sort_options | Add more sort options to property rela
  * Example of repeater.
  */
 
-papi_property([
+papi_property( [
   'title'    => 'Repeater',
   'slug'     => 'my_repeater_slug',
   'type'     => 'Repeater',
@@ -834,21 +834,21 @@ papi_property([
       ]
     ]
   ]
-])
+] )
 
 /**
  * Example output:
  */
 
-Array
+array
 (
-  [0] => Array
+  [0] => array
   (
     [my_string_slug] => 'Test 1'
     [my_dropdown_slug] => '#ffffff'
   )
 
-  [1] => Array
+  [1] => array
   (
     [my_string_slug] => 'Test 2'
     [my_dropdown_slug] => '#000000'
@@ -877,11 +877,11 @@ items | array() | The array of properties, the same key/values as the `$this->pr
  * Example of `papi/property/repeater/exclude` filter.
  */
 
-add_filter('papi/property/repeater/exclude', function ($exclude) {
-  return array_merge($exclude, [
+add_filter( 'papi/property/repeater/exclude', function ( $exclude ) {
+  return array_merge( $exclude, [
     'string'
-  ]);
-});
+  ] );
+} );
 ```
 
 Filter                         | Description
@@ -899,11 +899,11 @@ papi/property/repeater/exclude | Prevent properties from render and working in r
  * Example of string.
  */
 
-papi_property([
+papi_property( [
   'title' => 'Name',
   'slug'  => 'my_name_slug',
   'type'  => 'string'
-])
+] )
 
 /**
  * Example output.
@@ -931,11 +931,11 @@ No settings exists.
  * Example of text.
  */
 
-papi_property([
+papi_property( [
   'title' => 'Text',
   'slug'  => 'my_text_slug',
   'type'  => 'text'
-])
+] )
 
 /**
  * Example output.
@@ -963,14 +963,14 @@ No settings exists.
  * Example of url.
  */
 
-papi_property([
+papi_property( [
   'title'    => 'Url with button',
   'slug'     => 'my_url_slug',
   'type'     => 'url',
   'settings' => [
     'mediauploader' => true
   ]
-])
+] )
 
 /**
  * Example output.

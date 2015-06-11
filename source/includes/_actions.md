@@ -11,9 +11,9 @@
  * Example of `papi/include` action that will include a custom property.
  */
 
-add_action('papi/include', function () {
+add_action( 'papi/include', function () {
   require_once 'class-papi-property-kvack.php';
-});
+} );
 ```
 
 ## Description
