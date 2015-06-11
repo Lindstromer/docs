@@ -26,7 +26,19 @@ class Video_Page_Type extends Papi_Page_Type {
 }
 ```
 
-## page_type method
+## Namespaces
+
+```php
+<?php
+
+namespace Foo\Bar;
+
+class Test_Page_Type extends \Papi_Page_Type {}
+```
+
+## Methods
+
+### page_type method
 
 The `page_type()` is a required method of the page type class. It should return an array containing the required keys.
 
@@ -90,16 +102,6 @@ The method will take a `$post_type` argument. This is useful when the page type 
 Returning anything else then true will hide the page type.
 
 Default value is `true`.
-
-### Namespaces
-
-```php
-<?php
-
-namespace Foo\Bar;
-
-class Test_Page_Type extends \Papi_Page_Type {}
-```
 
 ### remove method
 
