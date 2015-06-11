@@ -35,4 +35,4 @@ namespace Foo\Bar;
 class Test_Option_Type extends \Papi_Option_Type {}
 ```
 
-Papi has no problem to work with page types that have namespaces.
+Papi has no problem to work with option types that have namespaces.
