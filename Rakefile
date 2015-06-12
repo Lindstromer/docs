@@ -4,18 +4,21 @@ require 'fileutils'
 task :default => [:build]
 
 task :apigen do
-  if Dir.exists?('papi')
-    FileUtils.remove_dir('papi')
+  source = 'tmp/papi'
+  target = 'source/apigen'
+
+  if Dir.exists?(source)
+    FileUtils.remove_dir(source)
   end
 
-  if Dir.exists?('source/apigen')
-    FileUtils.remove_dir('source/apigen')
+  if Dir.exists?(target)
+    FileUtils.remove_dir(target)
   end
 
-  sh 'git clone git@github.com:wp-papi/papi.git papi'
-  sh 'apigen generate -s papi/src -d source/apigen'
+  sh "git clone git@github.com:wp-papi/papi.git #{source}"
+  sh "apigen generate -s #{source}/src -d #{target}"
 
-  FileUtils.remove_dir('papi')
+  FileUtils.remove_dir(source)
 end
 
 task :publish => :apigen

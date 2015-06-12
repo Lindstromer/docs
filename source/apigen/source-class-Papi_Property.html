@@ -297,7 +297,7 @@
 </span><span id="81" class="l"><a href="#81"> 81: </a>
 </span><span id="82" class="l"><a href="#82"> 82: </a>        <span class="php-comment">// Only render if it's the right language if the definition exist.</span>
 </span><span id="83" class="l"><a href="#83"> 83: </a>        <span class="php-keyword1">if</span> ( <span class="php-var">$this</span>-&gt;get_option( <span class="php-quote">'lang'</span> ) === <span class="php-keyword2">strtolower</span>( papi_get_qs( <span class="php-quote">'lang'</span> ) ) ) {
-</span><span id="84" class="l"><a href="#84"> 84: </a>            <span class="php-var">$render</span> = <span class="php-keyword1">false</span>;
+</span><span id="84" class="l"><a href="#84"> 84: </a>            <span class="php-var">$render</span> = <span class="php-keyword1">true</span>;
 </span><span id="85" class="l"><a href="#85"> 85: </a>        } <span class="php-keyword1">else</span> {
 </span><span id="86" class="l"><a href="#86"> 86: </a>            <span class="php-var">$render</span> = <span class="php-var">$this</span>-&gt;get_option( <span class="php-quote">'lang'</span> ) === <span class="php-keyword1">false</span> &amp;&amp; papi_is_empty( papi_get_qs( <span class="php-quote">'lang'</span> ) );
 </span><span id="87" class="l"><a href="#87"> 87: </a>        }
