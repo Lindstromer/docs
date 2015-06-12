@@ -230,7 +230,7 @@ $properties       | array   | no       | The values to override the template va
 
 // my-page-type.php
 $this->box( 'My meta box', [
-  $this->property( [
+  papi_property( [
     'type'     => 'dropdown',
     'title'    => 'Dropdown',
     'slug'     => 'my_dropdown',
