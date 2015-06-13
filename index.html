@@ -48,9 +48,9 @@
 
 <p>Papi has a different approach on how to work with fields and page types in WordPress. The idea is coming from how Page Type Builder in EPiServer works and has been loved by the developers.</p>
 
-<p>So we though why don&rsquo;t use the same approach in WordPress? Papi is today running in production and has been easy to work with when it came to add new fields. Papi don&rsquo;t have any admin user interface where should add all fields, we use classes in PHP, where one class represents one page type and in your class you add all fields you need. It&rsquo;s that easy!</p>
+<p>So we though why don&rsquo;t use the same approach in WordPress? Papi is  running in production and has been easy to work with when it came to add new fields. Papi don&rsquo;t have any admin user interface where you should add fields, we use classes in PHP, where one class represents one page type and in your class you add all fields you need. It&rsquo;s that easy!</p>
 
-<p>Papi is completely open-source. You can use it however you like. If you want to help with its development you can submit your suggestions or improvements on in the <a href="https://github.com/wp-papi/papi">Github repository</a>.</p>
+<p>Papi is completely open-source. If you want to help with its development you can submit your suggestions or improvements on in the <a href="https://github.com/wp-papi/papi">Github repository</a>.</p>
 
 <h2 id="installation">Installation</h2>
 
@@ -131,6 +131,9 @@
  */</span>
 
 <span class="k">echo</span> <span class="nx">papi_field</span><span class="p">(</span><span class="s1">'twitter_url'</span><span class="p">);</span>
+
+<span class="c1">// with default value
+</span><span class="k">echo</span> <span class="nx">papi_field</span><span class="p">(</span><span class="s1">'twitter_url'</span><span class="p">,</span> <span class="s1">'http://twitter.com/frozzare'</span><span class="p">);</span>
 </code></pre>
 
 <h3 id="description">Description</h3>
@@ -408,7 +411,7 @@
 <pre><code class="highlight php"><span class="cp">&lt;?php</span>
 
 <span class="sd">/**
- * Example of `papi_field` function.
+ * Example of `the_papi_field` function.
  */</span>
 
 <span class="nx">the_papi_field</span><span class="p">(</span><span class="s1">'twitter_url'</span><span class="p">)</span>
