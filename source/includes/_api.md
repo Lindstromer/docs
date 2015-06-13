@@ -235,7 +235,7 @@ $properties       | array() | no       | The values to override the template va
 <?php
 
 /**
- * Example of `papi_field` function.
+ * Example of `the_papi_field` function.
  */
 
 the_papi_field('twitter_url')
