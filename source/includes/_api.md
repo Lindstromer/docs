@@ -31,6 +31,9 @@ No parameters exists.
  */
 
 echo papi_field('twitter_url');
+
+// with default value
+echo papi_field('twitter_url', 'http://twitter.com/frozzare');
 ```
 
 ### Description
