@@ -1,6 +1,6 @@
 # Actions
 
-## Include plugins or properties build for Papi
+## Include plugins or properties
 
 **action** `papi/include`
 
