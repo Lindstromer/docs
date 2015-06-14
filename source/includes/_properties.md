@@ -264,9 +264,8 @@ With this property you can add a dropdown. The key is the value that the user wi
 
 Key           | Default            | Description
 --------------|--------------------|-------------------------------------------------
-blank_text    | empty string       | Change the blank text to something else
-include_blank | true               | Include the blank row or not
-items         | array (no limit) | Array with options, value or key/value
+items         | array              | Array with options, value or key/value
+placeholder   | empty string       | Placeholder text that's displayed when no option is slected.
 selected      | empty string       | The select item that will be selected from start. The value should match a key of your items
 
 ## Editor
@@ -623,11 +622,9 @@ With this property you can add reference to another post. It can't handle multip
 
 Key           | Default       | Description
 --------------|---------------|--------------------------------------------------
-blank_text    | empty string  | Change the blank text to something else
-include_blank | true          | Include the blank row or not
+placeholder   | empty string  | Placeholder text that's displayed when no option is slected.
 post_type     | 'post'        | The post type that the property will load posts from. Can only be one post type
-query         | array       | Append a `WP_Query` on all post types. Gist reference over `WP_Query`. Note that `post_type` in query will always be removed
-text          | 'Select Post' | The text above the dropdown. If this text is a empty string the p tag will be hidden
+query         | array         | Append a `WP_Query` on all post types. Gist reference over `WP_Query`. Note that `post_type` in query will always be removed
 
 ## Radio buttons
 
