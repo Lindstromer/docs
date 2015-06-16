@@ -352,7 +352,7 @@ papi_property( [
 ] )
 
 /**
- * Example output:
+ * Example output.
  */
 
 array
@@ -512,7 +512,7 @@ papi_property( [
 ] )
 
 /**
- * Example output:
+ * Example output.
  * The reference property does not save any values.
  */
 ```
@@ -545,7 +545,7 @@ papi_property( [
 ] )
 
 /**
- * Example output:
+ * Example output.
  * The reference property does not save any values.
  */
 ```
@@ -798,7 +798,7 @@ papi_property( [
 ] )
 
 /**
- * Example output:
+ * Example output.
  * The reference property does not save any values.
  */
 ```
@@ -840,7 +840,7 @@ papi_property( [
 ] )
 
 /**
- * Example output:
+ * Example output.
  */
 
 array
@@ -950,7 +950,7 @@ papi_property( [
 ] )
 
 /**
- * Example output:
+ * Example output.
  */
 
 array
