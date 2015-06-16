@@ -302,7 +302,117 @@ No settings exists.
 
 ## Flexible
 
-TODO ME
+**type** `flexible`
+
+```php
+<?php
+
+/**
+ * Example of Flexible.
+ */
+
+papi_property( [
+  'title'    => 'Flexible',
+  'slug'     => 'my_flexible_slug',
+  'type'     => 'flexible',
+  'settings' => [
+    'items' => [
+      [
+        'title' => 'Posts',
+        'items' => [
+          papi_property( [
+            'type'  => 'string',
+            'title' => 'Title',
+            'slug'  => 'my_string_slug'
+          ] ),
+			    papi_property( [
+            'type'  => 'post',
+            'title' => 'Post',
+            'slug'  => 'my_post_slug'
+          ] )
+        ]
+      ],
+      [
+        'title' => 'Image',
+        'items' => [
+          papi_property( [
+            'type'  => 'string',
+            'title' => 'Title',
+            'slug'  => 'my_title_slug'
+          ] ),
+          papi_property( [
+            'type'  => 'image',
+            'title' => 'Image',
+            'slug'  => 'my_image_slug'
+          ] )
+        ]
+      ]
+    ]
+  ]
+] )
+
+/**
+ * Example output:
+ */
+
+array
+(
+  [0] => array
+  (
+    [my_string_slug] => 'Test 1'
+    [my_post_slug] => 'WP_Post object',
+    [layout] => 'posts'
+  )
+
+  [1] => array
+  (
+    [my_title_slug] => 'Test 2'
+    [my_image_slug] => 'Image object',
+    [layout] => 'image'
+  )
+)
+```
+
+### Description
+
+The flexible property can create a repeater with different layouts that contains sub fields. That's the big different from a [repeater property](#repeater).
+
+![Image example](/images/docs/property-flexible.png)
+
+### Settings
+
+Key    | Default | Description
+-------|---------|----------------------------------------------------------
+items  | array   | Array of key/value. See `Items key/value` section.
+layout | string  | Choose between `table` or `row`. Default is `table`.
+
+### Items key/value
+
+Key    | Default | Description
+-------|---------|----------------------------------------------------------
+items  | array   | The array of properties, the same key/values as `$this->property` method or `papi_property` function has. You can't use repeater or flexible inside a flexible.
+slug   | string  | The slug of the flexible section. **This is not required**. If you don't have a slug value it will be generated from the title.
+title  | string  | The title of the flexible section.
+
+### Filters
+
+```php
+<?php
+
+/**
+ * Example of `papi/property/flexible/exclude` filter.
+ */
+
+add_filter( 'papi/property/flexible/exclude', function ( $exclude ) {
+  return array_merge( $exclude, [
+    'string'
+  ] );
+} );
+```
+
+Filter                         | Description
+-------------------------------|-------------
+papi/property/flexible/exclude | Prevent properties from render and working in flexible
 
 ## Gallery
 
@@ -520,11 +630,11 @@ stdClass Object
 )
 ```
 
-![Image example](/images/docs/property-image.png)
-
 ### Description
 
 With this property you can add a image from the WordPress media library. If the gallery setting is set to true the output will be a array with objects instead of just one object.
+
+![Image example](/images/docs/property-image.png)
 
 ### Settings
 
@@ -816,15 +926,15 @@ papi/property/relationship/sort_options | Add more sort options to property rela
 papi_property( [
   'title'    => 'Repeater',
   'slug'     => 'my_repeater_slug',
-  'type'     => 'Repeater',
+  'type'     => 'repeater',
   'settings' => [
     'items' => [
-      [
+      papi_property( [
         'type'  => 'string',
         'title' => 'Title',
         'slug'  => 'my_string_slug'
-      ],
-      [
+      ] ),
+      papi_property( [
         'type'     => 'dropdown',
         'title'    => 'Color',
         'slug'     => 'my_dropdown_slug',
@@ -834,7 +944,7 @@ papi_property( [
             'Black' => '#000000'
           ]
         ]
-      ]
+      ] )
     ]
   ]
 ] )
@@ -867,9 +977,10 @@ The repeater property can create a repeater of sub fields which can be repeated 
 
 ### Settings
 
-Key   | Default | Description
-------|---------|----------------------------------------------------------
-items | array | The array of properties, the same key/values as the `$this->property` method or `papi_property` function has. You can't use property repeater inside a repeater.
+Key    | Default | Description
+-------|---------|----------------------------------------------------------
+items  | array   | The array of properties, the same key/values as `$this->property` method or `papi_property` function has. You can't use repeater or flexible inside a repeater.
+layout | string  | Choose between `table` or `row`. Default is `table`.
 
 ### Filters
 
