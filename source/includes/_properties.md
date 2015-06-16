@@ -325,7 +325,7 @@ papi_property( [
             'title' => 'Title',
             'slug'  => 'my_string_slug'
           ] ),
-			    papi_property( [
+          papi_property( [
             'type'  => 'post',
             'title' => 'Post',
             'slug'  => 'my_post_slug'
