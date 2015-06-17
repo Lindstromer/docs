@@ -19,7 +19,7 @@
 		<div id="groups">
 				<h3>Packages</h3>
 			<ul>
-				<li>
+				<li class="active">
 					<a href="package-Papi.html">
 						Papi					</a>
 
@@ -76,7 +76,7 @@
 				<li><a href="class-Papi_Property_Repeater.html">Papi_Property_Repeater</a></li>
 				<li><a href="class-Papi_Property_String.html">Papi_Property_String</a></li>
 				<li><a href="class-Papi_Property_Text.html">Papi_Property_Text</a></li>
-				<li><a href="class-Papi_Property_Url.html">Papi_Property_Url</a></li>
+				<li class="active"><a href="class-Papi_Property_Url.html">Papi_Property_Url</a></li>
 			</ul>
 
 
@@ -184,7 +184,7 @@
 				<li><a href="function-papify.html">papify</a></li>
 				<li><a href="function-the_papi_field.html">the_papi_field</a></li>
 				<li><a href="function-the_papi_option.html">the_papi_option</a></li>
-				<li><a href="function-the_papi_page_type_name.html">the_papi_page_type_name</a></li>
+				<li class="active"><a href="function-the_papi_page_type_name.html">the_papi_page_type_name</a></li>
 			</ul>
 		</div>
 	</div>
@@ -206,9 +206,11 @@
 				<a href="index.html" title="Overview"><span>Overview</span></a>
 			</li>
 			<li>
-<span>Package</span>			</li>
+				<a href="package-Papi.html" title="Summary of Papi"><span>Package</span></a>
+			</li>
 			<li>
-<span>Class</span>			</li>
+				<a href="function-the_papi_page_type_name.html" title="Summary of the_papi_page_type_name"><span>Function</span></a>
+			</li>
 		</ul>
 		<ul>
 		</ul>
@@ -328,9 +330,9 @@
 </span><span id="110" class="l"><a href="#110">110: </a>                    <span class="xlang">&lt;?php</span> <span class="php-keyword1">endif</span>; <span class="xlang">?&gt;</span>
 </span><span id="111" class="l"><a href="#111">111: </a>
 </span><span id="112" class="l"><a href="#112">112: </a>                    <span class="xlang">&lt;?php</span> <span class="php-keyword1">foreach</span> ( <span class="php-var">$items</span> <span class="php-keyword1">as</span> <span class="php-var">$post</span> ):
-</span><span id="113" class="l"><a href="#113">113: </a>                            <span class="php-keyword1">if</span> ( papi_is_empty( <span class="php-var">$post</span>-&gt;post_title ) ) {
-</span><span id="114" class="l"><a href="#114">114: </a>                                <span class="php-keyword1">continue</span>;
-</span><span id="115" class="l"><a href="#115">115: </a>                            }
+</span><span id="113" class="l"><a href="#113">113: </a>                        <span class="php-keyword1">if</span> ( papi_is_empty( <span class="php-var">$post</span>-&gt;post_title ) ) {
+</span><span id="114" class="l"><a href="#114">114: </a>                            <span class="php-keyword1">continue</span>;
+</span><span id="115" class="l"><a href="#115">115: </a>                        }
 </span><span id="116" class="l"><a href="#116">116: </a>                    <span class="xlang">?&gt;</span>
 </span><span id="117" class="l"><a href="#117">117: </a>                        &lt;option value=<span class="php-quote">&quot;&lt;?php echo </span><span class="php-var">$post</span><span class="php-quote">-&gt;ID; ?&gt;&quot;</span> <span class="xlang">&lt;?php</span> <span class="php-keyword1">echo</span> <span class="php-var">$value</span> == <span class="php-var">$post</span>-&gt;ID ? <span class="php-quote">'selected=&quot;selected&quot;'</span> : <span class="php-quote">''</span>; <span class="xlang">?&gt;</span>&gt;
 </span><span id="118" class="l"><a href="#118">118: </a>                            <span class="xlang">&lt;?php</span> <span class="php-keyword1">echo</span> <span class="php-var">$post</span>-&gt;post_title; <span class="xlang">?&gt;</span>
@@ -374,7 +376,7 @@
 	</div>
 </div>
 </div>
-<script src="resources/combined.js?e685cf306ff7af26861c1d8865255ca116cc5bd5"></script>
+<script src="resources/combined.js?6bc31116bf225f9af7b580dc798b3410c38547a0"></script>
 <script src="elementlist.js?3fc25441340baaf7ffdf97ea72905b43af9abc5a"></script>
 </body>
 </html>
