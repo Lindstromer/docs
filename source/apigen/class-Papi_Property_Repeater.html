@@ -92,6 +92,8 @@
 				<li><a href="function-papi_convert_to_string.html">papi_convert_to_string</a></li>
 				<li><a href="function-papi_current_user_is_allowed.html">papi_current_user_is_allowed</a></li>
 				<li><a href="function-papi_dashify.html">papi_dashify</a></li>
+				<li><a href="function-papi_delete_field.html">papi_delete_field</a></li>
+				<li><a href="function-papi_delete_option.html">papi_delete_option</a></li>
 				<li><a href="function-papi_display_page_type.html">papi_display_page_type</a></li>
 				<li><a href="function-papi_esc_html.html">papi_esc_html</a></li>
 				<li><a href="function-papi_f.html">papi_f</a></li>
@@ -180,6 +182,8 @@
 				<li><a href="function-papi_to_array.html">papi_to_array</a></li>
 				<li><a href="function-papi_to_property_array_slugs.html">papi_to_property_array_slugs</a></li>
 				<li><a href="function-papi_underscorify.html">papi_underscorify</a></li>
+				<li><a href="function-papi_update_field.html">papi_update_field</a></li>
+				<li><a href="function-papi_update_option.html">papi_update_option</a></li>
 				<li><a href="function-papify.html">papify</a></li>
 				<li><a href="function-the_papi_field.html">the_papi_field</a></li>
 				<li><a href="function-the_papi_option.html">the_papi_option</a></li>
@@ -262,7 +266,7 @@
 		
 		<b>Package:</b> <a href="package-Papi.html">Papi</a><br>
 
-			<b>Located at</b> <a href="source-class-Papi_Property_Repeater.html#7-716" title="Go to source code">includes/properties/class-papi-property-repeater.php</a>
+			<b>Located at</b> <a href="source-class-Papi_Property_Repeater.html#7-739" title="Go to source code">includes/properties/class-papi-property-repeater.php</a>
 		<br>
 	</div>
 
@@ -270,6 +274,49 @@
 
 	<table class="summary methods" id="methods">
 	<caption>Methods summary</caption>
+	<tr data-order="delete_value" id="_delete_value">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_delete_value">#</a>
+		<code><a href="source-class-Papi_Property_Repeater.html#47-74" title="Go to source code">delete_value</a>( <span>string <var>$slug</var></span>, <span>integer <var>$post_id</var></span> )</code>
+
+		<div class="description short">
+			<p>Delete value from the database.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Delete value from the database.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$slug</var></dt>
+					<dd></dd>
+					<dt><var>$post_id</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-Papi_Core_Property.html#_delete_value">Papi_Core_Property::delete_value()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="format_value" id="_format_value">
 
 		<td class="attributes"><code>
@@ -282,7 +329,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_format_value">#</a>
-		<code><a href="source-class-Papi_Property_Repeater.html#47-97" title="Go to source code">format_value</a>( <span>mixed <var>$values</var></span>, <span>string <var>$repeater_slug</var></span>, <span>integer <var>$post_id</var></span> )</code>
+		<code><a href="source-class-Papi_Property_Repeater.html#77-127" title="Go to source code">format_value</a>( <span>mixed <var>$values</var></span>, <span>string <var>$repeater_slug</var></span>, <span>integer <var>$post_id</var></span> )</code>
 
 		<div class="description short">
 			<p>Format the value of the property before it's returned to the theme.</p>
@@ -327,7 +374,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_get_default_settings">#</a>
-		<code><a href="source-class-Papi_Property_Repeater.html#100-111" title="Go to source code">get_default_settings</a>( )</code>
+		<code><a href="source-class-Papi_Property_Repeater.html#130-141" title="Go to source code">get_default_settings</a>( )</code>
 
 		<div class="description short">
 			<p>Get default settings.</p>
@@ -363,7 +410,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_get_json_property">#</a>
-		<code><a href="source-class-Papi_Property_Repeater.html#114-132" title="Go to source code">get_json_property</a>( <span> <var>$property</var></span> )</code>
+		<code><a href="source-class-Papi_Property_Repeater.html#144-162" title="Go to source code">get_json_property</a>( <span> <var>$property</var></span> )</code>
 
 		<div class="description short">
 			<p>Get JSON property that is used when adding new row.</p>
@@ -397,7 +444,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_get_results">#</a>
-		<code><a href="source-class-Papi_Property_Repeater.html#135-223" title="Go to source code">get_results</a>( <span>integer <var>$value</var></span>, <span>int $post_id <var>$repeater_slug</var></span>, <span>string <var>$post_id</var></span>, <span>integer <var>$post_id</var>,…</span> )</code>
+		<code><a href="source-class-Papi_Property_Repeater.html#165-252" title="Go to source code">get_results</a>( <span>integer <var>$value</var></span>, <span> <var>$repeater_slug</var></span>, <span>string <var>$post_id</var></span>, <span>integer <var>$post_id</var>,…</span> )</code>
 
 		<div class="description short">
 			<p>Get results from the database.</p>
@@ -442,7 +489,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_get_row_results">#</a>
-		<code><a href="source-class-Papi_Property_Repeater.html#226-265" title="Go to source code">get_row_results</a>( <span>array <var>$dbresults</var></span> )</code>
+		<code><a href="source-class-Papi_Property_Repeater.html#255-294" title="Go to source code">get_row_results</a>( <span>array <var>$dbresults</var></span> )</code>
 
 		<div class="description short">
 			<p>Get row results.</p>
@@ -481,7 +528,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_get_settings_properties">#</a>
-		<code><a href="source-class-Papi_Property_Repeater.html#268-281" title="Go to source code">get_settings_properties</a>( )</code>
+		<code><a href="source-class-Papi_Property_Repeater.html#297-310" title="Go to source code">get_settings_properties</a>( )</code>
 
 		<div class="description short">
 			<p>Get settings properties.</p>
@@ -515,7 +562,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_html">#</a>
-		<code><a href="source-class-Papi_Property_Repeater.html#284-298" title="Go to source code">html</a>( )</code>
+		<code><a href="source-class-Papi_Property_Repeater.html#313-327" title="Go to source code">html</a>( )</code>
 
 		<div class="description short">
 			<p>Display property html.</p>
@@ -547,7 +594,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_layout">#</a>
-		<code><a href="source-class-Papi_Property_Repeater.html#301-310" title="Go to source code">layout</a>( <span>string <var>$layout</var></span> )</code>
+		<code><a href="source-class-Papi_Property_Repeater.html#330-339" title="Go to source code">layout</a>( <span>string <var>$layout</var></span> )</code>
 
 		<div class="description short">
 			<p>Check if the given layout is the layouted used.</p>
@@ -586,7 +633,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_load_value">#</a>
-		<code><a href="source-class-Papi_Property_Repeater.html#313-357" title="Go to source code">load_value</a>( <span>mixed <var>$value</var></span>, <span>string <var>$repeater_slug</var></span>, <span>integer <var>$post_id</var></span> )</code>
+		<code><a href="source-class-Papi_Property_Repeater.html#342-386" title="Go to source code">load_value</a>( <span>integer <var>$value</var></span>, <span>string <var>$repeater_slug</var></span>, <span>integer <var>$post_id</var></span> )</code>
 
 		<div class="description short">
 			<p>Change value after it's loaded from the database
@@ -633,7 +680,7 @@ and populate every property in the repeater with the right property type.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_prepare_properties">#</a>
-		<code><a href="source-class-Papi_Property_Repeater.html#360-385" title="Go to source code">prepare_properties</a>( <span> <var>$items</var></span> )</code>
+		<code><a href="source-class-Papi_Property_Repeater.html#389-416" title="Go to source code">prepare_properties</a>( <span> <var>$items</var></span> )</code>
 
 		<div class="description short">
 			<p>Prepare properties, get properties options object,
@@ -674,7 +721,7 @@ check which properties that are allowed to use.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_remove_repeater_rows">#</a>
-		<code><a href="source-class-Papi_Property_Repeater.html#388-419" title="Go to source code">remove_repeater_rows</a>( <span>integer <var>$post_id</var></span>, <span>string <var>$repeater_slug</var></span> )</code>
+		<code><a href="source-class-Papi_Property_Repeater.html#419-450" title="Go to source code">remove_repeater_rows</a>( <span>integer <var>$post_id</var></span>, <span>string <var>$repeater_slug</var></span> )</code>
 
 		<div class="description short">
 			<p>Remove all repeater rows from the database.</p>
@@ -711,7 +758,7 @@ check which properties that are allowed to use.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_render_ajax_request">#</a>
-		<code><a href="source-class-Papi_Property_Repeater.html#422-434" title="Go to source code">render_ajax_request</a>( )</code>
+		<code><a href="source-class-Papi_Property_Repeater.html#453-465" title="Go to source code">render_ajax_request</a>( )</code>
 
 		<div class="description short">
 			<p>Render AJAX request.</p>
@@ -743,7 +790,7 @@ check which properties that are allowed to use.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_render_json_template">#</a>
-		<code><a href="source-class-Papi_Property_Repeater.html#437-457" title="Go to source code">render_json_template</a>( <span>string <var>$slug</var></span> )</code>
+		<code><a href="source-class-Papi_Property_Repeater.html#468-488" title="Go to source code">render_json_template</a>( <span>string <var>$slug</var></span> )</code>
 
 		<div class="description short">
 			<p>Render property JSON template.</p>
@@ -778,7 +825,7 @@ check which properties that are allowed to use.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_render_properties">#</a>
-		<code><a href="source-class-Papi_Property_Repeater.html#460-512" title="Go to source code">render_properties</a>( <span>array <var>$row</var></span>, <span>array|boolean <var>$value</var></span> )</code>
+		<code><a href="source-class-Papi_Property_Repeater.html#491-543" title="Go to source code">render_properties</a>( <span>array <var>$row</var></span>, <span>array|boolean <var>$value</var></span> )</code>
 
 		<div class="description short">
 			<p>Render properties.</p>
@@ -815,7 +862,7 @@ check which properties that are allowed to use.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_render_repeater">#</a>
-		<code><a href="source-class-Papi_Property_Repeater.html#515-544" title="Go to source code">render_repeater</a>( <span>object <var>$options</var></span> )</code>
+		<code><a href="source-class-Papi_Property_Repeater.html#546-571" title="Go to source code">render_repeater</a>( <span>stdClass <var>$options</var></span> )</code>
 
 		<div class="description short">
 			<p>Render repeater html.</p>
@@ -850,7 +897,7 @@ check which properties that are allowed to use.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_render_repeater_head">#</a>
-		<code><a href="source-class-Papi_Property_Repeater.html#547-565" title="Go to source code">render_repeater_head</a>( )</code>
+		<code><a href="source-class-Papi_Property_Repeater.html#574-592" title="Go to source code">render_repeater_head</a>( )</code>
 
 		<div class="description short">
 			<p>Render repeater head.</p>
@@ -880,7 +927,7 @@ check which properties that are allowed to use.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_render_repeater_rows">#</a>
-		<code><a href="source-class-Papi_Property_Repeater.html#568-612" title="Go to source code">render_repeater_rows</a>( )</code>
+		<code><a href="source-class-Papi_Property_Repeater.html#595-640" title="Go to source code">render_repeater_rows</a>( )</code>
 
 		<div class="description short">
 			<p>Render repeater rows.</p>
@@ -910,7 +957,7 @@ check which properties that are allowed to use.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_render_repeater_rows_template">#</a>
-		<code><a href="source-class-Papi_Property_Repeater.html#615-634" title="Go to source code">render_repeater_rows_template</a>( )</code>
+		<code><a href="source-class-Papi_Property_Repeater.html#643-663" title="Go to source code">render_repeater_rows_template</a>( )</code>
 
 		<div class="description short">
 			<p>Render repeater row template.</p>
@@ -940,7 +987,7 @@ check which properties that are allowed to use.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setup_actions">#</a>
-		<code><a href="source-class-Papi_Property_Repeater.html#637-642" title="Go to source code">setup_actions</a>( )</code>
+		<code><a href="source-class-Papi_Property_Repeater.html#666-671" title="Go to source code">setup_actions</a>( )</code>
 
 		<div class="description short">
 			<p>Setup actions.</p>
@@ -972,7 +1019,7 @@ check which properties that are allowed to use.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_update_value">#</a>
-		<code><a href="source-class-Papi_Property_Repeater.html#645-715" title="Go to source code">update_value</a>( <span>mixed <var>$values</var></span>, <span>string <var>$repeater_slug</var></span>, <span>integer <var>$post_id</var></span> )</code>
+		<code><a href="source-class-Papi_Property_Repeater.html#674-738" title="Go to source code">update_value</a>( <span>mixed <var>$values</var></span>, <span>string <var>$repeater_slug</var></span>, <span>integer <var>$post_id</var></span> )</code>
 
 		<div class="description short">
 			<p>Update value before it's saved to the database.</p>
@@ -1160,7 +1207,7 @@ check which properties that are allowed to use.</p>
 		<td class="value">
 			<div>
 				<a href="#$exclude_properties" class="anchor">#</a>
-				<code>[<span class="php-quote">'repeater'</span>]</code>
+				<code>[<span class="php-quote">'flexible'</span>, <span class="php-quote">'repeater'</span>]</code>
 			</div>
 		</td>
 	</tr>
