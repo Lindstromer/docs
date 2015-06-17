@@ -746,24 +746,26 @@ You can remove both post type support and meta boxes with <code class="prettypri
  * Example of the default options.
  */</span>
 
-<span class="nx">papi_property</span><span class="p">([</span>
-  <span class="s1">'capabilities'</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(),</span>
-  <span class="s1">'default'</span>      <span class="o">=&gt;</span> <span class="s1">''</span><span class="p">,</span>
+<span class="nx">papi_property</span><span class="p">(</span> <span class="p">[</span>
+  <span class="s1">'capabilities'</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">,</span>
   <span class="s1">'description'</span>  <span class="o">=&gt;</span> <span class="s1">''</span><span class="p">,</span>
   <span class="s1">'disabled'</span>     <span class="o">=&gt;</span> <span class="kc">false</span><span class="p">,</span>
   <span class="s1">'lang'</span>         <span class="o">=&gt;</span> <span class="kc">false</span><span class="p">,</span>
   <span class="s1">'raw'</span>          <span class="o">=&gt;</span> <span class="kc">false</span><span class="p">,</span>
   <span class="s1">'required'</span>     <span class="o">=&gt;</span> <span class="kc">false</span><span class="p">,</span>
-  <span class="s1">'settings'</span>     <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(),</span>
+  <span class="s1">'settings'</span>     <span class="o">=&gt;</span> <span class="k">array</span><span class="p">,</span>
   <span class="s1">'sidebar'</span>      <span class="o">=&gt;</span> <span class="kc">true</span><span class="p">,</span>
   <span class="s1">'slug'</span>         <span class="o">=&gt;</span> <span class="s1">''</span><span class="p">,</span>
   <span class="s1">'sort_order'</span>   <span class="o">=&gt;</span> <span class="mi">100</span><span class="p">,</span>
   <span class="s1">'title'</span>        <span class="o">=&gt;</span> <span class="s1">''</span><span class="p">,</span>
-  <span class="s1">'type'</span>         <span class="o">=&gt;</span> <span class="s1">''</span>
-<span class="p">])</span>
+  <span class="s1">'type'</span>         <span class="o">=&gt;</span> <span class="s1">''</span><span class="p">,</span>
+  <span class="s1">'value'</span>        <span class="o">=&gt;</span> <span class="s1">''</span>
+<span class="p">]</span> <span class="p">)</span>
 </code></pre>
 
-<p>Papi does support 19 core properties (a field is a property in the page type) to start with and you can easy create your own using our <a href="#">Yeoman generator</a>. The are several keys that all properties have.</p>
+<p>Papi has many different core properties (a field is a property in the page type) to start with and you can easy create your own using our <a href="#">Yeoman generator</a>. The are several keys that all properties have.</p>
+
+<p>The property type is loaded from the page type file instead of saving it in the database.</p>
 
 <table><thead>
 <tr>
@@ -774,23 +776,18 @@ You can remove both post type support and meta boxes with <code class="prettypri
 </thead><tbody>
 <tr>
 <td>capabilities</td>
-<td>array()</td>
+<td>array</td>
 <td>Can be a string with a role or capability or a array with many values</td>
-</tr>
-<tr>
-<td>default</td>
-<td>empty string</td>
-<td>The default value that are presented in the property</td>
 </tr>
 <tr>
 <td>description</td>
 <td>empty string</td>
-<td>The introduction text that will appear below the title text of the property. You could write your help text here. Since version 1.2.0 you can have &ldquo;\n&rdquo; to create new lines in the description</td>
+<td>Disable the property, won’t show in WordPress admin</td>
 </tr>
 <tr>
 <td>disabled</td>
 <td>false</td>
-<td>Disable the property, won’t show in WordPress admin</td>
+<td>The introduction text that will appear below the title text of the property. You could write your help text here. With &ldquo;\n&rdquo; you can create new lines in the description</td>
 </tr>
 <tr>
 <td>lang</td>
@@ -814,7 +811,7 @@ You can remove both post type support and meta boxes with <code class="prettypri
 </tr>
 <tr>
 <td>settings</td>
-<td>array()</td>
+<td>array</td>
 <td>Array with custom settings for the property</td>
 </tr>
 <tr>
@@ -836,6 +833,11 @@ You can remove both post type support and meta boxes with <code class="prettypri
 <td>type</td>
 <td>empty string</td>
 <td>The property type (lower case is preferred to use)</td>
+</tr>
+<tr>
+<td>value</td>
+<td>empty string</td>
+<td>The default value that are presented in the property</td>
 </tr>
 </tbody></table>
 
