@@ -9,7 +9,6 @@
 
 papi_property( [
   'capabilities' => array,
-  'default'      => '',
   'description'  => '',
   'disabled'     => false,
   'lang'         => false,
@@ -20,7 +19,8 @@ papi_property( [
   'slug'         => '',
   'sort_order'   => 100,
   'title'        => '',
-  'type'         => ''
+  'type'         => '',
+  'value'        => ''
 ] )
 ```
 
@@ -31,7 +31,6 @@ The property type is loaded from the page type file instead of saving it in the 
 Key          | Default      | Description
 -------------|--------------|---------------------------------------------------
 capabilities | array      | Can be a string with a role or capability or a array with many values
-default      | empty string | The default value that are presented in the property
 description  | empty string | Disable the property, won’t show in WordPress admin
 disabled     | false        | The introduction text that will appear below the title text of the property. You could write your help text here. With "\n" you can create new lines in the description
 lang         | false        | When using this key you can specify which language will show the property
@@ -43,6 +42,7 @@ sort_order   | 1000         | Numeric value, lowest value in the meta box will b
 slug         | empty string | The slug of property. If empty or not used the title will be generated to slug value
 title        | empty string | The title of the property. Can be empty for blank title
 type         | empty string | The property type (lower case is preferred to use)
+value        | empty string | The default value that are presented in the property
 
 **Note:** be sure to have different slug for each properties on a page type, the same slug will not work great and you will lose data if you are using same slug for multiple properties.
 
