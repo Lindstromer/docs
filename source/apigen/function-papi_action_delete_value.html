@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Function papi_f</title>
+	<title>Function papi_action_delete_value</title>
 
 	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
 
@@ -86,7 +86,7 @@
 			<ul>
 				<li><a href="function-current_page.html">current_page</a></li>
 				<li><a href="function-papi.html">papi</a></li>
-				<li><a href="function-papi_action_delete_value.html">papi_action_delete_value</a></li>
+				<li class="active"><a href="function-papi_action_delete_value.html">papi_action_delete_value</a></li>
 				<li><a href="function-papi_action_include.html">papi_action_include</a></li>
 				<li><a href="function-papi_append_post_type_query.html">papi_append_post_type_query</a></li>
 				<li><a href="function-papi_body_class.html">papi_body_class</a></li>
@@ -97,7 +97,7 @@
 				<li><a href="function-papi_delete_option.html">papi_delete_option</a></li>
 				<li><a href="function-papi_display_page_type.html">papi_display_page_type</a></li>
 				<li><a href="function-papi_esc_html.html">papi_esc_html</a></li>
-				<li class="active"><a href="function-papi_f.html">papi_f</a></li>
+				<li><a href="function-papi_f.html">papi_f</a></li>
 				<li><a href="function-papi_ff.html">papi_ff</a></li>
 				<li><a href="function-papi_field.html">papi_field</a></li>
 				<li><a href="function-papi_field_shortcode.html">papi_field_shortcode</a></li>
@@ -221,43 +221,42 @@
 	</div>
 
 <div id="content" class="function">
-	<h1>Function papi_f</h1>
+	<h1>Function papi_action_delete_value</h1>
 
 
 	<div class="description">
-	<p>Add a underscore at the start of the string.</p>
+	<p>Delete the property value from the database.</p>
 	</div>
 
 	<div class="info">
 		
 		<b>Package:</b> <a href="package-Papi.html">Papi</a><br>
 		<b>Located at</b>
-		<a href="source-function-papi_f.html#118-135" title="Go to source code">
-			includes/lib/utilities.php
+		<a href="source-function-papi_action_delete_value.html#13-22" title="Go to source code">
+			includes/lib/actions.php
 		</a><br>
 	</div>
 
 
 	<table class="summary" id="parameters">
 	<caption>Parameters summary</caption>
-	<tr id="$str">
+	<tr id="$type">
 		<td class="name"><code>string</code></td>
-		<td class="value"><code><var>$str</var> = <span class="php-quote">''</span></code></td>
+		<td class="value"><code><var>$type</var></code></td>
+		<td></td>
+	</tr>
+	<tr id="$slug">
+		<td class="name"><code>string</code></td>
+		<td class="value"><code><var>$slug</var></code></td>
+		<td></td>
+	</tr>
+	<tr id="$post_id">
+		<td class="name"><code>integer</code></td>
+		<td class="value"><code><var>$post_id</var></code></td>
 		<td></td>
 	</tr>
 	</table>
 
-	<table class="summary" id="returns">
-	<caption>Return value summary</caption>
-	<tr>
-		<td class="name"><code>
-			string
-		</code></td>
-		<td>
-			string
-		</td>
-	</tr>
-	</table>
 
 
 </div>
