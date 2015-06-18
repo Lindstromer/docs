@@ -105,6 +105,33 @@ Parameter | Default | Required | Description
 ----------|---------|----------|------------------------------------------------
 $post_id  | null    | no       | The post id will be added automatic if you are one a post, page or custom post type page. When fetching values from another post this argument will be required
 
+## papi_get_page_type_id
+
+```php
+<?php
+
+/**
+ * Example of `papi_get_page_type_id` function.
+ */
+
+echo papi_get_page_type_id();
+// "article-page-type"
+
+// with post id
+echo papi_get_page_type_id( 2 );
+// "activity-page-type"
+```
+
+### Description
+
+When given a post id it will fetch the Papi page for that post id instead.
+
+### Parameters
+
+Parameter | Default | Required | Description
+----------|---------|----------|------------------------------------------------
+$post_id  | null    | no       | The post id will be added automatic if you are one a post, page or custom post type page. When fetching values from another post this argument will be required
+
 ## papi_option
 
 ```php
