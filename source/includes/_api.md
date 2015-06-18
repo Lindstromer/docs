@@ -21,6 +21,51 @@ Get the current Papi page with all fields. This will not work with option types.
 
 No parameters exists.
 
+## papi_delete_field
+
+```php
+<?php
+
+/**
+ * Example of `papi_delete_field` function.
+ */
+
+$success = papi_delete_field( 456, 'twitter_url' );
+```
+
+### Description
+
+With this function you can delete property value from the database. It will return false if can't update or find the property in a page type.
+
+### Parameters
+
+Parameter | Default | Required |
+--------------------------------
+$post_id  | null    | no       | The post id will be added automatic if you are one a post, page or custom post type page. When deleting values from another post this argument will be required
+$slug     |         | yes      | The property slug to delete value from
+
+## papi_delete_option
+
+```php
+<?php
+
+/**
+ * Example of `papi_delete_option` function.
+ */
+
+$success = papi_delete_field( 'twitter_url' );
+```
+
+### Description
+
+With this function you can delete property value from the database. It will return false if can't update or find the property in a option type.
+
+### Parameters
+
+Parameter | Default | Required |
+--------------------------------
+$slug     |         | yes      | The property slug to delete value from
+
 ## papi_field
 
 ```php
@@ -315,6 +360,51 @@ Parameter         | Default | Required | Description
 ------------------|---------|----------|----------------------------------------
 $file_or_options  |         | yes      | File path to template file
 $properties       | array   | no       | The values to override the template values with
+
+## papi_update_field
+
+```php
+<?php
+
+/**
+ * Example of `papi_update_field` function.
+ */
+
+$success = papi_update_field( 456, 'twitter_url', 'http://twitter.com/frozzare' );
+```
+
+### Description
+
+With this function you can update property value from the database. It will return false if can't update or find the property in a page type.
+
+### Parameters
+
+Parameter | Default | Required |
+--------------------------------
+$post_id  | null    | no       | The post id will be added automatic if you are one a post, page or custom post type page. When deleting values from another post this argument will be required
+$slug     |         | yes      | The property slug to update property value
+
+## papi_update_option
+
+```php
+<?php
+
+/**
+ * Example of `papi_update_option` function.
+ */
+
+$success = papi_update_option( 'twitter_url', 'http://twitter.com/frozzare' );
+```
+
+### Description
+
+With this function you can update property value from the database. It will return false if can't update or find the property in a option type.
+
+### Parameters
+
+Parameter | Default | Required |
+--------------------------------
+$slug     |         | yes      | The property slug to update property value
 
 ## the_papi_field
 
