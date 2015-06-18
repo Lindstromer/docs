@@ -28,7 +28,7 @@ class Video_Page_Type extends Papi_Page_Type {
 
 ### page_type method
 
-The `page_type()` is a required method of the page type class. It should return an array containing the required keys.
+The `page_type` is a required method of the page type class. It should return an array containing the required keys.
 
 Options     | Required | Description
 ------------|----------|------------

@@ -32,6 +32,20 @@ Option type class extends the [page type class](#page-type) so you can create op
 - Does not save the option type id in the database since options don't have a post id. So you can't have different option types that has the same property slug.
 - The `page_type` method is named `option_type`.
 
+### option_type method
+
+The `option_type` is a required method of the option type class. It should return an array containing the required keys.
+
+Options    | Required | Description
+-----------|----------|------------
+capability | no       | The capability that are allowed to access the page. Default is `manage_options`
+menu       | yes      | The menu to register the sub menu page on
+name       | yes      | The name of the option type
+
+## Menu
+
+Papi does only register submenu pages, so if you want a own admin page you have to add it yourself.
+
 ## Namespaces
 
 ```php
