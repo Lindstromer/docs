@@ -11,6 +11,8 @@ toc_footers:
   - <a href='https://wp-papi.github.io/docs'>Documentation for Papi 1.x</a>
 
 includes:
+  - upgrade_guide
+  - page_type_directory
   - actions
   - api
   - box
@@ -57,20 +59,4 @@ Or manually add it to your `composer.json`:
     "wp-papi/papi": "~2.0"
   }
 }
-```
-
-# Page Type Directory
-
-Papi does require a directory in your theme, plugin or somewhere in your WordPress site where your page types exists. You can add multiplied directories.
-
-```php
-<?php
-
-/**
- * Register page types directory with Papi.
- */
-
-add_filter( 'papi/settings/directories', function () {
-  return __DIR__ . '/includes/page-types';
-} );
 ```
