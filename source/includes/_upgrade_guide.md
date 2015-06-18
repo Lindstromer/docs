@@ -2,6 +2,8 @@
 
 ## Upgrade to 2.x from 1.x
 
+Change `wp-papi/papi` version to `~2.0` in your `composer.json` file and run `composer update`.
+
 ### Properties
 
 #### Dropdown and Post property
