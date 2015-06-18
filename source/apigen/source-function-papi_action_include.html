@@ -242,7 +242,7 @@
 </span></span><span id="17" class="l"><a href="#17">17: </a><span class="php-comment"> * @param int $post_id
 </span></span><span id="18" class="l"><a href="#18">18: </a><span class="php-comment"> */</span>
 </span><span id="19" class="l"><a href="#19">19: </a>
-</span><span id="20" class="l"><a href="#20">20: </a><span class="php-keyword1">function</span> papi_action_delete_value( <span class="php-var">$type</span>, <span class="php-var">$slug</span>, <span class="php-var">$post_id</span> ) {
+</span><span id="20" class="l"><a href="#20">20: </a><span class="php-keyword1">function</span> papi_action_delete_value( <span class="php-var">$type</span>, <span class="php-var">$slug</span>, <span class="php-var">$post_id</span> = <span class="php-num">0</span> ) {
 </span><span id="21" class="l"><a href="#21">21: </a>    do_action( <span class="php-quote">'papi/delete_value/'</span> . <span class="php-var">$type</span>, <span class="php-var">$slug</span>, <span class="php-var">$post_id</span> );
 </span><span id="22" class="l"><a href="#22">22: </a>}
 </span><span id="23" class="l"><a href="#23">23: </a>
