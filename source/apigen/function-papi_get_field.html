@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class Papi_Page_Type_Meta</title>
+	<title>Function papi_get_field</title>
 
 	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
 
@@ -51,7 +51,7 @@
 				<li><a href="class-Papi_Option_Type.html">Papi_Option_Type</a></li>
 				<li><a href="class-Papi_Page_Type.html">Papi_Page_Type</a></li>
 				<li><a href="class-Papi_Page_Type_Base.html">Papi_Page_Type_Base</a></li>
-				<li class="active"><a href="class-Papi_Page_Type_Meta.html">Papi_Page_Type_Meta</a></li>
+				<li><a href="class-Papi_Page_Type_Meta.html">Papi_Page_Type_Meta</a></li>
 				<li><a href="class-Papi_Post_Page.html">Papi_Post_Page</a></li>
 				<li><a href="class-Papi_Property.html">Papi_Property</a></li>
 				<li><a href="class-Papi_Property_Bool.html">Papi_Property_Bool</a></li>
@@ -123,7 +123,7 @@
 				<li><a href="function-papi_get_box_property.html">papi_get_box_property</a></li>
 				<li><a href="function-papi_get_cache_key.html">papi_get_cache_key</a></li>
 				<li><a href="function-papi_get_class_name.html">papi_get_class_name</a></li>
-				<li><a href="function-papi_get_field.html">papi_get_field</a></li>
+				<li class="active"><a href="function-papi_get_field.html">papi_get_field</a></li>
 				<li><a href="function-papi_get_file_data.html">papi_get_file_data</a></li>
 				<li><a href="function-papi_get_file_path.html">papi_get_file_path</a></li>
 				<li><a href="function-papi_get_number_of_pages.html">papi_get_number_of_pages</a></li>
@@ -213,7 +213,7 @@
 			<li>
 <span>Package</span>			</li>
 			<li class="active">
-<span>Class</span>			</li>
+<span>Function</span>			</li>
 		</ul>
 		<ul>
 		</ul>
@@ -221,564 +221,59 @@
 		</ul>
 	</div>
 
-<div id="content" class="class">
-	<h1>Class Papi_Page_Type_Meta</h1>
+<div id="content" class="function">
+	<h1>Function papi_get_field</h1>
 
 
 	<div class="description">
-	<p>Papi Page Type Meta class.</p>
+	<p>Get value for a property on a page.</p>
 	</div>
-
-	<dl class="tree">
-		<dd style="padding-left:0px">
-			<a href="class-Papi_Page_Type_Base.html"><span>Papi_Page_Type_Base</span></a>
-			
-			
-			
-		</dd>
-		<dd style="padding-left:30px">
-			<img src="resources/inherit.png" alt="Extended by">
-<b><span>Papi_Page_Type_Meta</span></b>			
-			
-			
-		</dd>
-	</dl>
-
-
-	<div>
-		<h4>Direct known subclasses</h4>
-			<a href="class-Papi_Page_Type.html">Papi_Page_Type</a>
-	</div>
-
-	<div>
-		<h4>Indirect known subclasses</h4>
-			<a href="class-Papi_Option_Type.html">Papi_Option_Type</a>
-	</div>
-
-
-
-
 
 	<div class="info">
 		
-		
-		
 		<b>Package:</b> <a href="package-Papi.html">Papi</a><br>
-
-			<b>Located at</b> <a href="source-class-Papi_Page_Type_Meta.html#7-200" title="Go to source code">includes/page-type/class-papi-page-type-meta.php</a>
-		<br>
+		<b>Located at</b>
+		<a href="source-function-papi_get_field.html#168-223" title="Go to source code">
+			includes/lib/field.php
+		</a><br>
 	</div>
 
 
-
-	<table class="summary methods" id="methods">
-	<caption>Methods summary</caption>
-	<tr data-order="__construct" id="___construct">
-
-		<td class="attributes"><code>
-			 public 
-
-			
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-Papi_Page_Type_Meta.html#95-106" title="Go to source code">__construct</a>( <span>string <var>$file_path</var> = <span class="php-quote">''</span> </span> )</code>
-
-		<div class="description short">
-			<p>The constructor.</p>
-		</div>
-
-		<div class="description detailed hidden">
-			<p>The constructor.</p>
-
-<p>Load a page type by the file.</p>
-
-
-				<h4>Parameters</h4>
-				<div class="list"><dl>
-					<dt><var>$file_path</var></dt>
-					<dd></dd>
-				</dl></div>
-
-
-
-
-				<h4>Overrides</h4>
-				<div class="list"><code><a href="class-Papi_Page_Type_Base.html#___construct">Papi_Page_Type_Base::__construct()</a></code></div>
-
-		</div>
-		</div></td>
+	<table class="summary" id="parameters">
+	<caption>Parameters summary</caption>
+	<tr id="$post_id">
+		<td class="name"><code>integer</code></td>
+		<td class="value"><code><var>$post_id</var> = <span class="php-keyword1">null</span></code></td>
+		<td></td>
 	</tr>
-	<tr data-order="current_user_is_allowed" id="_current_user_is_allowed">
-
-		<td class="attributes"><code>
-			 public 
-
-			boolean
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_current_user_is_allowed">#</a>
-		<code><a href="source-class-Papi_Page_Type_Meta.html#109-122" title="Go to source code">current_user_is_allowed</a>( )</code>
-
-		<div class="description short">
-			<p>Is the user allowed to view this page type?</p>
-		</div>
-
-		<div class="description detailed hidden">
-			<p>Is the user allowed to view this page type?</p>
-
-
-
-				<h4>Returns</h4>
-				<div class="list">
-					boolean
-				</div>
-
-
-
-
-		</div>
-		</div></td>
+	<tr id="$slug">
+		<td class="name"><code>string</code></td>
+		<td class="value"><code><var>$slug</var> = <span class="php-keyword1">null</span></code></td>
+		<td></td>
 	</tr>
-	<tr data-order="get_labels" id="_get_labels">
-
-		<td class="attributes"><code>
-			 public 
-
-			array
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_get_labels">#</a>
-		<code><a href="source-class-Papi_Page_Type_Meta.html#125-141" title="Go to source code">get_labels</a>( )</code>
-
-		<div class="description short">
-			<p>Get labels that should be changed
-when using <code>fill_labels</code> option.</p>
-		</div>
-
-		<div class="description detailed hidden">
-			<p>Get labels that should be changed
-when using <code>fill_labels</code> option.</p>
-
-
-
-				<h4>Returns</h4>
-				<div class="list">
-					array
-				</div>
-
-
-
-
-		</div>
-		</div></td>
+	<tr id="$default">
+		<td class="name"><code>mixed</code></td>
+		<td class="value"><code><var>$default</var> = <span class="php-keyword1">null</span></code></td>
+		<td></td>
 	</tr>
-	<tr data-order="get_thumbnail" id="_get_thumbnail">
-
-		<td class="attributes"><code>
-			 public 
-
-			string
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_get_thumbnail">#</a>
-		<code><a href="source-class-Papi_Page_Type_Meta.html#144-155" title="Go to source code">get_thumbnail</a>( )</code>
-
-		<div class="description short">
-			<p>Get page type image thumbnail.</p>
-		</div>
-
-		<div class="description detailed hidden">
-			<p>Get page type image thumbnail.</p>
-
-
-
-				<h4>Returns</h4>
-				<div class="list">
-					string
-				</div>
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="has_name" id="_has_name">
-
-		<td class="attributes"><code>
-			 public 
-
-			boolean
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_has_name">#</a>
-		<code><a href="source-class-Papi_Page_Type_Meta.html#158-165" title="Go to source code">has_name</a>( )</code>
-
-		<div class="description short">
-			<p>Check so we have a name on the page type.</p>
-		</div>
-
-		<div class="description detailed hidden">
-			<p>Check so we have a name on the page type.</p>
-
-
-
-				<h4>Returns</h4>
-				<div class="list">
-					boolean
-				</div>
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="has_post_type" id="_has_post_type">
-
-		<td class="attributes"><code>
-			 public 
-
-			boolean
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_has_post_type">#</a>
-		<code><a href="source-class-Papi_Page_Type_Meta.html#168-177" title="Go to source code">has_post_type</a>( <span>string <var>$post_type</var></span> )</code>
-
-		<div class="description short">
-			<p>Check if the given post is allowed to use the page type.</p>
-		</div>
-
-		<div class="description detailed hidden">
-			<p>Check if the given post is allowed to use the page type.</p>
-
-
-				<h4>Parameters</h4>
-				<div class="list"><dl>
-					<dt><var>$post_type</var></dt>
-					<dd></dd>
-				</dl></div>
-
-				<h4>Returns</h4>
-				<div class="list">
-					boolean
-				</div>
-
-
-
-
-		</div>
-		</div></td>
+	<tr id="$type">
+		<td class="name"><code>string</code></td>
+		<td class="value"><code><var>$type</var> = <span class="php-quote">'post'</span></code></td>
+		<td></td>
 	</tr>
 	</table>
 
-	<table class="summary inherited">
-	<caption>Methods inherited from <a href="class-Papi_Page_Type_Base.html#methods">Papi_Page_Type_Base</a></caption>
+	<table class="summary" id="returns">
+	<caption>Return value summary</caption>
 	<tr>
-		<td><code>
-			<a href="class-Papi_Page_Type_Base.html#_get_class_name">get_class_name()</a>, 
-			<a href="class-Papi_Page_Type_Base.html#_get_file_path">get_file_path()</a>, 
-			<a href="class-Papi_Page_Type_Base.html#_get_id">get_id()</a>, 
-			<a href="class-Papi_Page_Type_Base.html#_match_id">match_id()</a>, 
-			<a href="class-Papi_Page_Type_Base.html#_new_class">new_class()</a>
+		<td class="name"><code>
+			mixed
 		</code></td>
-	</tr>
-	</table>
-
-
-
-
-
-
-
-
-
-
-
-	<table class="summary properties" id="properties">
-	<caption>Properties summary</caption>
-	<tr data-order="capabilities" id="$capabilities">
-		<td class="attributes"><code>
-			public  
-			array
-		</code></td>
-
-		<td class="name">
-				<a href="source-class-Papi_Page_Type_Meta.html#15-20" title="Go to source code"><var>$capabilities</var></a>
-
-			<div class="description short">
-				<p>Capabilities list.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Capabilities list.</p>
-
-			</div>
-		</td>
-		<td class="value">
-			<div>
-				<a href="#$capabilities" class="anchor">#</a>
-				<code>[]</code>
-			</div>
-		</td>
-	</tr>
-	<tr data-order="description" id="$description">
-		<td class="attributes"><code>
-			public  
-			string
-		</code></td>
-
-		<td class="name">
-				<a href="source-class-Papi_Page_Type_Meta.html#23-28" title="Go to source code"><var>$description</var></a>
-
-			<div class="description short">
-				<p>The description of the page type.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>The description of the page type.</p>
-
-			</div>
-		</td>
-		<td class="value">
-			<div>
-				<a href="#$description" class="anchor">#</a>
-				<code><span class="php-quote">''</span></code>
-			</div>
-		</td>
-	</tr>
-	<tr data-order="fill_labels" id="$fill_labels">
-		<td class="attributes"><code>
-			public  
-			boolean
-		</code></td>
-
-		<td class="name">
-				<a href="source-class-Papi_Page_Type_Meta.html#31-36" title="Go to source code"><var>$fill_labels</var></a>
-
-			<div class="description short">
-				<p>Fill labels.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Fill labels.</p>
-
-			</div>
-		</td>
-		<td class="value">
-			<div>
-				<a href="#$fill_labels" class="anchor">#</a>
-				<code><span class="php-keyword1">false</span></code>
-			</div>
-		</td>
-	</tr>
-	<tr data-order="labels" id="$labels">
-		<td class="attributes"><code>
-			public  
-			array
-		</code></td>
-
-		<td class="name">
-				<a href="source-class-Papi_Page_Type_Meta.html#39-44" title="Go to source code"><var>$labels</var></a>
-
-			<div class="description short">
-				<p>Labels, the same labels that post type object uses.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Labels, the same labels that post type object uses.</p>
-
-			</div>
-		</td>
-		<td class="value">
-			<div>
-				<a href="#$labels" class="anchor">#</a>
-				<code>[]</code>
-			</div>
-		</td>
-	</tr>
-	<tr data-order="name" id="$name">
-		<td class="attributes"><code>
-			public  
-			string
-		</code></td>
-
-		<td class="name">
-				<a href="source-class-Papi_Page_Type_Meta.html#47-52" title="Go to source code"><var>$name</var></a>
-
-			<div class="description short">
-				<p>The name of the page type.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>The name of the page type.</p>
-
-			</div>
-		</td>
-		<td class="value">
-			<div>
-				<a href="#$name" class="anchor">#</a>
-				<code><span class="php-quote">''</span></code>
-			</div>
-		</td>
-	</tr>
-	<tr data-order="page_types" id="$page_types">
-		<td class="attributes"><code>
-			public  
-			array
-		</code></td>
-
-		<td class="name">
-				<a href="source-class-Papi_Page_Type_Meta.html#55-60" title="Go to source code"><var>$page_types</var></a>
-
-			<div class="description short">
-				<p>The page types that lives under this page type.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>The page types that lives under this page type.</p>
-
-			</div>
-		</td>
-		<td class="value">
-			<div>
-				<a href="#$page_types" class="anchor">#</a>
-				<code>[]</code>
-			</div>
-		</td>
-	</tr>
-	<tr data-order="post_type" id="$post_type">
-		<td class="attributes"><code>
-			public  
-			array
-		</code></td>
-
-		<td class="name">
-				<a href="source-class-Papi_Page_Type_Meta.html#63-68" title="Go to source code"><var>$post_type</var></a>
-
-			<div class="description short">
-				<p>The post types to register the page type with.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>The post types to register the page type with.</p>
-
-			</div>
-		</td>
-		<td class="value">
-			<div>
-				<a href="#$post_type" class="anchor">#</a>
-				<code>[<span class="php-quote">'page'</span>]</code>
-			</div>
-		</td>
-	</tr>
-	<tr data-order="sort_order" id="$sort_order">
-		<td class="attributes"><code>
-			public  
-			integer
-		</code></td>
-
-		<td class="name">
-				<a href="source-class-Papi_Page_Type_Meta.html#71-76" title="Go to source code"><var>$sort_order</var></a>
-
-			<div class="description short">
-				<p>The sort order of the page type.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>The sort order of the page type.</p>
-
-			</div>
-		</td>
-		<td class="value">
-			<div>
-				<a href="#$sort_order" class="anchor">#</a>
-				<code><span class="php-num">0</span></code>
-			</div>
-		</td>
-	</tr>
-	<tr data-order="template" id="$template">
-		<td class="attributes"><code>
-			public  
-			string
-		</code></td>
-
-		<td class="name">
-				<a href="source-class-Papi_Page_Type_Meta.html#79-84" title="Go to source code"><var>$template</var></a>
-
-			<div class="description short">
-				<p>The template of the page type.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>The template of the page type.</p>
-
-			</div>
-		</td>
-		<td class="value">
-			<div>
-				<a href="#$template" class="anchor">#</a>
-				<code><span class="php-quote">''</span></code>
-			</div>
-		</td>
-	</tr>
-	<tr data-order="thumbnail" id="$thumbnail">
-		<td class="attributes"><code>
-			public  
-			string
-		</code></td>
-
-		<td class="name">
-				<a href="source-class-Papi_Page_Type_Meta.html#87-92" title="Go to source code"><var>$thumbnail</var></a>
-
-			<div class="description short">
-				<p>The page type thumbnail.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>The page type thumbnail.</p>
-
-			</div>
-		</td>
-		<td class="value">
-			<div>
-				<a href="#$thumbnail" class="anchor">#</a>
-				<code><span class="php-quote">''</span></code>
-			</div>
+		<td>
+			mixed
 		</td>
 	</tr>
 	</table>
-
-	<table class="summary inherited">
-	<caption>Properties inherited from <a href="class-Papi_Page_Type_Base.html#properties">Papi_Page_Type_Base</a></caption>
-	<tr>
-		<td><code>
-			<a href="class-Papi_Page_Type_Base.html#$_meta_method"><var>$_meta_method</var></a>
-		</code></td>
-	</tr>
-	</table>
-
-
-
 
 
 </div>
@@ -788,7 +283,7 @@ when using <code>fill_labels</code> option.</p>
 	</div>
 </div>
 </div>
-<script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="resources/combined.js?e685cf306ff7af26861c1d8865255ca116cc5bd5"></script>
+<script src="elementlist.js?0c1b29f30f1b8b75948ab455af2ed550978ddeb5"></script>
 </body>
 </html>
