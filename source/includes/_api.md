@@ -21,37 +21,6 @@ Get the current Papi page with all fields. This will not work with option types.
 
 No parameters exists.
 
-## papi_field
-
-```php
-<?php
-
-/**
- * Example of `papi_field` function.
- */
-
-echo papi_field( 'twitter_url' );
-
-// with default value
-echo papi_field( 'twitter_url', 'http://twitter.com/frozzare' );
-```
-
-### Description
-
-The post id will be added automatic if you are one a post, page or custom post type page.
-
-When fetching values from another post this argument will be required.
-
-You can also use [the_papi_field](#the_papi_field) to display it without `echo`
-
-### Parameters
-
-Parameter | Default | Required | Description
-----------|---------|----------|------------------------------------------------
-$post_id  | null    | no       | The post id will be added automatic if you are one a post, page or custom post type page. When fetching values from another post this argument will be required
-$slug     |         | yes      | The property slug to fetch value from
-$default  | null    | no       | When a default value is passed as argument it will use that value as return value and echo it if the property value is empty or don't exists
-
 ## papi_fields
 
 ```php
@@ -77,6 +46,65 @@ Papi fields will return a array with meta box title as keys and array of all Pap
 ### Parameters
 
 No parameters exists.
+
+## papi_get_field
+
+```php
+<?php
+
+/**
+ * Example of `papi_get_field` function.
+ */
+
+echo papi_get_field( 'twitter_url' );
+
+// with default value
+echo papi_get_field( 'twitter_url', 'http://twitter.com/frozzare' );
+```
+
+### Description
+
+The post id will be added automatic if you are one a post, page or custom post type page.
+
+When fetching values from another post this argument will be required.
+
+You can also use [the_papi_field](#the_papi_field) to display it without `echo`
+
+### Parameters
+
+Parameter | Default | Required | Description
+----------|---------|----------|------------------------------------------------
+$post_id  | null    | no       | The post id will be added automatic if you are one a post, page or custom post type page. When fetching values from another post this argument will be required
+$slug     |         | yes      | The property slug to fetch value from
+$default  | null    | no       | When a default value is passed as argument it will use that value as return value and echo it if the property value is empty or don't exists
+
+## papi_get_option
+
+```php
+<?php
+
+/**
+ * Example of `papi_get_option` function.
+ */
+
+echo papi_get_option( 'twitter_url' );
+
+// with default value
+echo papi_get_option( 'twitter_url', 'http://twitter.com/frozzare' );
+```
+
+### Description
+
+Fetch property value from option type.
+
+You can also use [the_papi_option](#the_papi_option) to display it without `echo`
+
+### Parameters
+
+Parameter | Default | Required | Description
+----------|---------|----------|------------------------------------------------
+$slug     |         | yes      | The property slug to fetch value from
+$default  | null    | no       | When a default value is passed as argument it will use that value as return value and echo it if the property value is empty or don't exists
 
 ## papi_get_page
 
@@ -105,35 +133,7 @@ Parameter | Default | Required | Description
 ----------|---------|----------|------------------------------------------------
 $post_id  | null    | no       | The post id will be added automatic if you are one a post, page or custom post type page. When fetching values from another post this argument will be required
 
-## papi_option
-
-```php
-<?php
-
-/**
- * Example of `papi_option` function.
- */
-
-echo papi_option( 'twitter_url' );
-
-// with default value
-echo papi_option( 'twitter_url', 'http://twitter.com/frozzare' );
-```
-
-### Description
-
-Fetch property value from option type.
-
-You can also use [the_papi_option](#the_papi_option) to display it without `echo`
-
-### Parameters
-
-Parameter | Default | Required | Description
-----------|---------|----------|------------------------------------------------
-$slug     |         | yes      | The property slug to fetch value from
-$default  | null    | no       | When a default value is passed as argument it will use that value as return value and echo it if the property value is empty or don't exists
-
-## papi_page_type_name
+## papi_get_page_type_name
 
 ```php
 <?php
