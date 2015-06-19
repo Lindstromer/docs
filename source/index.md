@@ -11,8 +11,13 @@ toc_footers:
   - <a href='https://wp-papi.github.io/docs'>Documentation for Papi 1.x</a>
 
 includes:
+  - upgrade_guide
+  - page_type_directory
   - actions
   - api
+  - api_field
+  - api_page
+  - api_option
   - box
   - option_type
   - page_type
@@ -33,6 +38,8 @@ search: true
 Papi has a different approach on how to work with fields and page types in WordPress. The idea is coming from how Page Type Builder in EPiServer works and has been loved by the developers.
 
 So we though why don't use the same approach in WordPress? Papi is  running in production and has been easy to work with when it came to add new fields. Papi don't have any admin user interface where you should add fields, we use classes in PHP, where one class represents one page type and in your class you add all fields you need. It's that easy!
+
+Papi does not save the property type value in the database, only the value of the property is saved since the type value exists in the page type file.
 
 Papi is completely open-source. If you want to help with its development you can submit your suggestions or improvements on in the [Github repository](https://github.com/wp-papi/papi).
 
@@ -57,20 +64,4 @@ Or manually add it to your `composer.json`:
     "wp-papi/papi": "~2.0"
   }
 }
-```
-
-# Page Type Directory
-
-Papi does require a directory in your theme, plugin or somewhere in your WordPress site where your page types exists. You can add multiplied directories.
-
-```php
-<?php
-
-/**
- * Register page types directory with Papi.
- */
-
-add_filter( 'papi/settings/directories', function () {
-  return __DIR__ . '/includes/page-types';
-} );
 ```

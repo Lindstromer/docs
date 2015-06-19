@@ -381,10 +381,12 @@ The flexible property can create a repeater with different layouts that contains
 
 ### Settings
 
-Key    | Default | Description
--------|---------|----------------------------------------------------------
-items  | array   | Array of key/value. See `Items key/value` section.
-layout | string  | Choose between `table` or `row`. Default is `table`.
+Key         | Default       | Description
+------------|---------------|----------------------------------------------------------
+closed_rows | false         | When this is true the existing rows will be closed when the page is loaded.
+items       | array         | Array of key/value. See `Items key/value` section.
+layout      | 'table'       | Choose between `table` or `row`.
+limit       | -1 (no limit) | Prevent how many post references that can be added.
 
 ### Items key/value
 
@@ -885,7 +887,7 @@ With this property you can link posts, pages or custom post types together. With
 
 Key          | Default       | Description
 -------------|---------------|--------------------------------------------------
-choose_max   | -1 (no limit) | Prevent how many post references that can be added
+limit        | -1 (no limit) | Prevent how many post references that can be added.
 post_type    | 'page'        | Change which post types it loads post objects from
 query        | array       | Append a `WP_Query` on all post types. Gist reference over `WP_Query`. Note that `post_type` in query will always be removed
 show_sort_by | true          | Show the sort by dropdown or not.
@@ -977,10 +979,12 @@ The repeater property can create a repeater of sub fields which can be repeated 
 
 ### Settings
 
-Key    | Default | Description
--------|---------|----------------------------------------------------------
-items  | array   | The array of properties, the same key/values as `$this->property` method or `papi_property` function has. You can't use repeater or flexible inside a repeater.
-layout | string  | Choose between `table` or `row`. Default is `table`.
+Key         | Default       | Description
+------------|---------------|----------------------------------------------------------
+closed_rows | false         | When this is true the existing rows will be closed when the page is loaded.
+items       | array         | The array of properties, the same key/values as `$this->property` method or `papi_property` function has. You can't use repeater or flexible inside a repeater.
+layout      | 'table'       | Choose between `table` or `row`.
+limit       | -1 (no limit) | Prevent how many post references that can be added.
 
 ### Filters
 

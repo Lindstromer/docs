@@ -19,7 +19,7 @@
 		<div id="groups">
 				<h3>Packages</h3>
 			<ul>
-				<li>
+				<li class="active">
 					<a href="package-Papi.html">
 						Papi					</a>
 
@@ -76,7 +76,7 @@
 				<li><a href="class-Papi_Property_Repeater.html">Papi_Property_Repeater</a></li>
 				<li><a href="class-Papi_Property_String.html">Papi_Property_String</a></li>
 				<li><a href="class-Papi_Property_Text.html">Papi_Property_Text</a></li>
-				<li><a href="class-Papi_Property_Url.html">Papi_Property_Url</a></li>
+				<li class="active"><a href="class-Papi_Property_Url.html">Papi_Property_Url</a></li>
 			</ul>
 
 
@@ -87,6 +87,7 @@
 			<ul>
 				<li><a href="function-current_page.html">current_page</a></li>
 				<li><a href="function-papi.html">papi</a></li>
+				<li><a href="function-papi_action_delete_value.html">papi_action_delete_value</a></li>
 				<li><a href="function-papi_action_include.html">papi_action_include</a></li>
 				<li><a href="function-papi_append_post_type_query.html">papi_append_post_type_query</a></li>
 				<li><a href="function-papi_body_class.html">papi_body_class</a></li>
@@ -188,7 +189,7 @@
 				<li><a href="function-papify.html">papify</a></li>
 				<li><a href="function-the_papi_field.html">the_papi_field</a></li>
 				<li><a href="function-the_papi_option.html">the_papi_option</a></li>
-				<li><a href="function-the_papi_page_type_name.html">the_papi_page_type_name</a></li>
+				<li class="active"><a href="function-the_papi_page_type_name.html">the_papi_page_type_name</a></li>
 			</ul>
 		</div>
 	</div>
@@ -210,9 +211,11 @@
 				<a href="index.html" title="Overview"><span>Overview</span></a>
 			</li>
 			<li>
-<span>Package</span>			</li>
+				<a href="package-Papi.html" title="Summary of Papi"><span>Package</span></a>
+			</li>
 			<li>
-<span>Class</span>			</li>
+				<a href="function-the_papi_page_type_name.html" title="Summary of the_papi_page_type_name"><span>Function</span></a>
+			</li>
 		</ul>
 		<ul>
 		</ul>
@@ -269,33 +272,35 @@
 </span><span id="47" class="l"><a href="#47">47: </a>            data-placeholder=<span class="php-quote">&quot;&lt;?php echo </span><span class="php-var">$settings</span><span class="php-quote">-&gt;placeholder; ?&gt;&quot;</span>
 </span><span id="48" class="l"><a href="#48">48: </a>            data-width=<span class="php-quote">&quot;100%&quot;</span>&gt;
 </span><span id="49" class="l"><a href="#49">49: </a>
-</span><span id="50" class="l"><a href="#50">50: </a>            &lt;option value=<span class="php-quote">&quot;&quot;</span>&gt;&lt;/option&gt;
-</span><span id="51" class="l"><a href="#51">51: </a>
-</span><span id="52" class="l"><a href="#52">52: </a>            <span class="xlang">&lt;?php</span> <span class="php-keyword1">foreach</span> ( <span class="php-var">$settings</span>-&gt;items <span class="php-keyword1">as</span> <span class="php-var">$key</span> =&gt; <span class="php-var">$value</span> ):
-</span><span id="53" class="l"><a href="#53">53: </a>                <span class="php-keyword1">if</span> ( <span class="php-keyword2">is_numeric</span>( <span class="php-var">$key</span> ) ) {
-</span><span id="54" class="l"><a href="#54">54: </a>                    <span class="php-var">$key</span> = <span class="php-var">$value</span>;
-</span><span id="55" class="l"><a href="#55">55: </a>                }
-</span><span id="56" class="l"><a href="#56">56: </a>
-</span><span id="57" class="l"><a href="#57">57: </a>                <span class="php-keyword1">if</span> ( papi_is_empty( <span class="php-var">$key</span> ) ) {
-</span><span id="58" class="l"><a href="#58">58: </a>                    <span class="php-keyword1">continue</span>;
-</span><span id="59" class="l"><a href="#59">59: </a>                }
-</span><span id="60" class="l"><a href="#60">60: </a>                <span class="xlang">?&gt;</span>
-</span><span id="61" class="l"><a href="#61">61: </a>                &lt;option
-</span><span id="62" class="l"><a href="#62">62: </a>                    value=<span class="php-quote">&quot;&lt;?php echo </span><span class="php-var">$value</span><span class="php-quote">; ?&gt;&quot;</span> <span class="xlang">&lt;?php</span> <span class="php-keyword1">echo</span> <span class="php-var">$key</span> === <span class="php-var">$settings</span>-&gt;selected ? <span class="php-quote">'selected=&quot;selected&quot;'</span> : <span class="php-quote">''</span>; <span class="xlang">?&gt;</span>&gt;<span class="xlang">&lt;?php</span> <span class="php-keyword1">echo</span> <span class="php-var">$key</span>; <span class="xlang">?&gt;</span>&lt;/option&gt;
-</span><span id="63" class="l"><a href="#63">63: </a>            <span class="xlang">&lt;?php</span> <span class="php-keyword1">endforeach</span>; <span class="xlang">?&gt;</span>
-</span><span id="64" class="l"><a href="#64">64: </a>        &lt;/select&gt;
-</span><span id="65" class="l"><a href="#65">65: </a>    <span class="xlang">&lt;?php</span>
-</span><span id="66" class="l"><a href="#66">66: </a>    }
-</span><span id="67" class="l"><a href="#67">67: </a>
-</span><span id="68" class="l"><a href="#68">68: </a>}
-</span><span id="69" class="l"><a href="#69">69: </a></span></code></pre>
+</span><span id="50" class="l"><a href="#50">50: </a>            <span class="xlang">&lt;?php</span> <span class="php-keyword1">if</span> ( ! <span class="php-keyword1">empty</span>( <span class="php-var">$settings</span>-&gt;placeholder ) ): <span class="xlang">?&gt;</span>
+</span><span id="51" class="l"><a href="#51">51: </a>                &lt;option value=<span class="php-quote">&quot;&quot;</span>&gt;&lt;/option&gt;
+</span><span id="52" class="l"><a href="#52">52: </a>            <span class="xlang">&lt;?php</span> <span class="php-keyword1">endif</span>; <span class="xlang">?&gt;</span>
+</span><span id="53" class="l"><a href="#53">53: </a>
+</span><span id="54" class="l"><a href="#54">54: </a>            <span class="xlang">&lt;?php</span> <span class="php-keyword1">foreach</span> ( <span class="php-var">$settings</span>-&gt;items <span class="php-keyword1">as</span> <span class="php-var">$key</span> =&gt; <span class="php-var">$value</span> ):
+</span><span id="55" class="l"><a href="#55">55: </a>                <span class="php-keyword1">if</span> ( <span class="php-keyword2">is_numeric</span>( <span class="php-var">$key</span> ) ) {
+</span><span id="56" class="l"><a href="#56">56: </a>                    <span class="php-var">$key</span> = <span class="php-var">$value</span>;
+</span><span id="57" class="l"><a href="#57">57: </a>                }
+</span><span id="58" class="l"><a href="#58">58: </a>
+</span><span id="59" class="l"><a href="#59">59: </a>                <span class="php-keyword1">if</span> ( papi_is_empty( <span class="php-var">$key</span> ) ) {
+</span><span id="60" class="l"><a href="#60">60: </a>                    <span class="php-keyword1">continue</span>;
+</span><span id="61" class="l"><a href="#61">61: </a>                }
+</span><span id="62" class="l"><a href="#62">62: </a>                <span class="xlang">?&gt;</span>
+</span><span id="63" class="l"><a href="#63">63: </a>                &lt;option
+</span><span id="64" class="l"><a href="#64">64: </a>                    value=<span class="php-quote">&quot;&lt;?php echo </span><span class="php-var">$value</span><span class="php-quote">; ?&gt;&quot;</span> <span class="xlang">&lt;?php</span> <span class="php-keyword1">echo</span> <span class="php-var">$key</span> === <span class="php-var">$settings</span>-&gt;selected ? <span class="php-quote">'selected=&quot;selected&quot;'</span> : <span class="php-quote">''</span>; <span class="xlang">?&gt;</span>&gt;<span class="xlang">&lt;?php</span> <span class="php-keyword1">echo</span> <span class="php-var">$key</span>; <span class="xlang">?&gt;</span>&lt;/option&gt;
+</span><span id="65" class="l"><a href="#65">65: </a>            <span class="xlang">&lt;?php</span> <span class="php-keyword1">endforeach</span>; <span class="xlang">?&gt;</span>
+</span><span id="66" class="l"><a href="#66">66: </a>        &lt;/select&gt;
+</span><span id="67" class="l"><a href="#67">67: </a>    <span class="xlang">&lt;?php</span>
+</span><span id="68" class="l"><a href="#68">68: </a>    }
+</span><span id="69" class="l"><a href="#69">69: </a>
+</span><span id="70" class="l"><a href="#70">70: </a>}
+</span><span id="71" class="l"><a href="#71">71: </a></span></code></pre>
 
 	<div id="footer">
 		 API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 </div>
-<script src="resources/combined.js?e685cf306ff7af26861c1d8865255ca116cc5bd5"></script>
-<script src="elementlist.js?92fb4a75ae504348ad868b3d37d4d5c70261ea7f"></script>
+<script src="resources/combined.js?6bc31116bf225f9af7b580dc798b3410c38547a0"></script>
+<script src="elementlist.js?9a9e8ccbda0046802bebba786960ac6d5b1a55f6"></script>
 </body>
 </html>
