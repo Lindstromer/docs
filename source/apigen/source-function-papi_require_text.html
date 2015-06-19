@@ -99,7 +99,6 @@
 				<li><a href="function-papi_display_page_type.html">papi_display_page_type</a></li>
 				<li><a href="function-papi_esc_html.html">papi_esc_html</a></li>
 				<li><a href="function-papi_f.html">papi_f</a></li>
-				<li><a href="function-papi_ff.html">papi_ff</a></li>
 				<li><a href="function-papi_field.html" class="deprecated">papi_field</a></li>
 				<li><a href="function-papi_field_shortcode.html">papi_field_shortcode</a></li>
 				<li><a href="function-papi_field_value.html">papi_field_value</a></li>
@@ -153,11 +152,9 @@
 				<li><a href="function-papi_get_qs.html">papi_get_qs</a></li>
 				<li><a href="function-papi_get_sanitized_post.html">papi_get_sanitized_post</a></li>
 				<li><a href="function-papi_get_tab_options.html">papi_get_tab_options</a></li>
-				<li><a href="function-papi_h.html">papi_h</a></li>
 				<li><a href="function-papi_html_name.html">papi_html_name</a></li>
 				<li><a href="function-papi_include_template.html">papi_include_template</a></li>
 				<li><a href="function-papi_is_empty.html">papi_is_empty</a></li>
-				<li><a href="function-papi_is_ext.html">papi_is_ext</a></li>
 				<li><a href="function-papi_is_metod.html">papi_is_metod</a></li>
 				<li><a href="function-papi_is_option_page.html">papi_is_option_page</a></li>
 				<li><a href="function-papi_is_property.html">papi_is_property</a></li>
@@ -350,7 +347,7 @@
 </span><span id="126" class="l"><a href="#126">126: </a>        <span class="php-comment">// If it's a template we need to load it the right way</span>
 </span><span id="127" class="l"><a href="#127">127: </a>        <span class="php-comment">// and add all properties the right way.</span>
 </span><span id="128" class="l"><a href="#128">128: </a>
-</span><span id="129" class="l"><a href="#129">129: </a>        <span class="php-keyword1">if</span> ( papi_is_ext( <span class="php-var">$file_or_options</span>, <span class="php-quote">'php'</span> ) ) {
+</span><span id="129" class="l"><a href="#129">129: </a>        <span class="php-keyword1">if</span> ( <span class="php-keyword2">preg_match</span>( <span class="php-quote">'/\.php$/'</span>, <span class="php-var">$file_or_options</span> ) === <span class="php-num">1</span> ) {
 </span><span id="130" class="l"><a href="#130">130: </a>            <span class="php-var">$values</span> = <span class="php-var">$properties</span>;
 </span><span id="131" class="l"><a href="#131">131: </a>            <span class="php-var">$template</span> = papi_template( <span class="php-var">$file_or_options</span>, <span class="php-var">$values</span> );
 </span><span id="132" class="l"><a href="#132">132: </a>
@@ -791,6 +788,6 @@
 </div>
 </div>
 <script src="resources/combined.js?e685cf306ff7af26861c1d8865255ca116cc5bd5"></script>
-<script src="elementlist.js?0c1b29f30f1b8b75948ab455af2ed550978ddeb5"></script>
+<script src="elementlist.js?7d299d2ab1fba61494f2b3cc23b39630615a8885"></script>
 </body>
 </html>
