@@ -2,7 +2,7 @@
 
 It's easy to create your own property with Papi. You can use our [Yo generator](http://github.com/wp-papi/generator-property)
 
-It's important that the class follow the Papi class name.
+It's important that the class follow the property class name standard in Papi.
 
 ```php
 <?php
@@ -15,7 +15,11 @@ class Property_Stringx extends Papi_Property {}
 class Papi_Property_String_x extends Papi_Property {}
 
 // Good
+// type: string
 class Papi_Property_Stringx extends Papi_Property {}
+
+// type: image_video
+class Papi_Property_Image_Video extends Papi_Property {}
 ```
 
 Example bootstrap and property class:
@@ -32,9 +36,8 @@ add_action( 'papi/include', function () {
   require_once 'class-papi-property-stringx.php';
 } );
 
-```
-```php
-<?php
+// class-papi-property-stringx.php
+
 // Exit if accessed directly
 defined( 'ABSPATH' ) || exit;
 
@@ -51,10 +54,10 @@ class Papi_Property_Stringx extends Papi_Property {
    */
 
   public function get_default_settings() {
-		return [
-			'allow_html' => false
-		];
-	}
+    return [
+      'allow_html' => false
+    ];
+  }
 
   /**
    * Generate the HTML for the property.
