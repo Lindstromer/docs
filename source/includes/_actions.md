@@ -16,7 +16,7 @@ add_action( 'papi/delete_value/string', function ( $slug, $post_id ) {
 }, 10, 2 );
 ```
 
-## Description
+### Description
 
 With this action you can do something when a property is deleted with `papi_delete_field` or `papi_delete_option`.
 
@@ -36,6 +36,6 @@ add_action( 'papi/include', function () {
 } );
 ```
 
-## Description
+### Description
 
 With this action you can include plugins or properties build for Papi. Third party properties should use this action when they load there custom property in the plugin.

@@ -64,7 +64,7 @@ This method is used to register all properties, tabs and remove meta boxes as de
 
 The box method can has callable method as the second argument that returns a array with properties or tabs.
 
-Read more about that under [box section](#box).
+Read more about that under [box section](#box-(meta-box)).
 
 ### display method
 
@@ -106,7 +106,7 @@ public function register() {
   $this->remove( 'comments' );
 
   // Multiple metaboxes
-  $this->remove( array( 'comments', 'editor' ) );
+  $this->remove( ['comments', 'editor'] );
 }
 ```
 

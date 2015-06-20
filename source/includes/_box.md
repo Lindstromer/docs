@@ -1,10 +1,10 @@
-# Box
+# Box (meta box)
 
 ```php
 <?php
 
 /**
- * Example of the default options
+ * Example of the default options.
  */
 
 $this->box( [
@@ -22,17 +22,16 @@ Documentation of the `box` method. `box` is a short name for `metabox` in Papi.
 
 ### Options
 
-Key          | Default
+Key          | Default      | Description
 -------------|--------------|---------------------------------------------------
-capabilities | array      | Can be a string with a role or capability or a array with many values
+capabilities | array        | Can be a string with a role or capability or a array with many values
 context      | 'normal'     | The same value as for context in `add_meta_box`
 post_type    | 'page'       | The post types where the box should be available
 priority     | 'default'    | The same value as for priority in `add_meta_box`
-sort_order   | 1000         |
-Numeric value, lowest value in the meta box will be at the top and the highest value at the bottom
+sort_order   | 1000         | Numeric value, lowest value in the meta box will be at the top and the highest value at the bottom
 title        | empty string | The title of the meta box. This can't be empty. When passing a string as the first argument for box method it will become `array('title' => 'the title')` automatic
 
-**In 2.0.0 the mode option was removed**
+**In 2.0.0 the mode option was removed.**
 
 ### Callable method
 
@@ -47,7 +46,7 @@ that returns a array with properties or tabs.
  */
 
 public function register() {
-  $this->box( 'Content', array( $this, 'content_box' ) );
+  $this->box( 'Content', [$this, 'content_box'] );
 }
 
 public function content_box() {

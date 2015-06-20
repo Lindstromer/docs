@@ -44,7 +44,7 @@ name       | yes      | The name of the option type
 
 ## Menu
 
-Papi does only register submenu pages, so if you want a own admin page you have to add it yourself.
+Papi does only register submenu pages, so if you want a custom admin page you have to add it yourself.
 
 ## Namespaces
 

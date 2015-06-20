@@ -8,23 +8,23 @@
  */
 
 papi_property( [
-  'capabilities' => array,
+  'capabilities' => [],
   'description'  => '',
   'disabled'     => false,
   'lang'         => false,
   'raw'          => false,
   'required'     => false,
-  'settings'     => array,
+  'settings'     => [],
   'sidebar'      => true,
   'slug'         => '',
   'sort_order'   => 100,
   'title'        => '',
-  'type'         => '',
+  'type'         => 'string',
   'value'        => ''
 ] )
 ```
 
-Papi has many different core properties (a field is a property in the page type) to start with and you can easy create your own using our [Yeoman generator](). The are several keys that all properties have.
+Papi has many different core properties (a field is a property in the page type) to start with and you can easy create your own using our [Yeoman generator](https://github.com/wp-papi/generator-property). The are several keys that all properties have.
 
 The property type is loaded from the page type file instead of saving it in the database.
 

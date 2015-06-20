@@ -15,7 +15,7 @@
     'feature_module',
     'show_feature_module'
   ]
-];
+]
 ```
 
 ### Description
@@ -24,7 +24,9 @@ Papi fields will return a array with meta box title as keys and array of all Pap
 
 ### Parameters
 
-No parameters exists.
+Parameter | Default | Required | Description
+----------|---------|----------|------------------------------------------------
+$post_id  | null    | no       | The post id will be added automatic if you are one a post, page or custom post type page. When fetching values from another post this argument will be required
 
 ## papi_property
 
