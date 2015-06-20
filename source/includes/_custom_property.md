@@ -32,8 +32,9 @@ add_action( 'papi/include', function () {
   require_once 'class-papi-property-stringx.php';
 } );
 
-// class-papi-property-stringx.php
-
+```
+```php
+<?php
 // Exit if accessed directly
 defined( 'ABSPATH' ) || exit;
 
@@ -43,11 +44,11 @@ defined( 'ABSPATH' ) || exit;
 
 class Papi_Property_Stringx extends Papi_Property {
 
-	/**
-	 * Get default settings.
-	 *
-	 * @return array
-	 */
+  /**
+   * Get default settings.
+   *
+   * @return array
+   */
 
   public function get_default_settings() {
 		return [
