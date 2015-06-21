@@ -102,7 +102,7 @@
 				<li><a href="function-papi_field.html" class="deprecated">papi_field</a></li>
 				<li><a href="function-papi_field_shortcode.html">papi_field_shortcode</a></li>
 				<li><a href="function-papi_field_value.html">papi_field_value</a></li>
-				<li><a href="function-papi_fields.html">papi_fields</a></li>
+				<li><a href="function-papi_fields.html" class="deprecated">papi_fields</a></li>
 				<li><a href="function-papi_filter_format_value.html">papi_filter_format_value</a></li>
 				<li><a href="function-papi_filter_load_value.html">papi_filter_load_value</a></li>
 				<li><a href="function-papi_filter_settings_directories.html">papi_filter_settings_directories</a></li>
@@ -151,6 +151,7 @@
 				<li><a href="function-papi_get_property_type_key_f.html">papi_get_property_type_key_f</a></li>
 				<li><a href="function-papi_get_qs.html">papi_get_qs</a></li>
 				<li><a href="function-papi_get_sanitized_post.html">papi_get_sanitized_post</a></li>
+				<li><a href="function-papi_get_slugs.html">papi_get_slugs</a></li>
 				<li><a href="function-papi_get_tab_options.html">papi_get_tab_options</a></li>
 				<li><a href="function-papi_html_name.html">papi_html_name</a></li>
 				<li><a href="function-papi_include_template.html">papi_include_template</a></li>
@@ -329,75 +330,75 @@
 </span><span id="108" class="l"><a href="#108">108: </a>}
 </span><span id="109" class="l"><a href="#109">109: </a>
 </span><span id="110" class="l"><a href="#110">110: </a><span class="php-comment">/**
-</span></span><span id="111" class="l"><a href="#111">111: </a><span class="php-comment"> * Get the data page.
+</span></span><span id="111" class="l"><a href="#111">111: </a><span class="php-comment"> * Get data from page type file.
 </span></span><span id="112" class="l"><a href="#112">112: </a><span class="php-comment"> *
-</span></span><span id="113" class="l"><a href="#113">113: </a><span class="php-comment"> * @param int $post_id
-</span></span><span id="114" class="l"><a href="#114">114: </a><span class="php-comment"> * @param string $type
-</span></span><span id="115" class="l"><a href="#115">115: </a><span class="php-comment"> *
-</span></span><span id="116" class="l"><a href="#116">116: </a><span class="php-comment"> * @return mixed
-</span></span><span id="117" class="l"><a href="#117">117: </a><span class="php-comment"> */</span>
-</span><span id="118" class="l"><a href="#118">118: </a>
-</span><span id="119" class="l"><a href="#119">119: </a><span class="php-keyword1">function</span> papi_get_page( <span class="php-var">$post_id</span> = <span class="php-num">0</span>, <span class="php-var">$type</span> = <span class="php-quote">'post'</span> ) {
-</span><span id="120" class="l"><a href="#120">120: </a>    <span class="php-keyword1">return</span> Papi_Core_Page::factory( <span class="php-var">$post_id</span>, <span class="php-var">$type</span> );
-</span><span id="121" class="l"><a href="#121">121: </a>}
-</span><span id="122" class="l"><a href="#122">122: </a>
-</span><span id="123" class="l"><a href="#123">123: </a><span class="php-comment">/**
-</span></span><span id="124" class="l"><a href="#124">124: </a><span class="php-comment"> * Get data from page type file.
-</span></span><span id="125" class="l"><a href="#125">125: </a><span class="php-comment"> *
-</span></span><span id="126" class="l"><a href="#126">126: </a><span class="php-comment"> * @param int|string $post_id Post id or page type
-</span></span><span id="127" class="l"><a href="#127">127: </a><span class="php-comment"> *
-</span></span><span id="128" class="l"><a href="#128">128: </a><span class="php-comment"> * @return Papi_Page_Type
-</span></span><span id="129" class="l"><a href="#129">129: </a><span class="php-comment"> */</span>
-</span><span id="130" class="l"><a href="#130">130: </a>
-</span><span id="131" class="l"><a href="#131">131: </a><span class="php-keyword1">function</span> papi_get_file_data( <span class="php-var">$post_id</span> ) {
-</span><span id="132" class="l"><a href="#132">132: </a>    <span class="php-var">$post_id</span>   = papi_get_post_id( <span class="php-var">$post_id</span> );
-</span><span id="133" class="l"><a href="#133">133: </a>    <span class="php-var">$page_type</span> = papi_get_page_type_id( <span class="php-var">$post_id</span> );
-</span><span id="134" class="l"><a href="#134">134: </a>
-</span><span id="135" class="l"><a href="#135">135: </a>    <span class="php-comment">// Check so the page type isn't null or empty before we</span>
-</span><span id="136" class="l"><a href="#136">136: </a>    <span class="php-comment">// trying to get the page type meta data.</span>
-</span><span id="137" class="l"><a href="#137">137: </a>    <span class="php-keyword1">if</span> ( ! <span class="php-keyword1">empty</span>( <span class="php-var">$page_type</span> ) ) {
-</span><span id="138" class="l"><a href="#138">138: </a>        <span class="php-keyword1">return</span> papi_get_page_type_by_id( <span class="php-var">$page_type</span> );
-</span><span id="139" class="l"><a href="#139">139: </a>    }
-</span><span id="140" class="l"><a href="#140">140: </a>}
-</span><span id="141" class="l"><a href="#141">141: </a>
-</span><span id="142" class="l"><a href="#142">142: </a><span class="php-comment">/**
-</span></span><span id="143" class="l"><a href="#143">143: </a><span class="php-comment"> * Get number of how many pages uses the given page type.
-</span></span><span id="144" class="l"><a href="#144">144: </a><span class="php-comment"> * This will also work with only page type.
-</span></span><span id="145" class="l"><a href="#145">145: </a><span class="php-comment"> *
-</span></span><span id="146" class="l"><a href="#146">146: </a><span class="php-comment"> * @param string|object $page_type
-</span></span><span id="147" class="l"><a href="#147">147: </a><span class="php-comment"> *
-</span></span><span id="148" class="l"><a href="#148">148: </a><span class="php-comment"> * @return int
-</span></span><span id="149" class="l"><a href="#149">149: </a><span class="php-comment"> */</span>
-</span><span id="150" class="l"><a href="#150">150: </a>
-</span><span id="151" class="l"><a href="#151">151: </a><span class="php-keyword1">function</span> papi_get_number_of_pages( <span class="php-var">$page_type</span> ) {
-</span><span id="152" class="l"><a href="#152">152: </a>    <span class="php-keyword1">global</span> <span class="php-var">$wpdb</span>;
-</span><span id="153" class="l"><a href="#153">153: </a>
-</span><span id="154" class="l"><a href="#154">154: </a>    <span class="php-keyword1">if</span> ( <span class="php-keyword1">empty</span>( <span class="php-var">$page_type</span> ) || ( ! <span class="php-keyword2">is_string</span>( <span class="php-var">$page_type</span> ) &amp;&amp; ( ! <span class="php-keyword2">is_object</span>( <span class="php-var">$page_type</span> ) ) ) ) {
-</span><span id="155" class="l"><a href="#155">155: </a>        <span class="php-keyword1">return</span> <span class="php-num">0</span>;
-</span><span id="156" class="l"><a href="#156">156: </a>    }
+</span></span><span id="113" class="l"><a href="#113">113: </a><span class="php-comment"> * @param int|string $post_id Post id or page type
+</span></span><span id="114" class="l"><a href="#114">114: </a><span class="php-comment"> *
+</span></span><span id="115" class="l"><a href="#115">115: </a><span class="php-comment"> * @return Papi_Page_Type
+</span></span><span id="116" class="l"><a href="#116">116: </a><span class="php-comment"> */</span>
+</span><span id="117" class="l"><a href="#117">117: </a>
+</span><span id="118" class="l"><a href="#118">118: </a><span class="php-keyword1">function</span> papi_get_file_data( <span class="php-var">$post_id</span> ) {
+</span><span id="119" class="l"><a href="#119">119: </a>    <span class="php-var">$post_id</span>   = papi_get_post_id( <span class="php-var">$post_id</span> );
+</span><span id="120" class="l"><a href="#120">120: </a>    <span class="php-var">$page_type</span> = papi_get_page_type_id( <span class="php-var">$post_id</span> );
+</span><span id="121" class="l"><a href="#121">121: </a>
+</span><span id="122" class="l"><a href="#122">122: </a>    <span class="php-comment">// Check so the page type isn't null or empty before we</span>
+</span><span id="123" class="l"><a href="#123">123: </a>    <span class="php-comment">// trying to get the page type meta data.</span>
+</span><span id="124" class="l"><a href="#124">124: </a>    <span class="php-keyword1">if</span> ( ! <span class="php-keyword1">empty</span>( <span class="php-var">$page_type</span> ) ) {
+</span><span id="125" class="l"><a href="#125">125: </a>        <span class="php-keyword1">return</span> papi_get_page_type_by_id( <span class="php-var">$page_type</span> );
+</span><span id="126" class="l"><a href="#126">126: </a>    }
+</span><span id="127" class="l"><a href="#127">127: </a>}
+</span><span id="128" class="l"><a href="#128">128: </a>
+</span><span id="129" class="l"><a href="#129">129: </a><span class="php-comment">/**
+</span></span><span id="130" class="l"><a href="#130">130: </a><span class="php-comment"> * Get number of how many pages uses the given page type.
+</span></span><span id="131" class="l"><a href="#131">131: </a><span class="php-comment"> * This will also work with only page type.
+</span></span><span id="132" class="l"><a href="#132">132: </a><span class="php-comment"> *
+</span></span><span id="133" class="l"><a href="#133">133: </a><span class="php-comment"> * @param string|object $page_type
+</span></span><span id="134" class="l"><a href="#134">134: </a><span class="php-comment"> *
+</span></span><span id="135" class="l"><a href="#135">135: </a><span class="php-comment"> * @return int
+</span></span><span id="136" class="l"><a href="#136">136: </a><span class="php-comment"> */</span>
+</span><span id="137" class="l"><a href="#137">137: </a>
+</span><span id="138" class="l"><a href="#138">138: </a><span class="php-keyword1">function</span> papi_get_number_of_pages( <span class="php-var">$page_type</span> ) {
+</span><span id="139" class="l"><a href="#139">139: </a>    <span class="php-keyword1">global</span> <span class="php-var">$wpdb</span>;
+</span><span id="140" class="l"><a href="#140">140: </a>
+</span><span id="141" class="l"><a href="#141">141: </a>    <span class="php-keyword1">if</span> ( <span class="php-keyword1">empty</span>( <span class="php-var">$page_type</span> ) || ( ! <span class="php-keyword2">is_string</span>( <span class="php-var">$page_type</span> ) &amp;&amp; ( ! <span class="php-keyword2">is_object</span>( <span class="php-var">$page_type</span> ) ) ) ) {
+</span><span id="142" class="l"><a href="#142">142: </a>        <span class="php-keyword1">return</span> <span class="php-num">0</span>;
+</span><span id="143" class="l"><a href="#143">143: </a>    }
+</span><span id="144" class="l"><a href="#144">144: </a>
+</span><span id="145" class="l"><a href="#145">145: </a>    <span class="php-keyword1">if</span> ( <span class="php-keyword2">is_object</span>( <span class="php-var">$page_type</span> ) &amp;&amp; <span class="php-keyword2">method_exists</span>( <span class="php-var">$page_type</span>, <span class="php-quote">'get_id'</span> ) ) {
+</span><span id="146" class="l"><a href="#146">146: </a>        <span class="php-var">$page_type</span> = <span class="php-var">$page_type</span>-&gt;get_id();
+</span><span id="147" class="l"><a href="#147">147: </a>    }
+</span><span id="148" class="l"><a href="#148">148: </a>
+</span><span id="149" class="l"><a href="#149">149: </a>    <span class="php-keyword1">if</span> ( ! <span class="php-keyword2">is_string</span>( <span class="php-var">$page_type</span> ) ) {
+</span><span id="150" class="l"><a href="#150">150: </a>        <span class="php-keyword1">return</span> <span class="php-num">0</span>;
+</span><span id="151" class="l"><a href="#151">151: </a>    }
+</span><span id="152" class="l"><a href="#152">152: </a>
+</span><span id="153" class="l"><a href="#153">153: </a>    <span class="php-var">$cache_key</span> = papi_get_cache_key( <span class="php-quote">'page_type'</span>, <span class="php-var">$page_type</span> );
+</span><span id="154" class="l"><a href="#154">154: </a>    <span class="php-var">$value</span> = wp_cache_get( <span class="php-var">$cache_key</span> );
+</span><span id="155" class="l"><a href="#155">155: </a>
+</span><span id="156" class="l"><a href="#156">156: </a>    <span class="php-keyword1">if</span> ( <span class="php-var">$value</span> === <span class="php-keyword1">false</span> ) {
 </span><span id="157" class="l"><a href="#157">157: </a>
-</span><span id="158" class="l"><a href="#158">158: </a>    <span class="php-keyword1">if</span> ( <span class="php-keyword2">is_object</span>( <span class="php-var">$page_type</span> ) &amp;&amp; <span class="php-keyword2">method_exists</span>( <span class="php-var">$page_type</span>, <span class="php-quote">'get_id'</span> ) ) {
-</span><span id="159" class="l"><a href="#159">159: </a>        <span class="php-var">$page_type</span> = <span class="php-var">$page_type</span>-&gt;get_id();
-</span><span id="160" class="l"><a href="#160">160: </a>    }
-</span><span id="161" class="l"><a href="#161">161: </a>
-</span><span id="162" class="l"><a href="#162">162: </a>    <span class="php-keyword1">if</span> ( ! <span class="php-keyword2">is_string</span>( <span class="php-var">$page_type</span> ) ) {
-</span><span id="163" class="l"><a href="#163">163: </a>        <span class="php-keyword1">return</span> <span class="php-num">0</span>;
+</span><span id="158" class="l"><a href="#158">158: </a>        <span class="php-var">$sql</span> = <span class="php-quote">&quot;SELECT COUNT(*) FROM </span><span class="php-var">{$wpdb-&gt;prefix}</span><span class="php-quote">postmeta WHERE `meta_key` = '%s' AND `meta_value` = '%s'&quot;</span>;
+</span><span id="159" class="l"><a href="#159">159: </a>        <span class="php-var">$sql</span> = <span class="php-var">$wpdb</span>-&gt;prepare( <span class="php-var">$sql</span>, PAPI_PAGE_TYPE_KEY, <span class="php-var">$page_type</span> );
+</span><span id="160" class="l"><a href="#160">160: </a>
+</span><span id="161" class="l"><a href="#161">161: </a>        <span class="php-var">$value</span> = <span class="php-keyword2">intval</span>( <span class="php-var">$wpdb</span>-&gt;get_var( <span class="php-var">$sql</span> ) );
+</span><span id="162" class="l"><a href="#162">162: </a>
+</span><span id="163" class="l"><a href="#163">163: </a>        wp_cache_set( <span class="php-var">$cache_key</span>, <span class="php-var">$value</span> );
 </span><span id="164" class="l"><a href="#164">164: </a>    }
 </span><span id="165" class="l"><a href="#165">165: </a>
-</span><span id="166" class="l"><a href="#166">166: </a>    <span class="php-var">$cache_key</span> = papi_get_cache_key( <span class="php-quote">'page_type'</span>, <span class="php-var">$page_type</span> );
-</span><span id="167" class="l"><a href="#167">167: </a>    <span class="php-var">$value</span> = wp_cache_get( <span class="php-var">$cache_key</span> );
+</span><span id="166" class="l"><a href="#166">166: </a>    <span class="php-keyword1">return</span> <span class="php-var">$value</span>;
+</span><span id="167" class="l"><a href="#167">167: </a>}
 </span><span id="168" class="l"><a href="#168">168: </a>
-</span><span id="169" class="l"><a href="#169">169: </a>    <span class="php-keyword1">if</span> ( <span class="php-var">$value</span> === <span class="php-keyword1">false</span> ) {
-</span><span id="170" class="l"><a href="#170">170: </a>
-</span><span id="171" class="l"><a href="#171">171: </a>        <span class="php-var">$sql</span> = <span class="php-quote">&quot;SELECT COUNT(*) FROM </span><span class="php-var">{$wpdb-&gt;prefix}</span><span class="php-quote">postmeta WHERE `meta_key` = '%s' AND `meta_value` = '%s'&quot;</span>;
-</span><span id="172" class="l"><a href="#172">172: </a>        <span class="php-var">$sql</span> = <span class="php-var">$wpdb</span>-&gt;prepare( <span class="php-var">$sql</span>, PAPI_PAGE_TYPE_KEY, <span class="php-var">$page_type</span> );
-</span><span id="173" class="l"><a href="#173">173: </a>
-</span><span id="174" class="l"><a href="#174">174: </a>        <span class="php-var">$value</span> = <span class="php-keyword2">intval</span>( <span class="php-var">$wpdb</span>-&gt;get_var( <span class="php-var">$sql</span> ) );
-</span><span id="175" class="l"><a href="#175">175: </a>
-</span><span id="176" class="l"><a href="#176">176: </a>        wp_cache_set( <span class="php-var">$cache_key</span>, <span class="php-var">$value</span> );
-</span><span id="177" class="l"><a href="#177">177: </a>    }
-</span><span id="178" class="l"><a href="#178">178: </a>
-</span><span id="179" class="l"><a href="#179">179: </a>    <span class="php-keyword1">return</span> <span class="php-var">$value</span>;
+</span><span id="169" class="l"><a href="#169">169: </a><span class="php-comment">/**
+</span></span><span id="170" class="l"><a href="#170">170: </a><span class="php-comment"> * Get the data page.
+</span></span><span id="171" class="l"><a href="#171">171: </a><span class="php-comment"> *
+</span></span><span id="172" class="l"><a href="#172">172: </a><span class="php-comment"> * @param int $post_id
+</span></span><span id="173" class="l"><a href="#173">173: </a><span class="php-comment"> * @param string $type
+</span></span><span id="174" class="l"><a href="#174">174: </a><span class="php-comment"> *
+</span></span><span id="175" class="l"><a href="#175">175: </a><span class="php-comment"> * @return mixed
+</span></span><span id="176" class="l"><a href="#176">176: </a><span class="php-comment"> */</span>
+</span><span id="177" class="l"><a href="#177">177: </a>
+</span><span id="178" class="l"><a href="#178">178: </a><span class="php-keyword1">function</span> papi_get_page( <span class="php-var">$post_id</span> = <span class="php-num">0</span>, <span class="php-var">$type</span> = <span class="php-quote">'post'</span> ) {
+</span><span id="179" class="l"><a href="#179">179: </a>    <span class="php-keyword1">return</span> Papi_Core_Page::factory( <span class="php-var">$post_id</span>, <span class="php-var">$type</span> );
 </span><span id="180" class="l"><a href="#180">180: </a>}
 </span><span id="181" class="l"><a href="#181">181: </a>
 </span><span id="182" class="l"><a href="#182">182: </a><span class="php-comment">/**
@@ -581,17 +582,65 @@
 </span><span id="360" class="l"><a href="#360">360: </a>}
 </span><span id="361" class="l"><a href="#361">361: </a>
 </span><span id="362" class="l"><a href="#362">362: </a><span class="php-comment">/**
-</span></span><span id="363" class="l"><a href="#363">363: </a><span class="php-comment"> * Echo the Page type name.
+</span></span><span id="363" class="l"><a href="#363">363: </a><span class="php-comment"> * Get boxes with properties slug for a page.
 </span></span><span id="364" class="l"><a href="#364">364: </a><span class="php-comment"> *
 </span></span><span id="365" class="l"><a href="#365">365: </a><span class="php-comment"> * @param int $post_id
 </span></span><span id="366" class="l"><a href="#366">366: </a><span class="php-comment"> *
-</span></span><span id="367" class="l"><a href="#367">367: </a><span class="php-comment"> * @return string
+</span></span><span id="367" class="l"><a href="#367">367: </a><span class="php-comment"> * @return array
 </span></span><span id="368" class="l"><a href="#368">368: </a><span class="php-comment"> */</span>
 </span><span id="369" class="l"><a href="#369">369: </a>
-</span><span id="370" class="l"><a href="#370">370: </a><span class="php-keyword1">function</span> the_papi_page_type_name( <span class="php-var">$post_id</span> = <span class="php-keyword1">null</span> ) {
-</span><span id="371" class="l"><a href="#371">371: </a>    <span class="php-keyword1">echo</span> papi_get_page_type_name( <span class="php-var">$post_id</span> );
-</span><span id="372" class="l"><a href="#372">372: </a>}
-</span><span id="373" class="l"><a href="#373">373: </a></span></code></pre>
+</span><span id="370" class="l"><a href="#370">370: </a><span class="php-keyword1">function</span> papi_get_slugs( <span class="php-var">$post_id</span> = <span class="php-num">0</span> ) {
+</span><span id="371" class="l"><a href="#371">371: </a>    <span class="php-var">$page</span> = papi_get_page( <span class="php-var">$post_id</span> );
+</span><span id="372" class="l"><a href="#372">372: </a>
+</span><span id="373" class="l"><a href="#373">373: </a>    <span class="php-keyword1">if</span> ( <span class="php-keyword1">empty</span>( <span class="php-var">$page</span> ) ) {
+</span><span id="374" class="l"><a href="#374">374: </a>        <span class="php-keyword1">return</span> [];
+</span><span id="375" class="l"><a href="#375">375: </a>    }
+</span><span id="376" class="l"><a href="#376">376: </a>
+</span><span id="377" class="l"><a href="#377">377: </a>    <span class="php-var">$cache_key</span> = papi_get_cache_key( <span class="php-quote">'page'</span>, <span class="php-var">$page</span>-&gt;id );
+</span><span id="378" class="l"><a href="#378">378: </a>    <span class="php-var">$value</span>     = wp_cache_get( <span class="php-var">$cache_key</span> );
+</span><span id="379" class="l"><a href="#379">379: </a>
+</span><span id="380" class="l"><a href="#380">380: </a>    <span class="php-keyword1">if</span> ( <span class="php-var">$value</span> === <span class="php-keyword1">false</span> ) {
+</span><span id="381" class="l"><a href="#381">381: </a>        <span class="php-var">$page_type</span> = <span class="php-var">$page</span>-&gt;get_page_type();
+</span><span id="382" class="l"><a href="#382">382: </a>
+</span><span id="383" class="l"><a href="#383">383: </a>        <span class="php-keyword1">if</span> ( <span class="php-keyword1">empty</span>( <span class="php-var">$page_type</span> ) ) {
+</span><span id="384" class="l"><a href="#384">384: </a>            <span class="php-keyword1">return</span> [];
+</span><span id="385" class="l"><a href="#385">385: </a>        }
+</span><span id="386" class="l"><a href="#386">386: </a>
+</span><span id="387" class="l"><a href="#387">387: </a>        <span class="php-var">$value</span> = [];
+</span><span id="388" class="l"><a href="#388">388: </a>        <span class="php-var">$boxes</span> = <span class="php-var">$page_type</span>-&gt;get_boxes();
+</span><span id="389" class="l"><a href="#389">389: </a>
+</span><span id="390" class="l"><a href="#390">390: </a>        <span class="php-keyword1">foreach</span> ( <span class="php-var">$boxes</span> <span class="php-keyword1">as</span> <span class="php-var">$box</span> ) {
+</span><span id="391" class="l"><a href="#391">391: </a>            <span class="php-keyword1">if</span> ( <span class="php-keyword2">count</span>( <span class="php-var">$box</span> ) &lt; <span class="php-num">2</span> || <span class="php-keyword1">empty</span>( <span class="php-var">$box</span>[<span class="php-num">0</span>][<span class="php-quote">'title'</span>] ) || ! <span class="php-keyword2">is_array</span>( <span class="php-var">$box</span>[<span class="php-num">1</span>] ) ) {
+</span><span id="392" class="l"><a href="#392">392: </a>                <span class="php-keyword1">continue</span>;
+</span><span id="393" class="l"><a href="#393">393: </a>            }
+</span><span id="394" class="l"><a href="#394">394: </a>
+</span><span id="395" class="l"><a href="#395">395: </a>            <span class="php-keyword1">if</span> ( ! <span class="php-keyword1">isset</span>( <span class="php-var">$value</span>[<span class="php-var">$box</span>[<span class="php-num">0</span>][<span class="php-quote">'title'</span>]] ) ) {
+</span><span id="396" class="l"><a href="#396">396: </a>                <span class="php-var">$value</span>[<span class="php-var">$box</span>[<span class="php-num">0</span>][<span class="php-quote">'title'</span>]] = [];
+</span><span id="397" class="l"><a href="#397">397: </a>            }
+</span><span id="398" class="l"><a href="#398">398: </a>
+</span><span id="399" class="l"><a href="#399">399: </a>            <span class="php-keyword1">foreach</span> ( <span class="php-var">$box</span>[<span class="php-num">1</span>] <span class="php-keyword1">as</span> <span class="php-var">$property</span> ) {
+</span><span id="400" class="l"><a href="#400">400: </a>                <span class="php-var">$value</span>[<span class="php-var">$box</span>[<span class="php-num">0</span>][<span class="php-quote">'title'</span>]][] = <span class="php-var">$property</span>-&gt;get_slug( <span class="php-keyword1">true</span> );
+</span><span id="401" class="l"><a href="#401">401: </a>            }
+</span><span id="402" class="l"><a href="#402">402: </a>        }
+</span><span id="403" class="l"><a href="#403">403: </a>
+</span><span id="404" class="l"><a href="#404">404: </a>        wp_cache_set( <span class="php-var">$cache_key</span>, <span class="php-var">$value</span> );
+</span><span id="405" class="l"><a href="#405">405: </a>    }
+</span><span id="406" class="l"><a href="#406">406: </a>
+</span><span id="407" class="l"><a href="#407">407: </a>    <span class="php-keyword1">return</span> <span class="php-var">$value</span>;
+</span><span id="408" class="l"><a href="#408">408: </a>}
+</span><span id="409" class="l"><a href="#409">409: </a>
+</span><span id="410" class="l"><a href="#410">410: </a><span class="php-comment">/**
+</span></span><span id="411" class="l"><a href="#411">411: </a><span class="php-comment"> * Echo the Page type name.
+</span></span><span id="412" class="l"><a href="#412">412: </a><span class="php-comment"> *
+</span></span><span id="413" class="l"><a href="#413">413: </a><span class="php-comment"> * @param int $post_id
+</span></span><span id="414" class="l"><a href="#414">414: </a><span class="php-comment"> *
+</span></span><span id="415" class="l"><a href="#415">415: </a><span class="php-comment"> * @return string
+</span></span><span id="416" class="l"><a href="#416">416: </a><span class="php-comment"> */</span>
+</span><span id="417" class="l"><a href="#417">417: </a>
+</span><span id="418" class="l"><a href="#418">418: </a><span class="php-keyword1">function</span> the_papi_page_type_name( <span class="php-var">$post_id</span> = <span class="php-keyword1">null</span> ) {
+</span><span id="419" class="l"><a href="#419">419: </a>    <span class="php-keyword1">echo</span> papi_get_page_type_name( <span class="php-var">$post_id</span> );
+</span><span id="420" class="l"><a href="#420">420: </a>}
+</span><span id="421" class="l"><a href="#421">421: </a></span></code></pre>
 
 	<div id="footer">
 		 API documentation generated by <a href="http://apigen.org">ApiGen</a>
@@ -599,6 +648,6 @@
 </div>
 </div>
 <script src="resources/combined.js?e685cf306ff7af26861c1d8865255ca116cc5bd5"></script>
-<script src="elementlist.js?7d299d2ab1fba61494f2b3cc23b39630615a8885"></script>
+<script src="elementlist.js?73dd3908d8f1b2bfc0501005bd7c0993a5191800"></script>
 </body>
 </html>

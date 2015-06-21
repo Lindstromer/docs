@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Function papi_filter_settings_only_page_type</title>
+	<title>Function papi_get_slugs</title>
 
 	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
 
@@ -105,7 +105,7 @@
 				<li><a href="function-papi_filter_format_value.html">papi_filter_format_value</a></li>
 				<li><a href="function-papi_filter_load_value.html">papi_filter_load_value</a></li>
 				<li><a href="function-papi_filter_settings_directories.html">papi_filter_settings_directories</a></li>
-				<li class="active"><a href="function-papi_filter_settings_only_page_type.html">papi_filter_settings_only_page_type</a></li>
+				<li><a href="function-papi_filter_settings_only_page_type.html">papi_filter_settings_only_page_type</a></li>
 				<li><a href="function-papi_filter_settings_page_type_column_title.html">papi_filter_settings_page_type_column_title</a></li>
 				<li><a href="function-papi_filter_settings_page_type_from_post_qs.html">papi_filter_settings_page_type_from_post_qs</a></li>
 				<li><a href="function-papi_filter_settings_show_page_type.html">papi_filter_settings_show_page_type</a></li>
@@ -150,7 +150,7 @@
 				<li><a href="function-papi_get_property_type_key_f.html">papi_get_property_type_key_f</a></li>
 				<li><a href="function-papi_get_qs.html">papi_get_qs</a></li>
 				<li><a href="function-papi_get_sanitized_post.html">papi_get_sanitized_post</a></li>
-				<li><a href="function-papi_get_slugs.html">papi_get_slugs</a></li>
+				<li class="active"><a href="function-papi_get_slugs.html">papi_get_slugs</a></li>
 				<li><a href="function-papi_get_tab_options.html">papi_get_tab_options</a></li>
 				<li><a href="function-papi_html_name.html">papi_html_name</a></li>
 				<li><a href="function-papi_include_template.html">papi_include_template</a></li>
@@ -220,28 +220,28 @@
 	</div>
 
 <div id="content" class="function">
-	<h1>Function papi_filter_settings_only_page_type</h1>
+	<h1>Function papi_get_slugs</h1>
 
 
 	<div class="description">
-	<p>Get the only page type that will be used for the given post type.</p>
+	<p>Get boxes with properties slug for a page.</p>
 	</div>
 
 	<div class="info">
 		
 		<b>Package:</b> <a href="package-Papi.html">Papi</a><br>
 		<b>Located at</b>
-		<a href="source-function-papi_filter_settings_only_page_type.html#65-80" title="Go to source code">
-			includes/lib/filters.php
+		<a href="source-function-papi_get_slugs.html#363-408" title="Go to source code">
+			includes/lib/page.php
 		</a><br>
 	</div>
 
 
 	<table class="summary" id="parameters">
 	<caption>Parameters summary</caption>
-	<tr id="$post_type">
-		<td class="name"><code>string</code></td>
-		<td class="value"><code><var>$post_type</var></code></td>
+	<tr id="$post_id">
+		<td class="name"><code>integer</code></td>
+		<td class="value"><code><var>$post_id</var> = <span class="php-num">0</span></code></td>
 		<td></td>
 	</tr>
 	</table>
@@ -250,10 +250,10 @@
 	<caption>Return value summary</caption>
 	<tr>
 		<td class="name"><code>
-			string
+			array
 		</code></td>
 		<td>
-			string
+			array
 		</td>
 	</tr>
 	</table>

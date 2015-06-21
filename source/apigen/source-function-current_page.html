@@ -102,7 +102,7 @@
 				<li><a href="function-papi_field.html" class="deprecated">papi_field</a></li>
 				<li><a href="function-papi_field_shortcode.html">papi_field_shortcode</a></li>
 				<li><a href="function-papi_field_value.html">papi_field_value</a></li>
-				<li><a href="function-papi_fields.html">papi_fields</a></li>
+				<li><a href="function-papi_fields.html" class="deprecated">papi_fields</a></li>
 				<li><a href="function-papi_filter_format_value.html">papi_filter_format_value</a></li>
 				<li><a href="function-papi_filter_load_value.html">papi_filter_load_value</a></li>
 				<li><a href="function-papi_filter_settings_directories.html">papi_filter_settings_directories</a></li>
@@ -151,6 +151,7 @@
 				<li><a href="function-papi_get_property_type_key_f.html">papi_get_property_type_key_f</a></li>
 				<li><a href="function-papi_get_qs.html">papi_get_qs</a></li>
 				<li><a href="function-papi_get_sanitized_post.html">papi_get_sanitized_post</a></li>
+				<li><a href="function-papi_get_slugs.html">papi_get_slugs</a></li>
 				<li><a href="function-papi_get_tab_options.html">papi_get_tab_options</a></li>
 				<li><a href="function-papi_html_name.html">papi_html_name</a></li>
 				<li><a href="function-papi_include_template.html">papi_include_template</a></li>
@@ -235,7 +236,7 @@
 </span><span id="14" class="l"><a href="#14">14: </a><span class="php-comment">/**
 </span></span><span id="15" class="l"><a href="#15">15: </a><span class="php-comment"> * Get the current page. Like in EPiServer.
 </span></span><span id="16" class="l"><a href="#16">16: </a><span class="php-comment"> *
-</span></span><span id="17" class="l"><a href="#17">17: </a><span class="php-comment"> * @deprecated deprecated since version 2.0.0
+</span></span><span id="17" class="l"><a href="#17">17: </a><span class="php-comment"> * @deprecated deprecated since version 2.0.0.
 </span></span><span id="18" class="l"><a href="#18">18: </a><span class="php-comment"> *
 </span></span><span id="19" class="l"><a href="#19">19: </a><span class="php-comment"> * @return Papi_Page|null
 </span></span><span id="20" class="l"><a href="#20">20: </a><span class="php-comment"> */</span>
@@ -255,7 +256,7 @@
 </span></span><span id="34" class="l"><a href="#34">34: </a><span class="php-comment"> * @param mixed $default
 </span></span><span id="35" class="l"><a href="#35">35: </a><span class="php-comment"> * @param string $type
 </span></span><span id="36" class="l"><a href="#36">36: </a><span class="php-comment"> *
-</span></span><span id="37" class="l"><a href="#37">37: </a><span class="php-comment"> * @deprecated deprecatedd since version 2.0.0.
+</span></span><span id="37" class="l"><a href="#37">37: </a><span class="php-comment"> * @deprecated deprecated since version 2.0.0.
 </span></span><span id="38" class="l"><a href="#38">38: </a><span class="php-comment"> *
 </span></span><span id="39" class="l"><a href="#39">39: </a><span class="php-comment"> * @return mixed
 </span></span><span id="40" class="l"><a href="#40">40: </a><span class="php-comment"> */</span>
@@ -264,7 +265,24 @@
 </span><span id="43" class="l"><a href="#43">43: </a>    _deprecated_function( __FUNCTION__, <span class="php-quote">'2.0.0'</span>, <span class="php-quote">'papi_get_field'</span> );
 </span><span id="44" class="l"><a href="#44">44: </a>    <span class="php-keyword1">return</span> papi_get_field( <span class="php-var">$post_id</span>, <span class="php-var">$slug</span>, <span class="php-var">$default</span>, <span class="php-var">$type</span> );
 </span><span id="45" class="l"><a href="#45">45: </a>}
-</span><span id="46" class="l"><a href="#46">46: </a></span></code></pre>
+</span><span id="46" class="l"><a href="#46">46: </a>
+</span><span id="47" class="l"><a href="#47">47: </a><span class="php-comment">/**
+</span></span><span id="48" class="l"><a href="#48">48: </a><span class="php-comment"> * Get boxes with properties slug for a page.
+</span></span><span id="49" class="l"><a href="#49">49: </a><span class="php-comment"> *
+</span></span><span id="50" class="l"><a href="#50">50: </a><span class="php-comment"> * You should use papi_get_slugs() instead.
+</span></span><span id="51" class="l"><a href="#51">51: </a><span class="php-comment"> *
+</span></span><span id="52" class="l"><a href="#52">52: </a><span class="php-comment"> * @param int $post_id
+</span></span><span id="53" class="l"><a href="#53">53: </a><span class="php-comment"> *
+</span></span><span id="54" class="l"><a href="#54">54: </a><span class="php-comment"> * @deprecated deprecated since version 2.0.0.
+</span></span><span id="55" class="l"><a href="#55">55: </a><span class="php-comment"> *
+</span></span><span id="56" class="l"><a href="#56">56: </a><span class="php-comment"> * @return array
+</span></span><span id="57" class="l"><a href="#57">57: </a><span class="php-comment"> */</span>
+</span><span id="58" class="l"><a href="#58">58: </a>
+</span><span id="59" class="l"><a href="#59">59: </a><span class="php-keyword1">function</span> papi_fields( <span class="php-var">$post_id</span> = <span class="php-num">0</span> ) {
+</span><span id="60" class="l"><a href="#60">60: </a>    _deprecated_function( __FUNCTION__, <span class="php-quote">'2.0.0'</span>, <span class="php-quote">'papi_get_slugs'</span> );
+</span><span id="61" class="l"><a href="#61">61: </a>    <span class="php-keyword1">return</span> papi_get_slugs( <span class="php-var">$post_id</span> );
+</span><span id="62" class="l"><a href="#62">62: </a>}
+</span><span id="63" class="l"><a href="#63">63: </a></span></code></pre>
 
 	<div id="footer">
 		 API documentation generated by <a href="http://apigen.org">ApiGen</a>
@@ -272,6 +290,6 @@
 </div>
 </div>
 <script src="resources/combined.js?e685cf306ff7af26861c1d8865255ca116cc5bd5"></script>
-<script src="elementlist.js?7d299d2ab1fba61494f2b3cc23b39630615a8885"></script>
+<script src="elementlist.js?73dd3908d8f1b2bfc0501005bd7c0993a5191800"></script>
 </body>
 </html>
