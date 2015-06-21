@@ -1,12 +1,12 @@
 # API
 
-## papi_fields
+## papi_get_slugs
 
 ```php
 <?php
 
 /**
- * Example output from `papi_fields` function.
+ * Example output from `papi_get_slugs` function.
  */
 
 [

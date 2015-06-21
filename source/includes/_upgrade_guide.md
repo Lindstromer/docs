@@ -4,6 +4,10 @@
 
 Change `wp-papi/papi` version to `~2.0` in your `composer.json` file and run `composer update`.
 
+### API
+
+`papi_fields` is deprecated and replaced with `papi_get_slugs`.
+
 ### API Field
 
 `papi_field` is deprecated and replaced with `papi_get_field` because the name can be confusing when `papi_update_field` and `papi_delete_field` exists.
