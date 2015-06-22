@@ -8,7 +8,7 @@ toc_footers:
   - <a href='http://github.com/wp-papi/papi'>Fork me on GitHub</a>
   - <a href='http://wp-papi.github.io/'>Papi project site</a>
   - <a href='apigen/'>API reference docs</a>
-  - <a href='https://wp-papi.github.io/docs'>Documentation for Papi 1.x</a>
+  - <a href='https://wp-papi.github.io/docs-1.x'>Documentation for Papi 1.x</a>
 
 includes:
   - upgrade_guide
