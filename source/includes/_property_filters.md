@@ -11,10 +11,10 @@
  * Example of `papi/format_value/{$property_type}` filter.
  */
 
-add_filter('papi/format_value/string', function ($value, $slug, $post_id) {
+add_filter( 'papi/format_value/string', function ( $value, $slug, $post_id ) {
   // do some magic with the value and return it.
   return $value;
-}, 10, 3);
+}, 10, 3 );
 ```
 
 ### Description
@@ -32,10 +32,10 @@ Format the value of the property before it's returned to the theme.
  * Example of `papi/load_value/{$property_type}` filter.
  */
 
-add_filter('papi/load_value/string', function ($value, $slug, $post_id) {
+add_filter( 'papi/load_value/string', function ( $value, $slug, $post_id ) {
   // do some magic with the value and return it.
   return $value;
-}, 10, 3);
+}, 10, 3 );
 ```
 
 ### Description
@@ -53,10 +53,10 @@ This filter is applied after the value is loaded in the database.
  * Example of `papi/update_value/{$property_type}` filter.
  */
 
-add_filter('papi/update_value/string', function ($value, $slug, $post_id) {
+add_filter( 'papi/update_value/string', function ( $value, $slug, $post_id ) {
   // do some magic with the value and return it.
   return $value;
-}, 10, 3);
+}, 10, 3 );
 ```
 
 ### Description

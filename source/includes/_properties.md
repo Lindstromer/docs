@@ -7,40 +7,42 @@
  * Example of the default options.
  */
 
-papi_property([
-  'capabilities' => array(),
-  'default'      => '',
+papi_property( [
+  'capabilities' => [],
   'description'  => '',
   'disabled'     => false,
   'lang'         => false,
   'raw'          => false,
   'required'     => false,
-  'settings'     => array(),
+  'settings'     => [],
   'sidebar'      => true,
   'slug'         => '',
   'sort_order'   => 100,
   'title'        => '',
-  'type'         => ''
-])
+  'type'         => 'string',
+  'value'        => ''
+] )
 ```
 
-Papi does support 19 core properties (a field is a property in the page type) to start with and you can easy create your own using our [Yeoman generator](). The are several keys that all properties have.
+Papi has many different core properties (a field is a property in the page type) to start with and you can easy create your own using our [Yeoman generator](https://github.com/wp-papi/generator-property). The are several keys that all properties have.
+
+The property type is loaded from the page type file instead of saving it in the database.
 
 Key          | Default      | Description
 -------------|--------------|---------------------------------------------------
-capabilities | array()      | Can be a string with a role or capability or a array with many values
-default      | empty string | The default value that are presented in the property
-description  | empty string | The introduction text that will appear below the title text of the property. You could write your help text here. Since version 1.2.0 you can have "\n" to create new lines in the description
-disabled     | false        | Disable the property, won’t show in WordPress admin
+capabilities | array      | Can be a string with a role or capability or a array with many values
+description  | empty string | Disable the property, won’t show in WordPress admin
+disabled     | false        | The introduction text that will appear below the title text of the property. You could write your help text here. With "\n" you can create new lines in the description
 lang         | false        | When using this key you can specify which language will show the property
 raw          | false        | This will render the property without a table, good to use when creating a custom property that uses other properties
 required     | false        | By default all fields are non required in Papi but this can be changed with required option
 sidebar      | true         | Boolean that shows the sidebar on each property. If false the sidebar won’t show
-settings     | array()      | Array with custom settings for the property
+settings     | array      | Array with custom settings for the property
 sort_order   | 1000         | Numeric value, lowest value in the meta box will be at the top and the highest value at the bottom
 slug         | empty string | The slug of property. If empty or not used the title will be generated to slug value
 title        | empty string | The title of the property. Can be empty for blank title
 type         | empty string | The property type (lower case is preferred to use)
+value        | empty string | The default value that are presented in the property
 
 **Note:** be sure to have different slug for each properties on a page type, the same slug will not work great and you will lose data if you are using same slug for multiple properties.
 
@@ -55,11 +57,11 @@ type         | empty string | The property type (lower case is preferred to use)
  * Example of bool.
  */
 
-papi_property([
+papi_property( [
   'title'    => 'True or false?',
   'slug'     => 'my_true_or_false_slug',
   'type'     => 'bool'
-])
+] )
 
 /**
  * Example output.
@@ -87,7 +89,7 @@ No settings exists.
  * Example of checkbox.
  */
 
-papi_property([
+papi_property( [
   'title'    => 'Categories',
   'slug'     => 'my_categories_slug',
   'type'     => 'checkbox',
@@ -97,13 +99,13 @@ papi_property([
       'Black' => '#000000'
     ]
   ]
-])
+] )
 
 /**
  * Example output.
  */
 
-Array
+array
 (
   [0] => '#ffffff'
 )
@@ -117,8 +119,8 @@ With this property you can add multiple checkboxes. The key is the value that th
 
 Key      | Default | Description
 ---------|---------|------------------------------------------------------------
-items    | array() | Array with checkboxes, value or key/value
-selected | array() | The seleceted key or array of keys
+items    | array | Array with checkboxes, value or key/value
+selected | array | The seleceted key or array of keys
 
 ## Color
 
@@ -131,11 +133,11 @@ selected | array() | The seleceted key or array of keys
  * Example of color.
  */
 
-papi_property([
+papi_property( [
   'title'    => 'Color',
   'slug'     => 'my_color_slug',
   'type'     => 'color'
-])
+] )
 
 /**
  * Example output.
@@ -153,7 +155,7 @@ The property output the WordPress color picker.
 Key        | Default | Description
 -----------|---------|----------------------------------------------------------
 show_input | true    | Show the text input
-palettes   | array() | Array with hex colors
+palettes   | array | Array with hex colors
 
 ## Datetime
 
@@ -166,11 +168,11 @@ palettes   | array() | Array with hex colors
  * Example of datetime.
  */
 
-papi_property([
+papi_property( [
   'title'    => 'Datetime',
   'slug'     => 'my_datetime_slug',
   'type'     => 'datetime'
-])
+] )
 
 /**
  * Example output.
@@ -203,11 +205,11 @@ use_24_hours | false               | Array with hex colors
  * Example of divider.
  */
 
-papi_property([
+papi_property( [
   'title'       => 'Divider',
   'type'        => 'divider',
   'description' => 'Non volutpat ultricies bibendum odio luctus.'
-])
+] )
 
 /**
  * Example output.
@@ -235,7 +237,7 @@ No settings exists.
  * Example of select.
  */
 
-papi_property([
+papi_property( [
   'title'    => 'Dropdown',
   'slug'     => 'my_dropdown_slug',
   'type'     => 'dropdown',
@@ -245,7 +247,7 @@ papi_property([
       'Black' => '#000000'
     ]
   ]
-])
+] )
 
 /**
  * Example output.
@@ -260,15 +262,15 @@ With this property you can add a dropdown. The key is the value that the user wi
 
 ### Settings
 
-Key      | Default            | Description
----------|--------------------|-------------------------------------------------
-items    | array() (no limit) | Array with options, value or key/value
-selected | empty string       | The select item that will be selected from start. The value should match a key of your items
+Key           | Default            | Description
+--------------|--------------------|-------------------------------------------------
+items         | array              | Array with options, value or key/value
+placeholder   | empty string       | Placeholder text that's displayed when no option is slected.
+selected      | empty string       | The select item that will be selected from start. The value should match a key of your items
 
 ## Editor
 
 **type** `editor`
-**since** `1.2.0`
 
 ```php
 <?php
@@ -277,11 +279,11 @@ selected | empty string       | The select item that will be selected from start
  * Example of Property Editor.
  */
 
-papi_property([
+papi_property( [
   'title' => 'Editor',
   'slug'  => 'my_editor_slug',
   'type'  => 'editor'
-])
+] )
 
 /**
  * Example output.
@@ -298,10 +300,125 @@ The WordPress editor.
 
 No settings exists.
 
+## Flexible
+
+**type** `flexible`
+
+```php
+<?php
+
+/**
+ * Example of Flexible.
+ */
+
+papi_property( [
+  'title'    => 'Flexible',
+  'slug'     => 'my_flexible_slug',
+  'type'     => 'flexible',
+  'settings' => [
+    'items' => [
+      [
+        'title' => 'Posts',
+        'items' => [
+          papi_property( [
+            'type'  => 'string',
+            'title' => 'Title',
+            'slug'  => 'my_string_slug'
+          ] ),
+          papi_property( [
+            'type'  => 'post',
+            'title' => 'Post',
+            'slug'  => 'my_post_slug'
+          ] )
+        ]
+      ],
+      [
+        'title' => 'Image',
+        'items' => [
+          papi_property( [
+            'type'  => 'string',
+            'title' => 'Title',
+            'slug'  => 'my_title_slug'
+          ] ),
+          papi_property( [
+            'type'  => 'image',
+            'title' => 'Image',
+            'slug'  => 'my_image_slug'
+          ] )
+        ]
+      ]
+    ]
+  ]
+] )
+
+/**
+ * Example output.
+ */
+
+array
+(
+  [0] => array
+  (
+    [my_string_slug] => 'Test 1'
+    [my_post_slug] => 'WP_Post object',
+    [layout] => 'posts'
+  )
+
+  [1] => array
+  (
+    [my_title_slug] => 'Test 2'
+    [my_image_slug] => 'Image object',
+    [layout] => 'image'
+  )
+)
+```
+
+### Description
+
+The flexible property can create a repeater with different layouts that contains sub fields. That's the big different from a [repeater property](#repeater).
+
+![Image example](/images/docs/property-flexible.png)
+
+### Settings
+
+Key         | Default       | Description
+------------|---------------|----------------------------------------------------------
+closed_rows | false         | When this is true the existing rows will be closed when the page is loaded.
+items       | array         | Array of key/value. See `Items key/value` section.
+layout      | 'table'       | Choose between `table` or `row`.
+limit       | -1 (no limit) | Prevent how many post references that can be added.
+
+### Items key/value
+
+Key    | Default | Description
+-------|---------|----------------------------------------------------------
+items  | array   | The array of properties, the same key/values as `$this->property` method or `papi_property` function has. You can't use repeater or flexible inside a flexible.
+slug   | string  | The slug of the flexible layout. **This is not required**. If you don't have a slug value it will be generated from the title.
+title  | string  | The title of the flexible layout.
+
+### Filters
+
+```php
+<?php
+
+/**
+ * Example of `papi/property/flexible/exclude` filter.
+ */
+
+add_filter( 'papi/property/flexible/exclude', function ( $exclude ) {
+  return array_merge( $exclude, [
+    'string'
+  ] );
+} );
+```
+
+Filter                         | Description
+-------------------------------|-------------
+papi/property/flexible/exclude | Prevent properties from render and working in flexible
+
 ## Gallery
 
 **type** `gallery`
-**since** `1.2.0`
 
 ```php
 <?php
@@ -310,25 +427,25 @@ No settings exists.
  * Example of gallery.
  */
 
-papi_property([
+papi_property( [
   'title' => 'Gallery',
   'slug'  => 'my_gallery_slug',
   'type'  => 'gallery'
-])
+] )
 
 /**
  * Example output.
  */
 
-Array(
+array(
   stdClass Object
   (
       [width] => 800
       [height] => 600
       [file] => '2014/09/cube.jpg'
-      [sizes] => Array
+      [sizes] => array
         (
-          [thumbnail] => Array
+          [thumbnail] => array
           (
             [file] => 'cube-150x150.jpg'
             [width] => 150
@@ -336,7 +453,7 @@ Array(
             [mime-type] => 'image/jpeg'
           )
 
-          [medium] => Array
+          [medium] => array
           (
             [file] => 'cube-300x225.jpg'
             [width] => 300
@@ -346,7 +463,7 @@ Array(
 
       )
 
-      [image_meta] => Array
+      [image_meta] => array
         (
           [aperture] => 0
           [credit] =>
@@ -379,6 +496,37 @@ With this property you can add a multiple image from the WordPress media library
 
 No settings exists.
 
+## Hidden
+
+**type** `hidden`
+
+```php
+<?php
+
+/**
+ * Example of hidden.
+ */
+
+papi_property( [
+  'slug'  => 'my_hidden_slug',
+  'type'  => 'hidden',
+  'value' => 'hidden value'
+] )
+
+/**
+ * Example output.
+ * The reference property does not save any values.
+ */
+```
+
+### Description
+
+Hidden input field.
+
+### Settings
+
+No settings exists.
+
 ## Html
 
 **type** `html`
@@ -390,19 +538,18 @@ No settings exists.
  * Example of html.
  */
 
-papi_property([
+papi_property( [
   'title'    => 'Information',
   'type'     => 'html',
   'settings' => [
     'html' => '<p>Hello, world</p>'
   ]
-])
+] )
 
 /**
  * Example output.
+ * The reference property does not save any values.
  */
-
-string '#ffffff'
 ```
 
 ### Description
@@ -426,11 +573,11 @@ html | empty string | String with html or a callable function or method.
  * Example of image.
  */
 
-papi_property([
+papi_property( [
   'title' => 'Image',
   'slug'  => 'my_image_slug',
   'type'  => 'image'
-])
+] )
 
 /**
  * Example output.
@@ -441,9 +588,9 @@ stdClass Object
       [width] => 800
       [height] => 600
       [file] => '2014/09/cube.jpg'
-      [sizes] => Array
+      [sizes] => array
         (
-          [thumbnail] => Array
+          [thumbnail] => array
           (
             [file] => 'cube-150x150.jpg'
             [width] => 150
@@ -451,7 +598,7 @@ stdClass Object
             [mime-type] => 'image/jpeg'
           )
 
-          [medium] => Array
+          [medium] => array
           (
             [file] => 'cube-300x225.jpg'
             [width] => 300
@@ -461,7 +608,7 @@ stdClass Object
 
       )
 
-      [image_meta] => Array
+      [image_meta] => array
         (
           [aperture] => 0
           [credit] =>
@@ -485,11 +632,11 @@ stdClass Object
 )
 ```
 
-![Image example](/images/docs/property-image.png)
-
 ### Description
 
 With this property you can add a image from the WordPress media library. If the gallery setting is set to true the output will be a array with objects instead of just one object.
+
+![Image example](/images/docs/property-image.png)
 
 ### Settings
 
@@ -508,11 +655,11 @@ html | empty string | String with html or a callable function or method.
  * Example of number.
  */
 
-papi_property([
+papi_property( [
   'title' => 'Number',
   'slug'  => 'my_number_slug',
   'type'  => 'number'
-])
+] )
 
 /**
  * Example output.
@@ -540,11 +687,11 @@ No settings exists.
  * Example of post.
  */
 
-papi_property([
+papi_property( [
   'title'    => 'Post',
   'slug'     => 'my_post_slug',
   'type'     => 'post'
-])
+] )
 
 /**
  * Example output.
@@ -583,17 +730,13 @@ WP_Post Object
 
 With this property you can add reference to another post. It can't handle multiple references like [relationship](#relationship)
 
-Since version 1.2.0 the post property by default include a blank row in the dropdown, this can be disabled by `include_blank`
-
 ### Settings
 
 Key           | Default       | Description
 --------------|---------------|--------------------------------------------------
-blank_text    | empty string  | Change the blank text to something else
-include_blank | true          | Include the blank row or not
+placeholder   | empty string  | Placeholder text that's displayed when no option is slected.
 post_type     | 'post'        | The post type that the property will load posts from. Can only be one post type
-query         | array()       | Append a `WP_Query` on all post types. Gist reference over `WP_Query`. Note that `post_type` in query will always be removed
-text          | 'Select Post' | The text above the dropdown. If this text is a empty string the p tag will be hidden
+query         | array         | Append a `WP_Query` on all post types. Gist reference over `WP_Query`. Note that `post_type` in query will always be removed
 
 ## Radio buttons
 
@@ -606,7 +749,7 @@ text          | 'Select Post' | The text above the dropdown. If this text is a e
  * Example of radio buttons.
  */
 
-papi_property([
+papi_property( [
   'title'    => 'Colors',
   'slug'     => 'my_radio_slug',
   'type'     => 'radio',
@@ -616,7 +759,7 @@ papi_property([
         'Black' => '#000000'
       ]
   ]
-])
+] )
 
 /**
  * Example output.
@@ -633,14 +776,12 @@ With this property you can create a list of radio buttons. The key is the value 
 
 Key      | Default      | Description
 ---------|--------------|-------------------------------------------------------
-items    | array()      | Array with radio buttons, value or key/value
+items    | array      | Array with radio buttons, value or key/value
 selected | empty string | The radio button that will be selected from start. The value should match a key of your items
 
 ## Reference
 
 **type** `reference`
-
-**since** `1.2.0`
 
 ```php
 <?php
@@ -649,17 +790,17 @@ selected | empty string | The radio button that will be selected from start. The
  * Example of reference.
  */
 
-papi_property([
+papi_property( [
   'title'    => 'References',
   'type'     => 'reference',
   'settings' => [
     'slug'      => 'top_module',
     'page_type' => 'start-page-type'
   ]
-])
+] )
 
 /**
- * Example output:
+ * Example output.
  * The reference property does not save any values.
  */
 ```
@@ -676,7 +817,7 @@ it will show which pages that has a reference to the module.
 
 Key       | Default      | Description
 ----------|--------------|-------------------------------------------------------
-slug      | array()      | String or array of slugs to look for references
+slug      | array      | String or array of slugs to look for references
 page_type | empty string | String or array of page types (the file name of the page type) to check
 
 ## Relationship
@@ -690,7 +831,7 @@ page_type | empty string | String or array of page types (the file name of the p
  * Example of relationship.
  */
 
-papi_property([
+papi_property( [
   'title'    => 'Relationship',
   'slug'     => 'my_relationship_slug',
   'type'     => 'relationship',
@@ -698,13 +839,13 @@ papi_property([
     'choose_max' => 3,
     'post_type'  => ['post', 'pages', 'my-custom-post-type']
   ]
-])
+] )
 
 /**
- * Example output:
+ * Example output.
  */
 
-Array
+array
 (
   [0] => WP_Post Object
   (
@@ -746,9 +887,9 @@ With this property you can link posts, pages or custom post types together. With
 
 Key          | Default       | Description
 -------------|---------------|--------------------------------------------------
-choose_max   | -1 (no limit) | Prevent how many post references that can be added
+limit        | -1 (no limit) | Prevent how many post references that can be added.
 post_type    | 'page'        | Change which post types it loads post objects from
-query        | array()       | Append a `WP_Query` on all post types. Gist reference over `WP_Query`. Note that `post_type` in query will always be removed
+query        | array       | Append a `WP_Query` on all post types. Gist reference over `WP_Query`. Note that `post_type` in query will always be removed
 show_sort_by | true          | Show the sort by dropdown or not.
 
 ### Filters
@@ -760,13 +901,13 @@ show_sort_by | true          | Show the sort by dropdown or not.
  * Example of `papi/property/relationship/sort_options` filter.
  */
 
-add_filter('papi/property/relationship/sort_options', function ($not_allowed) {
-  return array_merge($not_allowed, [
-    'Name (alphabetically)' => function ($a, $b) {
-      return strcmp(strtolower($a->post_title), strtolower($b->post_title));
+add_filter( 'papi/property/relationship/sort_options', function ( $not_allowed ) {
+  return array_merge( $not_allowed, [
+    'Name (alphabetically)' => function ( $a, $b ) {
+      return strcmp( strtolower( $a->post_title ), strtolower( $b->post_title ) );
     }
-  ]);
-});
+  ] );
+} );
 ```
 
 Filter                                  | Description
@@ -784,18 +925,18 @@ papi/property/relationship/sort_options | Add more sort options to property rela
  * Example of repeater.
  */
 
-papi_property([
+papi_property( [
   'title'    => 'Repeater',
   'slug'     => 'my_repeater_slug',
-  'type'     => 'Repeater',
+  'type'     => 'repeater',
   'settings' => [
     'items' => [
-      [
+      papi_property( [
         'type'  => 'string',
         'title' => 'Title',
         'slug'  => 'my_string_slug'
-      ],
-      [
+      ] ),
+      papi_property( [
         'type'     => 'dropdown',
         'title'    => 'Color',
         'slug'     => 'my_dropdown_slug',
@@ -805,24 +946,24 @@ papi_property([
             'Black' => '#000000'
           ]
         ]
-      ]
+      ] )
     ]
   ]
-])
+] )
 
 /**
- * Example output:
+ * Example output.
  */
 
-Array
+array
 (
-  [0] => Array
+  [0] => array
   (
     [my_string_slug] => 'Test 1'
     [my_dropdown_slug] => '#ffffff'
   )
 
-  [1] => Array
+  [1] => array
   (
     [my_string_slug] => 'Test 2'
     [my_dropdown_slug] => '#000000'
@@ -838,9 +979,12 @@ The repeater property can create a repeater of sub fields which can be repeated 
 
 ### Settings
 
-Key   | Default | Description
-------|---------|----------------------------------------------------------
-items | array() | The array of properties, the same key/values as the `$this->property` method or `papi_property` function has. You can't use property repeater inside a repeater.
+Key         | Default       | Description
+------------|---------------|----------------------------------------------------------
+closed_rows | false         | When this is true the existing rows will be closed when the page is loaded.
+items       | array         | The array of properties, the same key/values as `$this->property` method or `papi_property` function has. You can't use repeater or flexible inside a repeater.
+layout      | 'table'       | Choose between `table` or `row`.
+limit       | -1 (no limit) | Prevent how many post references that can be added.
 
 ### Filters
 
@@ -851,11 +995,11 @@ items | array() | The array of properties, the same key/values as the `$this->pr
  * Example of `papi/property/repeater/exclude` filter.
  */
 
-add_filter('papi/property/repeater/exclude', function ($exclude) {
-  return array_merge($exclude, [
+add_filter( 'papi/property/repeater/exclude', function ( $exclude ) {
+  return array_merge( $exclude, [
     'string'
-  ]);
-});
+  ] );
+} );
 ```
 
 Filter                         | Description
@@ -873,11 +1017,11 @@ papi/property/repeater/exclude | Prevent properties from render and working in r
  * Example of string.
  */
 
-papi_property([
+papi_property( [
   'title' => 'Name',
   'slug'  => 'my_name_slug',
   'type'  => 'string'
-])
+] )
 
 /**
  * Example output.
@@ -905,11 +1049,11 @@ No settings exists.
  * Example of text.
  */
 
-papi_property([
+papi_property( [
   'title' => 'Text',
   'slug'  => 'my_text_slug',
   'type'  => 'text'
-])
+] )
 
 /**
  * Example output.
@@ -937,14 +1081,14 @@ No settings exists.
  * Example of url.
  */
 
-papi_property([
+papi_property( [
   'title'    => 'Url with button',
   'slug'     => 'my_url_slug',
   'type'     => 'url',
   'settings' => [
     'mediauploader' => true
   ]
-])
+] )
 
 /**
  * Example output.
