@@ -26,7 +26,7 @@ Papi fields will return a array with meta box title as keys and array of all Pap
 
 Parameter | Default | Required | Description
 ----------|---------|----------|------------------------------------------------
-$post_id  | null    | no       | The post id will be added automatic if you are one a post, page or custom post type page. When fetching values from another post this argument will be required
+$post_id  | null    | no       | The post id will be added automatic if you are one a post, page or custom post type page. When fetching values from another post this argument will be required
 
 ## papi_property
 
@@ -66,8 +66,8 @@ This is great to use when you will share properties over many page types and it 
 
 Parameter         | Default | Required | Description
 ------------------|---------|----------|----------------------------------------
-$file_or_options  |         | yes      | File path or a array containing property options
-$values           | array | no       | The values to override the template values with
+$file_or_options  |         | yes      | File path or a array containing property options
+$values           | array | no       | The values to override the template values with
 
 ## papi_tab
 
@@ -113,8 +113,8 @@ This is great to use when you will share tabs over many page types and it will b
 
 Parameter         | Default | Required | Description
 ------------------|---------|----------|----------------------------------------
-$file_or_options  |         | yes      | Title, file path or a array containing tab options
-$properties       | array   | no       | The values to override the template values with or properties
+$file_or_options  |         | yes      | Title, file path or a array containing tab options
+$properties       | array   | no       | The values to override the template values with or properties
 
 ## papi_template
 
@@ -152,5 +152,5 @@ return [
 
 Parameter         | Default | Required | Description
 ------------------|---------|----------|----------------------------------------
-$file_or_options  |         | yes      | File path to template file
-$properties       | array   | no       | The values to override the template values with
+$file_or_options  |         | yes      | File path to template file
+$properties       | array   | no       | The values to override the template values with
