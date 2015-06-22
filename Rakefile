@@ -20,5 +20,3 @@ task :apigen do
 
   FileUtils.remove_dir(source)
 end
-
-task :publish => :apigen

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class Papi_Page_Type_Base</title>
+	<title>Function papi_get_page_type_by_post_id</title>
 
 	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
 
@@ -50,7 +50,7 @@
 				<li><a href="class-Papi_Option_Page.html">Papi_Option_Page</a></li>
 				<li><a href="class-Papi_Option_Type.html">Papi_Option_Type</a></li>
 				<li><a href="class-Papi_Page_Type.html">Papi_Page_Type</a></li>
-				<li class="active"><a href="class-Papi_Page_Type_Base.html">Papi_Page_Type_Base</a></li>
+				<li><a href="class-Papi_Page_Type_Base.html">Papi_Page_Type_Base</a></li>
 				<li><a href="class-Papi_Page_Type_Meta.html">Papi_Page_Type_Meta</a></li>
 				<li><a href="class-Papi_Post_Page.html">Papi_Post_Page</a></li>
 				<li><a href="class-Papi_Property.html">Papi_Property</a></li>
@@ -75,7 +75,7 @@
 				<li><a href="class-Papi_Property_Repeater.html">Papi_Property_Repeater</a></li>
 				<li><a href="class-Papi_Property_String.html">Papi_Property_String</a></li>
 				<li><a href="class-Papi_Property_Text.html">Papi_Property_Text</a></li>
-				<li><a href="class-Papi_Property_Url.html">Papi_Property_Url</a></li>
+				<li class="active"><a href="class-Papi_Property_Url.html">Papi_Property_Url</a></li>
 			</ul>
 
 
@@ -132,7 +132,7 @@
 				<li><a href="function-papi_get_page_type.html">papi_get_page_type</a></li>
 				<li><a href="function-papi_get_page_type_base_path.html">papi_get_page_type_base_path</a></li>
 				<li><a href="function-papi_get_page_type_by_id.html">papi_get_page_type_by_id</a></li>
-				<li><a href="function-papi_get_page_type_by_post_id.html">papi_get_page_type_by_post_id</a></li>
+				<li class="active"><a href="function-papi_get_page_type_by_post_id.html">papi_get_page_type_by_post_id</a></li>
 				<li><a href="function-papi_get_page_type_id.html">papi_get_page_type_id</a></li>
 				<li><a href="function-papi_get_page_type_meta_value.html">papi_get_page_type_meta_value</a></li>
 				<li><a href="function-papi_get_page_type_name.html">papi_get_page_type_name</a></li>
@@ -209,7 +209,7 @@
 			<li>
 <span>Package</span>			</li>
 			<li class="active">
-<span>Class</span>			</li>
+<span>Function</span>			</li>
 		</ul>
 		<ul>
 		</ul>
@@ -217,302 +217,44 @@
 		</ul>
 	</div>
 
-<div id="content" class="class">
-	<h1>Class Papi_Page_Type_Base</h1>
+<div id="content" class="function">
+	<h1>Function papi_get_page_type_by_post_id</h1>
 
 
 	<div class="description">
-	<p>Papi Page Type Base class.</p>
+	<p>Get page type from post id.</p>
 	</div>
-
-
-
-	<div>
-		<h4>Direct known subclasses</h4>
-			<a href="class-Papi_Page_Type_Meta.html">Papi_Page_Type_Meta</a>
-	</div>
-
-	<div>
-		<h4>Indirect known subclasses</h4>
-			<a href="class-Papi_Option_Type.html">Papi_Option_Type</a>, 
-			<a href="class-Papi_Page_Type.html">Papi_Page_Type</a>
-	</div>
-
-
-
-
 
 	<div class="info">
 		
-		
-		
 		<b>Package:</b> <a href="package-Papi.html">Papi</a><br>
-
-			<b>Located at</b> <a href="source-class-Papi_Page_Type_Base.html#7-170" title="Go to source code">includes/page-type/class-papi-page-type-base.php</a>
-		<br>
+		<b>Located at</b>
+		<a href="source-function-papi_get_page_type_by_post_id.html#232-253" title="Go to source code">
+			includes/lib/page.php
+		</a><br>
 	</div>
 
 
-
-	<table class="summary methods" id="methods">
-	<caption>Methods summary</caption>
-	<tr data-order="__construct" id="___construct">
-
-		<td class="attributes"><code>
-			 public 
-
-			
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-Papi_Page_Type_Base.html#55-73" title="Go to source code">__construct</a>( <span>string <var>$file_path</var></span> )</code>
-
-		<div class="description short">
-			<p>The constructor.</p>
-		</div>
-
-		<div class="description detailed hidden">
-			<p>The constructor.</p>
-
-<p>Load a page type by the file.</p>
-
-
-				<h4>Parameters</h4>
-				<div class="list"><dl>
-					<dt><var>$file_path</var></dt>
-					<dd></dd>
-				</dl></div>
-
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="get_class_name" id="_get_class_name">
-
-		<td class="attributes"><code>
-			 public 
-
-			string
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_get_class_name">#</a>
-		<code><a href="source-class-Papi_Page_Type_Base.html#76-83" title="Go to source code">get_class_name</a>( )</code>
-
-		<div class="description short">
-			<p>Get the page type class name with namespace if exists.</p>
-		</div>
-
-		<div class="description detailed hidden">
-			<p>Get the page type class name with namespace if exists.</p>
-
-
-
-				<h4>Returns</h4>
-				<div class="list">
-					string
-				</div>
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="get_file_path" id="_get_file_path">
-
-		<td class="attributes"><code>
-			 public 
-
-			string
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_get_file_path">#</a>
-		<code><a href="source-class-Papi_Page_Type_Base.html#86-93" title="Go to source code">get_file_path</a>( )</code>
-
-		<div class="description short">
-			<p>Get the page type file pat.h</p>
-		</div>
-
-		<div class="description detailed hidden">
-			<p>Get the page type file pat.h</p>
-
-
-
-				<h4>Returns</h4>
-				<div class="list">
-					string
-				</div>
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="get_id" id="_get_id">
-
-		<td class="attributes"><code>
-			 public 
-
-			string
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_get_id">#</a>
-		<code><a href="source-class-Papi_Page_Type_Base.html#96-107" title="Go to source code">get_id</a>( )</code>
-
-		<div class="description short">
-			<p>Get the page type identifier.</p>
-		</div>
-
-		<div class="description detailed hidden">
-			<p>Get the page type identifier.</p>
-
-
-
-				<h4>Returns</h4>
-				<div class="list">
-					string
-				</div>
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="match_id" id="_match_id">
-
-		<td class="attributes"><code>
-			 public 
-
-			boolean
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_match_id">#</a>
-		<code><a href="source-class-Papi_Page_Type_Base.html#110-123" title="Go to source code">match_id</a>( <span>string <var>$id</var></span> )</code>
-
-		<div class="description short">
-			<p>Check if the the given identifier match the page type identifier.</p>
-		</div>
-
-		<div class="description detailed hidden">
-			<p>Check if the the given identifier match the page type identifier.</p>
-
-
-				<h4>Parameters</h4>
-				<div class="list"><dl>
-					<dt><var>$id</var></dt>
-					<dd></dd>
-				</dl></div>
-
-				<h4>Returns</h4>
-				<div class="list">
-					boolean
-				</div>
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="new_class" id="_new_class">
-
-		<td class="attributes"><code>
-			 public 
-
-			object
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_new_class">#</a>
-		<code><a href="source-class-Papi_Page_Type_Base.html#126-137" title="Go to source code">new_class</a>( )</code>
-
-		<div class="description short">
-			<p>Create a new instance of the page type file.</p>
-		</div>
-
-		<div class="description detailed hidden">
-			<p>Create a new instance of the page type file.</p>
-
-
-
-				<h4>Returns</h4>
-				<div class="list">
-					object
-				</div>
-
-
-
-
-		</div>
-		</div></td>
+	<table class="summary" id="parameters">
+	<caption>Parameters summary</caption>
+	<tr id="$post_id">
+		<td class="name"><code>integer</code></td>
+		<td class="value"><code><var>$post_id</var> = <span class="php-num">0</span></code></td>
+		<td></td>
 	</tr>
 	</table>
 
-
-
-
-
-
-
-
-
-
-
-
-	<table class="summary properties" id="properties">
-	<caption>Properties summary</caption>
-	<tr data-order="_meta_method" id="$_meta_method">
-		<td class="attributes"><code>
-			public  
-			string
+	<table class="summary" id="returns">
+	<caption>Return value summary</caption>
+	<tr>
+		<td class="name"><code>
+			<code><a href="class-Papi_Page_Type.html">Papi_Page_Type</a></code>
 		</code></td>
-
-		<td class="name">
-				<a href="source-class-Papi_Page_Type_Base.html#15-20" title="Go to source code"><var>$_meta_method</var></a>
-
-			<div class="description short">
-				<p>The meta method to call.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>The meta method to call.</p>
-
-			</div>
-		</td>
-		<td class="value">
-			<div>
-				<a href="#$_meta_method" class="anchor">#</a>
-				<code><span class="php-quote">'page_type'</span></code>
-			</div>
+		<td>
+			Papi_Page_Type
 		</td>
 	</tr>
 	</table>
-
-
-
-
 
 
 </div>
@@ -522,7 +264,7 @@
 	</div>
 </div>
 </div>
-<script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="resources/combined.js?6bc31116bf225f9af7b580dc798b3410c38547a0"></script>
+<script src="elementlist.js?e8ff5c70d0f300548200fe9250650d8eb1c1a3a1"></script>
 </body>
 </html>

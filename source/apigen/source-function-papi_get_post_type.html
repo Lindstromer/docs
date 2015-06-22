@@ -121,7 +121,6 @@
 				<li><a href="function-papi_get_cache_key.html">papi_get_cache_key</a></li>
 				<li><a href="function-papi_get_class_name.html">papi_get_class_name</a></li>
 				<li><a href="function-papi_get_field.html">papi_get_field</a></li>
-				<li><a href="function-papi_get_file_data.html">papi_get_file_data</a></li>
 				<li><a href="function-papi_get_file_path.html">papi_get_file_path</a></li>
 				<li><a href="function-papi_get_number_of_pages.html">papi_get_number_of_pages</a></li>
 				<li><a href="function-papi_get_only_objects.html">papi_get_only_objects</a></li>
@@ -134,7 +133,9 @@
 				<li><a href="function-papi_get_page_type.html">papi_get_page_type</a></li>
 				<li><a href="function-papi_get_page_type_base_path.html">papi_get_page_type_base_path</a></li>
 				<li><a href="function-papi_get_page_type_by_id.html">papi_get_page_type_by_id</a></li>
+				<li><a href="function-papi_get_page_type_by_post_id.html">papi_get_page_type_by_post_id</a></li>
 				<li><a href="function-papi_get_page_type_id.html">papi_get_page_type_id</a></li>
+				<li><a href="function-papi_get_page_type_meta_value.html">papi_get_page_type_meta_value</a></li>
 				<li><a href="function-papi_get_page_type_name.html">papi_get_page_type_name</a></li>
 				<li><a href="function-papi_get_page_type_template.html">papi_get_page_type_template</a></li>
 				<li><a href="function-papi_get_post_id.html">papi_get_post_id</a></li>
@@ -239,7 +240,7 @@
 </span></span><span id="18" class="l"><a href="#18">18: </a><span class="php-comment"> */</span>
 </span><span id="19" class="l"><a href="#19">19: </a>
 </span><span id="20" class="l"><a href="#20">20: </a><span class="php-keyword1">function</span> papi_get_post_id( <span class="php-var">$post_id</span> = <span class="php-keyword1">null</span> ) {
-</span><span id="21" class="l"><a href="#21">21: </a>    <span class="php-keyword1">if</span> ( <span class="php-keyword2">is_object</span>( <span class="php-var">$post_id</span> ) ) {
+</span><span id="21" class="l"><a href="#21">21: </a>    <span class="php-keyword1">if</span> ( <span class="php-keyword2">is_object</span>( <span class="php-var">$post_id</span> ) &amp;&amp; <span class="php-keyword1">isset</span>( <span class="php-var">$post_id</span>-&gt;ID ) ) {
 </span><span id="22" class="l"><a href="#22">22: </a>        <span class="php-keyword1">return</span> <span class="php-var">$post_id</span>-&gt;ID;
 </span><span id="23" class="l"><a href="#23">23: </a>    }
 </span><span id="24" class="l"><a href="#24">24: </a>
@@ -315,6 +316,6 @@
 </div>
 </div>
 <script src="resources/combined.js?6bc31116bf225f9af7b580dc798b3410c38547a0"></script>
-<script src="elementlist.js?0e03155c728e6b7b3414df8d7db2fe4355f82faa"></script>
+<script src="elementlist.js?e8ff5c70d0f300548200fe9250650d8eb1c1a3a1"></script>
 </body>
 </html>

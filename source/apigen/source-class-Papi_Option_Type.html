@@ -121,7 +121,6 @@
 				<li><a href="function-papi_get_cache_key.html">papi_get_cache_key</a></li>
 				<li><a href="function-papi_get_class_name.html">papi_get_class_name</a></li>
 				<li><a href="function-papi_get_field.html">papi_get_field</a></li>
-				<li><a href="function-papi_get_file_data.html">papi_get_file_data</a></li>
 				<li><a href="function-papi_get_file_path.html">papi_get_file_path</a></li>
 				<li><a href="function-papi_get_number_of_pages.html">papi_get_number_of_pages</a></li>
 				<li><a href="function-papi_get_only_objects.html">papi_get_only_objects</a></li>
@@ -134,7 +133,9 @@
 				<li><a href="function-papi_get_page_type.html">papi_get_page_type</a></li>
 				<li><a href="function-papi_get_page_type_base_path.html">papi_get_page_type_base_path</a></li>
 				<li><a href="function-papi_get_page_type_by_id.html">papi_get_page_type_by_id</a></li>
+				<li><a href="function-papi_get_page_type_by_post_id.html">papi_get_page_type_by_post_id</a></li>
 				<li><a href="function-papi_get_page_type_id.html">papi_get_page_type_id</a></li>
+				<li><a href="function-papi_get_page_type_meta_value.html">papi_get_page_type_meta_value</a></li>
 				<li><a href="function-papi_get_page_type_name.html">papi_get_page_type_name</a></li>
 				<li><a href="function-papi_get_page_type_template.html">papi_get_page_type_template</a></li>
 				<li><a href="function-papi_get_post_id.html">papi_get_post_id</a></li>
@@ -284,21 +285,24 @@
 </span><span id="63" class="l"><a href="#63">63: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> render() {
 </span><span id="64" class="l"><a href="#64">64: </a>        <span class="xlang">?&gt;</span>
 </span><span id="65" class="l"><a href="#65">65: </a>        &lt;div <span class="php-keyword1">class</span>=<span class="php-quote">&quot;wrap&quot;</span>&gt;
-</span><span id="66" class="l"><a href="#66">66: </a>            &lt;h2&gt;<span class="php-keyword2">Header</span>&lt;/h2&gt;
+</span><span id="66" class="l"><a href="#66">66: </a>            &lt;h2&gt;<span class="xlang">&lt;?php</span> esc_html_e( <span class="php-var">$this</span>-&gt;name ); <span class="xlang">?&gt;</span>&lt;/h2&gt;
 </span><span id="67" class="l"><a href="#67">67: </a>            &lt;form id=<span class="php-quote">&quot;post&quot;</span> method=<span class="php-quote">&quot;post&quot;</span> name=<span class="php-quote">&quot;post&quot;</span>&gt;
-</span><span id="68" class="l"><a href="#68">68: </a>                <span class="xlang">&lt;?php</span> wp_nonce_field( <span class="php-quote">'papi_save_data'</span>, <span class="php-quote">'papi_meta_nonce'</span> ); <span class="xlang">?&gt;</span>
-</span><span id="69" class="l"><a href="#69">69: </a>                &lt;div id=<span class="php-quote">&quot;poststuff&quot;</span>&gt;
-</span><span id="70" class="l"><a href="#70">70: </a>                    &lt;div id=<span class="php-quote">&quot;post-body&quot;</span>&gt;
-</span><span id="71" class="l"><a href="#71">71: </a>                        <span class="xlang">&lt;?php</span> do_meta_boxes( <span class="php-var">$this</span>-&gt;post_type[<span class="php-num">0</span>], <span class="php-quote">'normal'</span>, <span class="php-keyword1">null</span> ); <span class="xlang">?&gt;</span>
-</span><span id="72" class="l"><a href="#72">72: </a>                        <span class="xlang">&lt;?php</span> submit_button(); <span class="xlang">?&gt;</span>
-</span><span id="73" class="l"><a href="#73">73: </a>                    &lt;/div&gt;
-</span><span id="74" class="l"><a href="#74">74: </a>                &lt;/div&gt;
-</span><span id="75" class="l"><a href="#75">75: </a>            &lt;/form&gt;
-</span><span id="76" class="l"><a href="#76">76: </a>        &lt;/div&gt;
-</span><span id="77" class="l"><a href="#77">77: </a>        <span class="xlang">&lt;?php</span>
-</span><span id="78" class="l"><a href="#78">78: </a>    }
-</span><span id="79" class="l"><a href="#79">79: </a>}
-</span><span id="80" class="l"><a href="#80">80: </a></span></code></pre>
+</span><span id="68" class="l"><a href="#68">68: </a>                &lt;div id=<span class="php-quote">&quot;papi-hidden-editor&quot;</span> <span class="php-keyword1">class</span>=<span class="php-quote">&quot;hide-if-js&quot;</span>&gt;
+</span><span id="69" class="l"><a href="#69">69: </a>                    <span class="xlang">&lt;?php</span> wp_nonce_field( <span class="php-quote">'papi_save_data'</span>, <span class="php-quote">'papi_meta_nonce'</span> ); <span class="xlang">?&gt;</span>
+</span><span id="70" class="l"><a href="#70">70: </a>                    <span class="xlang">&lt;?php</span> wp_editor( <span class="php-quote">''</span>, <span class="php-quote">'papiHiddenEditor'</span> ); <span class="xlang">?&gt;</span>
+</span><span id="71" class="l"><a href="#71">71: </a>                &lt;/div&gt;
+</span><span id="72" class="l"><a href="#72">72: </a>                &lt;div id=<span class="php-quote">&quot;poststuff&quot;</span>&gt;
+</span><span id="73" class="l"><a href="#73">73: </a>                    &lt;div id=<span class="php-quote">&quot;post-body&quot;</span>&gt;
+</span><span id="74" class="l"><a href="#74">74: </a>                        <span class="xlang">&lt;?php</span> do_meta_boxes( <span class="php-var">$this</span>-&gt;post_type[<span class="php-num">0</span>], <span class="php-quote">'normal'</span>, <span class="php-keyword1">null</span> ); <span class="xlang">?&gt;</span>
+</span><span id="75" class="l"><a href="#75">75: </a>                        <span class="xlang">&lt;?php</span> submit_button(); <span class="xlang">?&gt;</span>
+</span><span id="76" class="l"><a href="#76">76: </a>                    &lt;/div&gt;
+</span><span id="77" class="l"><a href="#77">77: </a>                &lt;/div&gt;
+</span><span id="78" class="l"><a href="#78">78: </a>            &lt;/form&gt;
+</span><span id="79" class="l"><a href="#79">79: </a>        &lt;/div&gt;
+</span><span id="80" class="l"><a href="#80">80: </a>        <span class="xlang">&lt;?php</span>
+</span><span id="81" class="l"><a href="#81">81: </a>    }
+</span><span id="82" class="l"><a href="#82">82: </a>}
+</span><span id="83" class="l"><a href="#83">83: </a></span></code></pre>
 
 	<div id="footer">
 		 API documentation generated by <a href="http://apigen.org">ApiGen</a>
@@ -306,6 +310,6 @@
 </div>
 </div>
 <script src="resources/combined.js?6bc31116bf225f9af7b580dc798b3410c38547a0"></script>
-<script src="elementlist.js?0e03155c728e6b7b3414df8d7db2fe4355f82faa"></script>
+<script src="elementlist.js?e8ff5c70d0f300548200fe9250650d8eb1c1a3a1"></script>
 </body>
 </html>
