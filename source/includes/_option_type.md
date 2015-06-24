@@ -25,7 +25,7 @@ class Header_Option_Type extends Papi_Option_Type {
 }
 ```
 
-Option type class extends the [page type class](#page-type) so you can create options pages with Papi!
+Option type class extends the [page type class](#page-type) so you can create options pages with Papi! Option types will not be showed on Papi's tool page since they don't belong to a post type.
 
 ### Differents between option type and a page type
 
