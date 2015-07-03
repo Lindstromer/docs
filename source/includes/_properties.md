@@ -30,14 +30,14 @@ The property type is loaded from the page type file instead of saving it in the 
 
 Key          | Default      | Description
 -------------|--------------|---------------------------------------------------
-capabilities | array      | Can be a string with a role or capability or a array with many values
+capabilities | array        | Can be a string with a role or capability or a array with many values
 description  | empty string | Disable the property, won’t show in WordPress admin
 disabled     | false        | The introduction text that will appear below the title text of the property. You could write your help text here. With "\n" you can create new lines in the description
 lang         | false        | When using this key you can specify which language will show the property
 raw          | false        | This will render the property without a table, good to use when creating a custom property that uses other properties
 required     | false        | By default all fields are non required in Papi but this can be changed with required option
 sidebar      | true         | Boolean that shows the sidebar on each property. If false the sidebar won’t show
-settings     | array      | Array with custom settings for the property
+settings     | array        | Array with custom settings for the property
 sort_order   | 1000         | Numeric value, lowest value in the meta box will be at the top and the highest value at the bottom
 slug         | empty string | The slug of property. If empty or not used the title will be generated to slug value
 title        | empty string | The title of the property. Can be empty for blank title
@@ -1108,3 +1108,38 @@ This property will output the textarea tag and the output will be a string with 
 Key           | Default | Description
 --------------|---------|------------
 mediauploader | false   | When this is `true` a button will show next to the input field where you can open the WordPress media library
+
+## User
+
+**type** `user`
+
+```php
+<?php
+
+/**
+ * Example of user.
+ */
+
+papi_property( [
+  'title'    => 'Author',
+  'slug'     => 'my_user_slug',
+  'type'     => 'user'
+] )
+
+/**
+ * Example output.
+ */
+
+// WP_User object
+```
+
+### Description
+
+With this property you can add a user dropdown.
+
+### Settings
+
+Key           | Default            | Description
+--------------|--------------------|-------------------------------------------------
+capabilities  | array              | The capabilities of the users that should be listed. Can be a string with a role or capability or a array with many values
+placeholder   | empty string       | Placeholder text that's displayed when no option is slected.
