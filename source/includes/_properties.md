@@ -155,7 +155,7 @@ The property output the WordPress color picker.
 Key        | Default | Description
 -----------|---------|----------------------------------------------------------
 show_input | true    | Show the text input
-palettes   | array | Array with hex colors
+palettes   | array   | Array with hex colors
 
 ## Datetime
 
@@ -776,7 +776,7 @@ With this property you can create a list of radio buttons. The key is the value 
 
 Key      | Default      | Description
 ---------|--------------|-------------------------------------------------------
-items    | array      | Array with radio buttons, value or key/value
+items    | array        | Array with radio buttons, value or key/value
 selected | empty string | The radio button that will be selected from start. The value should match a key of your items
 
 ## Reference
@@ -889,7 +889,7 @@ Key          | Default       | Description
 -------------|---------------|--------------------------------------------------
 limit        | -1 (no limit) | Prevent how many post references that can be added.
 post_type    | 'page'        | Change which post types it loads post objects from
-query        | array       | Append a `WP_Query` on all post types. Gist reference over `WP_Query`. Note that `post_type` in query will always be removed
+query        | array         | Append a `WP_Query` on all post types. Gist reference over `WP_Query`. Note that `post_type` in query will always be removed
 show_sort_by | true          | Show the sort by dropdown or not.
 
 ### Filters
@@ -1121,7 +1121,7 @@ mediauploader | false   | When this is `true` a button will show next to the inp
  */
 
 papi_property( [
-  'title'    => 'Author',
+  'title'    => 'User',
   'slug'     => 'my_user_slug',
   'type'     => 'user'
 ] )
