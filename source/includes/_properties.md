@@ -836,8 +836,8 @@ papi_property( [
   'slug'     => 'my_relationship_slug',
   'type'     => 'relationship',
   'settings' => [
-    'limit' => 3,
-    'post_type'  => ['post', 'pages', 'my-custom-post-type']
+    'limit'     => 3,
+    'post_type' => ['post', 'pages', 'my-custom-post-type']
   ]
 ] )
 
