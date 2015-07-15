@@ -60,14 +60,13 @@ $post_id  | null    | no       | The post id will be added automatic if you are
 <?php
 
 /**
- * Example of `papi_page_type_name` function.
+ * Example of `papi_get_page_type_name` function.
  */
-
-echo papi_page_type_name();
+echo papi_get_page_type_name();
 // => "Article Page"
 
 // with post id
-echo papi_page_type_name( 2 );
+echo papi_get_page_type_name( 2 );
 // => "Video Page"
 ```
 
